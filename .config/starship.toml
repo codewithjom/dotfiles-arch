@@ -1,0 +1,26 @@
+#    _________
+#   |_  |  _  \
+#     | | | | | Jom Dollesin
+#     | | | | | https://github.com/codewithjom
+# /\__/ / |/ /
+# \____/|___/
+
+# Install starship
+# $ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+add_newline = false
+
+[line_break]
+disabled = true
+
+[package]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[java]
+symbol = " "
