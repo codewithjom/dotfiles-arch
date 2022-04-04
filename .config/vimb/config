@@ -1,0 +1,18 @@
+set home-page=https://duckduckgo.com
+
+set default-font=JetBrains Mono Nerd Font
+set monospace-font=JetBrains Mono Nerd Font
+
+set smooth-scrolling=true
+
+set user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36
+
+set download-path=~/Downloads
+
+set input-autohide=true
+
+set editor-command=emacsclient
+
+set webgl=true
+
+set incsearch=true
