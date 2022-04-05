@@ -19,6 +19,10 @@ alias vim 'nvim'
 alias vi 'vim'
 alias rm 'rm -rf'
 alias mv 'mv -i'
+alias gs 'git status -s'
+alias gc 'git commit '
+alias ga 'git add '
+alias gl 'git log --oneline'
 
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
