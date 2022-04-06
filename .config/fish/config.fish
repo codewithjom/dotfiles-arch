@@ -25,6 +25,9 @@ alias gc 'git commit '
 alias ga 'git add '
 alias gl 'git log --oneline'
 alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
+alias mpv 'devour mpv'
+alias sxiv 'devour sxiv'
+alias zathura 'devour zathura'
 
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
