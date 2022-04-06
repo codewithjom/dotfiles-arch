@@ -24,6 +24,7 @@ alias gs 'git status -s'
 alias gc 'git commit '
 alias ga 'git add '
 alias gl 'git log --oneline'
+alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
 
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
