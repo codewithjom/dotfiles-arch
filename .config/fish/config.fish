@@ -1,7 +1,7 @@
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH $fish_user_paths
 
-set fish_greeting
+set fish_greeting ""
 set fish_history ""
 set TERM xterm-256color
 set EDITOR emacsclient -c -a emacs
@@ -19,6 +19,7 @@ alias vim 'nvim'
 alias vi 'vim'
 alias rm 'rm -rf'
 alias mv 'mv -i'
+alias cp 'cp -rf'
 alias gs 'git status -s'
 alias gc 'git commit '
 alias ga 'git add '
@@ -30,4 +31,4 @@ if status --is-login
   end
 end
 
-starship init fish | source
+# starship init fish | source
