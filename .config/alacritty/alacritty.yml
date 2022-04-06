@@ -442,7 +442,7 @@ font:
 # *tomorrow-night
 # *tokyo-night
 
-colors: *one-dark
+colors: *gruvbox-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
