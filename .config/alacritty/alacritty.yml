@@ -450,7 +450,7 @@ colors: *one-dark
 
 cursor:
   style: 
-    shape: underline # replace with block, underline, beam
+    shape: block # replace with block, underline, beam
     blinking: Always
   
   blink_interval: 250
