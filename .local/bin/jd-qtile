@@ -55,7 +55,7 @@ if [[ $install_neovim = true ]]; then
 fi
 
 # Install themes, etc.
-paru -S --noconfirm python-iwlib arc-gtk-theme dracula-gtk-theme dracula-icons-git dracula-cursors-git gruvbox-dark-icons-gtk gruvbox-dark-gtk
+paru -S --noconfirm python-iwlib arc-gtk-theme dracula-gtk-theme dracula-icons-git dracula-cursors-git gruvbox-dark-icons-gtk gruvbox-dark-gtk xcursor-simp1e-gruvbox-dark
 paru -S --aur --noconfirm betterlockscreen preload picom-git light-git devour
 
 # Install fonts
