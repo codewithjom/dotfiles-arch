@@ -1,0 +1,17 @@
+#!/bin/sh
+
+sudo pacman -Sy
+sudo pacman -S base-devel
+cd /opt
+sudo git clone https://aur.archlinux.org/yay.git
+cd /opt
+
+run1="sudo chown -R "
+username="$USER"
+run2=":users ./yay"
+final="$run1$username$run2"
+$final
+
+cd yay
+makepkg -si
+

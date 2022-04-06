@@ -1,0 +1,11 @@
+#!/bin/sh
+
+sudo pacman -Sy
+sudo pacman -S virtualbox
+sudo modprobe vboxdrv
+sudo pacman -S virtualbox-guest-iso
+
+run1="sudo usermod -aG vboxusers "
+run2="$USER"
+final="$run1$run2"
+$final
