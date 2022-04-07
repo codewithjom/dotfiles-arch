@@ -58,7 +58,7 @@ paru -S --noconfirm python-iwlib arc-gtk-theme dracula-gtk-theme dracula-icons-g
 paru -S --aur --noconfirm betterlockscreen preload picom-git light-git devour
 
 # Install fonts
-paru -S --aur --noconfirm ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts ttf-material-icons noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code
+paru -S --aur --noconfirm ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts ttf-material-icons noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code nerd-fonts-roboto-mono
 paru -S --noconfirm adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts nerd-fonts-victor-mono
 
 # Install packages
