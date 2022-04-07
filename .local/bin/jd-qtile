@@ -1,14 +1,13 @@
 #!/bin/sh
 
 printf "\e[1;32m########################################################################################\e[0m\n"
-printf "\e[1;32m# README:                                                                              #\e[0m\n"
-printf "\e[1;32m# You are about to install JDOS an installation	and deployment script	of JD's desktop. #\e[0m\n"
-printf "\e[1;32m# WARNING:                                                                             #\e[0m\n"
-printf "\e[1;32m# Run this script at your own risk.                                                    #\e[0m\n"
-printf "\e[1;32m# AUTHOR:                                                                              #\e[0m\n"
-printf "\e[1;32m# Jom Dollesin                                                                         #\e[0m\n"
-printf "\e[1;32m# Gitlab:                                                                              #\e[0m\n"
-printf "\e[1;32m# https://gitlab.com/nightjd/                                                          #\e[0m\n"
+echo "NOTE:"
+echo "You are about to install JDOS an installation	and deployment script	of JD's desktop."
+echo "Run this script at your own risk!"
+echo "Author:"
+echo "Jom Dollesin"
+echo "GitHub:"
+echo "https://github.com/codewithjom"
 printf "\e[1;32m########################################################################################\e[0m\n"
 sleep 3
 while true; do
@@ -59,7 +58,7 @@ paru -S --noconfirm python-iwlib arc-gtk-theme dracula-gtk-theme dracula-icons-g
 paru -S --aur --noconfirm betterlockscreen preload picom-git light-git devour
 
 # Install fonts
-paru -S --aur --noconfirm ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts ttf-material-icons noto-color-emoji-fontconfig
+paru -S --aur --noconfirm ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts ttf-material-icons noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code
 paru -S --noconfirm adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts nerd-fonts-victor-mono
 
 # Install packages
