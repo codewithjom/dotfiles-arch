@@ -78,7 +78,7 @@ myTerminal :: String
 myTerminal = "alacritty"    -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "qutebrowser"  -- Sets qutebrowser as browser
+myBrowser = "brave"  -- Sets brave as browser
 
 myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs'"  -- Makes emacs keybindings easier to type
