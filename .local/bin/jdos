@@ -62,7 +62,7 @@ paru -S --aur --noconfirm ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-
 paru -S --noconfirm adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts nerd-fonts-victor-mono
 
 # Install packages
-sudo pacman -S --noconfirm tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa python-pip openjdk11-src sxiv mpv pavucontrol plocate dunst pamixer conky alacritty min blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs cmake dmenu xdo
+sudo pacman -S --noconfirm tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa python-pip openjdk11-src sxiv mpv pavucontrol plocate dunst pamixer conky alacritty min blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs cmake dmenu xdo xdotool
 
 # Install more fonts
 sudo pacman -S --noconfirm ttf-cascadia-code ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-inconsolata ttf-jetbrains-mono ttf-ubuntu-font-family
