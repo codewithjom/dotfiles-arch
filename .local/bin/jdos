@@ -78,14 +78,11 @@ printf "\e[1;32m## You are about to install JDOS ##\e[0m\n"
 printf "\e[1;32m###################################\e[0m\n"
 
 sudo pacman -Sy
-paru -S qtile sxhkd pfetch
+paru -S qtile sxhkd pfetch xmonad xmonad-contrib xmobar
 git	clone https://github.com/codewithjom/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 cp -rf * ~/
 rm -rf ~/dotfiles
-git clone https://github.com/codewithjom/qtile-config.git ~/.config/qtile
-git clone https://github.com/codewithjom/emacs-config.git ~/.emacs.d
-git clone https://github.com/codewithjom/neovim-config.git ~/.config/nvim
 
 # Enable daemon
 sudo systemctl enable tlp.service
