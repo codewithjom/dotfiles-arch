@@ -4,6 +4,8 @@
 
 * About This Config
 
+[[https://raw.githubusercontent.com/codewithjom/dotfiles/master/.xmonad/lib/Scripts/xmonad-screenshot.jpg]]
+
 Xmonad is a dynamically tiling X11 window manager that is written and configured in Haskell.
 - XMonad Official Website: [[https://xmonad.org][https://xmonad.org]]
 - Haskell Official Website: [[https://haskell.org][https://haskell.org]]
