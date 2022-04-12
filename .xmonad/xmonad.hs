@@ -107,13 +107,11 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 myStartupHook :: X ()
 myStartupHook = do
   spawn "killall conky"   -- kill current conky on each restart
-  spawn "killall trayer"  -- kill current trayer on each restart
 
   spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
 
   spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
-  spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
 
   setWMName "LG3D"
 
