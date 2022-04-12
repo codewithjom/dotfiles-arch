@@ -94,8 +94,8 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
                 "margin": 15,
-                "border_focus": "ebdbb2",
-                "border_normal": "282828"
+                "border_focus": "73daca",
+                "border_normal": "33635c"
                 }
 
 layouts = [
@@ -105,14 +105,14 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-colors = [["#282828", "#282828"], # 0 BG
-          ["#cc241d", "#fb4934"], # 1 RED
-          ["#98971a", "#b8bb26"], # 2 GREEN
-          ["#d79921", "#fabd2f"], # 3 YELLOW
-          ["#458588", "#83a598"], # 4 BLUE
-          ["#b16286", "#d3869b"], # 5 MAGENTA
-          ["#689d6a", "#8ec07c"], # 6 CYAN
-          ["#a89984", "#ebdbb2"], # 7 FG
+colors = [["#1a1b26", "#1a1b26"], # 0 BG
+          ["#f7768e", "#8c4351"], # 1 RED
+          ["#73daca", "#33635c"], # 2 GREEN
+          ["#e0af68", "#8f5e15"], # 3 YELLOW
+          ["#7aa2f7", "#34548a"], # 4 BLUE
+          ["#bb9af7", "#5a4a78"], # 5 MAGENTA
+          ["#7dcfff", "#0f4b6e"], # 6 CYAN
+          ["#a9b1d6", "#343b58"], # 7 FG
           ["#839496", "#839496"], # 8 SHADE-1
           ["#c5c8c6", "#c5c8c6"]] # 9 SHADE-2
 
@@ -152,12 +152,12 @@ def init_widgets_list():
             padding_y = 3,
             padding_x = 3,
             borderwidth = 3,
-            active = colors[7],
+            active = colors[4],
             inactive = colors[8],
             rounded = False,
-            highlight_color = ['c678dd', '282a36'],
+            highlight_color = ['#73daca', '#33635c'],
             highlight_method = "text",
-            this_current_screen_border = colors[5],
+            this_current_screen_border = colors[9],
             this_screen_border = colors [4],
             other_current_screen_border = colors[6],
             other_screen_border = colors[4],
