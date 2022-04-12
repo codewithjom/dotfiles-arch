@@ -35,7 +35,7 @@ keys = [
     Key([ctrl], ret, lazy.spawn(screenshot)),
 
     # ROFI
-    Key([mod], "d", lazy.spawn("rofi -show drun")),
+    Key([mod,s], "d", lazy.spawn("rofi -show drun")),
 
     # QTILE
     Key([mod], "x",lazy.shutdown()),         # LOGOUT
