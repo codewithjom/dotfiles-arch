@@ -38,11 +38,9 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
                         -- Time and date
                     , Run Date "<fn=2>\xf017</fn>  %b %d %Y - [%I:%M %p] " "date" 50
                         -- Script that dynamically adjusts xmobar padding depending on number of trayer icons.
-										, Run Com ".xmonad/lib/Scripts/trayer-padding-icon.sh" [] "trayerpad" 20
-                        -- Prints out the left side items such as workspaces, layout, etc.
                     , Run UnsafeStdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %UnsafeStdinReader% }{ <fc=#d3869b>%penguin%  %kernel%</fc>    <fc=#b8bb26><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#d79921>%disku%</fc>    <fc=#689d6a>%bell%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#fb4934>%baticon%  %battery%</fc>    <fc=#83a598>%date%</fc> %trayerpad%"
+       , template = " %UnsafeStdinReader% }{ <fc=#d3869b>%penguin%  %kernel%</fc>    <fc=#b8bb26><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#d79921>%disku%</fc>    <fc=#689d6a>%bell%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#fb4934>%baticon%  %battery%</fc>    <fc=#83a598>%date%</fc>"
        }
