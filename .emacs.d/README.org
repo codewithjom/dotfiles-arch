@@ -11,7 +11,6 @@ Use my configuration:
   git clone https://github.com/codewithjom/emacs-config.git ~/.emacs.d
 
 #+end_src
-
 * About This Configuration
 
 This is an ongoing evolution of my original Emacs configuration files, inspired by a bunch of resources I've found online.
@@ -855,7 +854,7 @@ Set up Org Mode with a baseline configuration. The following sections will add m
 			:after org
 			:hook (org-mode . org-superstar-mode)
 			:custom
-			(org-directory "~/Docs/notes")
+			(org-directory "~/Repo/notes")
 			(org-superstar-remove-leading-stars t)
 			(org-ellipsis "...")
 			(org-superstar-item-bullet-alist '((?+ . ?) (?- . ?✦)))
@@ -913,7 +912,7 @@ These templates enable you to type things like =<el= and then hit =Tab= to expan
 
   (defun jd/search-org-files ()
     (interactive)
-    (counsel-rg "" "~/Docs/notes/" nil "Search Notes: "))
+    (counsel-rg "" "~/Repo/notes/" nil "Search Notes: "))
 
 #+end_src
 
@@ -1307,7 +1306,7 @@ Set up the =compile= package and ensure that compilation output automatically sc
   (use-package yasnippet
     :hook (prog-mode . yas-minor-mode)
     :config
-    (setq yas-snippet-dirs '("~/Docs/repo/snippets"))
+    (setq yas-snippet-dirs '("~/Repo/snippets"))
     (yas-global-mode 1))
 
 #+end_src

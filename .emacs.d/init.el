@@ -529,7 +529,7 @@ folder, otherwise delete a word"
 		:after org
 		:hook (org-mode . org-superstar-mode)
 		:custom
-		(org-directory "~/Docs/notes")
+		(org-directory "~/Repo/notes")
 		(org-superstar-remove-leading-stars t)
 		(org-ellipsis "...")
 		(org-superstar-item-bullet-alist '((?+ . ?) (?- . ?✦)))
@@ -573,7 +573,7 @@ folder, otherwise delete a word"
 
 (defun jd/search-org-files ()
   (interactive)
-  (counsel-rg "" "~/Docs/notes/" nil "Search Notes: "))
+  (counsel-rg "" "~/Repo/notes/" nil "Search Notes: "))
 
 (defun jd/org-present-prepare-slide ()
   (org-overview)
@@ -809,7 +809,7 @@ folder, otherwise delete a word"
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
   :config
-  (setq yas-snippet-dirs '("~/Docs/repo/snippets"))
+  (setq yas-snippet-dirs '("~/Repo/snippets"))
   (yas-global-mode 1))
 
 (use-package smartparens
