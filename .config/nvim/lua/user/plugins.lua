@@ -66,6 +66,7 @@ return packer.startup(function(use)
   use "altercation/solarized"
   use "navarasu/onedark.nvim"
 	use "morhetz/gruvbox"
+  use "folke/tokyonight.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

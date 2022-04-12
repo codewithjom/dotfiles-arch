@@ -272,7 +272,7 @@ These days I bounce around between themes included with =DOOM Themes= since they
 #+begin_src emacs-lisp
 
   (use-package doom-themes
-    :init (load-theme 'doom-gruvbox t))
+    :init (load-theme 'doom-tokyo-night t))
 
 #+end_src
 

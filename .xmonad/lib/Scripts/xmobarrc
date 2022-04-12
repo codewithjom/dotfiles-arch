@@ -1,18 +1,17 @@
 -- Xmobar (http://projects.haskell.org/xmobar/)
--- Color scheme: Gruvbox Dark
+-- Color scheme: Tokyo Night
 
 Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:hinting=true"
        , additionalFonts = [ "xft:Mononoki:pixelsize=11:antialias=true:hinting=true"
                            , "xft:Font Awesome 6 Free Solid:pixelsize=12"
                            , "xft:Font Awesome 6 Brands:pixelsize=12"
                            ]
-       , bgColor      = "#282828"
-       , fgColor      = "#ebdbb2"
+       , bgColor      = "#1a1b26"
+       , fgColor      = "#a9b1d6"
        -- Position TopSize and BottomSize take 3 arguments:
        --   an alignment parameter (L/R/C) for Left, Right or Center.
        --   an integer for the percentage width, so 100 would be 100%.
        --   an integer for the minimum pixel height for xmobar, so 24 would force a height of at least 24 pixels.
-       --   NOTE: The height should be the same as the trayer (system tray) height.
        , position       = TopSize L 100 24
        , lowerOnStart = True
        , hideOnStart  = False
@@ -37,10 +36,10 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
                     , Run BatteryP ["BAT1"] ["-t", "<acstatus> [<left>%]"] 360
                         -- Time and date
                     , Run Date "<fn=2>\xf017</fn>  %b %d %Y - [%I:%M %p] " "date" 50
-                        -- Script that dynamically adjusts xmobar padding depending on number of trayer icons.
+                        -- Prints out the left side items such as workspaces, layout, etc.
                     , Run UnsafeStdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %UnsafeStdinReader% }{ <fc=#d3869b>%penguin%  %kernel%</fc>    <fc=#b8bb26><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#d79921>%disku%</fc>    <fc=#689d6a>%bell%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#fb4934>%baticon%  %battery%</fc>    <fc=#83a598>%date%</fc>"
+       , template = " %UnsafeStdinReader% }{ <fc=#f7768e>%penguin%  %kernel%</fc>    <fc=#e0af68><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#7aa2f7>%disku%</fc>    <fc=#7dcfff>%bell%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>   <fc=#bb9af7>%baticon%  %battery%</fc>    <fc=#73daca>%date%</fc> "
        }

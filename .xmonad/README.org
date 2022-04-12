@@ -87,7 +87,7 @@ These are Haskell modules that we must import so that we can use their functions
   import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
   import XMonad.Util.SpawnOnce
 
-  import Colors.GruvboxDark
+  import Colors.TokyoNight
 
 #+end_src
 
@@ -366,7 +366,7 @@ This is the "main" of XMonad. This where everything in our configs comes togethe
                   -- Hidden workspaces (no windows)
                 , ppHiddenNoWindows = xmobarColor color05 ""  . clickable
                   -- Title of active window
-                , ppTitle = xmobarColor color16 "" . shorten 60
+                , ppTitle = xmobarColor color08 "" . shorten 60
                   -- Separator character
                 , ppSep =  "<fc=" ++ color09 ++ "> <fn=1>|</fn> </fc>"
                   -- Urgent workspace
