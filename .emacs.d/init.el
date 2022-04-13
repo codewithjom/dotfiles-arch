@@ -490,10 +490,10 @@ folder, otherwise delete a word"
 	:defer t
 	:hook (org-mode . jd/org-mode-setup)
 	:config
-	(setq org-ellipsis " ▼ "
+	(setq org-ellipsis " ▼"
 				org-hide-emphasis-markers t
 				org-src-fontify-natively t
-				org-fontify-quote-and-verse-blocks t
+				org-fontify-quote-and-verse-blocks nil
 				org-src-tab-acts-natively t
 				org-edit-src-content-indentation 2
 				org-hide-block-startup nil
@@ -531,21 +531,21 @@ folder, otherwise delete a word"
 		:custom
 		(org-directory "~/Repo/notes")
 		(org-superstar-remove-leading-stars t)
-		(org-ellipsis "...")
+		;; (org-ellipsis "...")
 		(org-superstar-item-bullet-alist '((?+ . ?) (?- . ?✦)))
 		(org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 	;; Increase the size of various headings
 	(set-face-attribute 'org-document-title nil :font "Roboto Mono Nerd Font" :weight 'bold :height 1.3)
-	(dolist (face '((org-level-1 . 1.2)
-									(org-level-2 . 1.1)
-									(org-level-3 . 1.05)
+	(dolist (face '((org-level-1 . 1.3)
+									(org-level-2 . 1.2)
+									(org-level-3 . 1.1)
 									(org-level-4 . 1.0)
-									(org-level-5 . 1.1)
-									(org-level-6 . 1.1)
-									(org-level-7 . 1.1)
-									(org-level-8 . 1.1)))
-	(set-face-attribute (car face) nil :font "Roboto Mono Nerd Font" :weight 'medium :height (cdr face)))
+									(org-level-5 . 1.05)
+									(org-level-6 . 1.05)
+									(org-level-7 . 1.05)
+									(org-level-8 . 1.05)))
+	(set-face-attribute (car face) nil :font "Fira Code" :weight 'medium :height (cdr face)))
 
 	(require 'org-indent)
 	(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
