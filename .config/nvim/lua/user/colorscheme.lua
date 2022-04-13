@@ -1,10 +1,11 @@
 vim.cmd [[
 try
-  " set background=dark
+  syntax enable
+  set background=dark
+  colorscheme tokyonight
   " let g:neosolorized_termtrans=1
   " runtime ../../colors/NeoSolarized.vim
   " colorscheme NeoSolarized
-  colorscheme tokyonight
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
