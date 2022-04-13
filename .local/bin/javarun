@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [[ $(ls | grep "bin") != 'bin' ]]; then
+		mkdir bin
+fi
+
+echo -n "What file should I run? "
+read compile
+javac $compile
+
+echo -n "Please input the file without '.java' "
+read file
+java $file
+
+mv $file.class bin/
