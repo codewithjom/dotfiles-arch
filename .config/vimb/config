@@ -1,7 +1,7 @@
 set home-page=https://duckduckgo.com
 
-set default-font=JetBrains Mono Nerd Font
-set monospace-font=JetBrains Mono Nerd Font
+set default-font=Roboto Mono Nerd Font
+set monospace-font=Roboto Mono Nerd Font
 
 set smooth-scrolling=true
 
