@@ -119,7 +119,7 @@ ${color1}[S]+[SHIFT]+[1-3]${alignr}${color2}send window${color}
 ${color1}[S]+h/l${alignr}${color2}shrink/expand${color}
 ${color1}${hr}${color}
 ${color1}[S]+[SHIFT]+[RET]${alignr}${color2}emacs${color}
-${color1}[S]+b${alignr}${color2}qutebrowser${color}
+${color1}[S]+b${alignr}${color2}brave${color}
 ${color1}[S]+d${alignr}${color2}open rofi${color}
 ${color1}[S]+[SHIFT]+f${alignr}${color2}file manager${color}
 ${color1}[ctrl]+[RET]${alignr}${color2}screenshot${color}
