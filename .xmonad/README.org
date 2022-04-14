@@ -87,7 +87,7 @@ These are Haskell modules that we must import so that we can use their functions
   import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
   import XMonad.Util.SpawnOnce
 
-  import Colors.TokyoNight
+  import Colors.GruvboxDark
 
 #+end_src
 
@@ -143,9 +143,9 @@ These are commands we want XMonad to execute on startup this are only few, most 
 
   myStartupHook :: X ()
   myStartupHook = do
-    spawn "killall conky"   -- kill current conky on each restart
+    -- spawn "killall conky"   -- kill current conky on each restart
 
-    spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+    -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
     spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
 
     spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
