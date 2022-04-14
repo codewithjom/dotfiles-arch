@@ -15,11 +15,11 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "#1a1b26"
+    frame_color = "#282828"
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = JetBrains Mono Nerd Font Bold 10
+    font = Roboto Mono Nerd Font Bold 10
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -52,16 +52,16 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#1a1b26"
-    foreground = "#a9b1d6"
+    background = "#282828"
+    foreground = "#458588"
     timeout = 5
 
 [urgency_normal]
-    background = "#1a1b26"
-    foreground = "#a9b1d6"
+    background = "#282828"
+    foreground = "#458588"
     timeout = 5
 
 [urgency_critical]
-    background = "#1a1b26"
+    background = "#282828"
     foreground = "#cc241d"
     timeout = 5

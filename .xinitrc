@@ -15,5 +15,5 @@ volumeicon &
 xsetroot -cursor_name left_ptr &
 blueberry-tray &
 
-# exec qtile start
-exec xmonad
+exec qtile start
+# exec xmonad
