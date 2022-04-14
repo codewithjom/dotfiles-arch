@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "dracula/vim"
-  use "altercation/solarized"
+  -- use "altercation/solarized"
   use "navarasu/onedark.nvim"
 	use "morhetz/gruvbox"
   use "folke/tokyonight.nvim"
@@ -112,6 +112,7 @@ return packer.startup(function(use)
   use "jiangmiao/auto-pairs"
   use "sheerun/vim-polyglot"
   use "suan/vim-instant-markdown"
+  use "tribela/vim-transparent"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

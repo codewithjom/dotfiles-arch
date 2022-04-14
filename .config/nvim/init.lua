@@ -20,7 +20,3 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.coc"
-
--- vim.cmd "let g:neosolorized_termtrans=1"
--- vim.cmd "runtime ./colors/NeoSolarized.vim"
--- vim.cmd "colorscheme NeoSolarized"
