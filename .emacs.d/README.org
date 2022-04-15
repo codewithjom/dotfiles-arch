@@ -1041,11 +1041,11 @@ Configuration for various programming languages ad dev tools that I use.
   (use-package lsp-mode
     :ensure t
     :commands lsp
-    :hook (lsp)
+    :hook (lsp-mode . lsp-enable-which-key-integration)
     :init
     (setq lsp-keymap-prefix "C-c l")
     :config
-    (lsp-enable-which-key-integration t))
+    (setq lsp-completion-enable-additional-text-edit nil))
 
   (use-package lsp-ui
     :ensure t
@@ -1062,10 +1062,12 @@ Configuration for various programming languages ad dev tools that I use.
 #+begin_src emacs-lisp
 
   (use-package dap-mode
+    :after lsp-mode
     :ensure t
     :custom
     (lsp-enable-dap-auto-configure nil)
     :config
+    (dap-auto-configure-mode)
     (dap-ui-mode 1)
     (dap-tooltip-mode 1)
     (require 'dap-node)

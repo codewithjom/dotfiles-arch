@@ -630,11 +630,11 @@ folder, otherwise delete a word"
 (use-package lsp-mode
   :ensure t
   :commands lsp
-  :hook (lsp)
+  :hook (lsp-mode . lsp-enable-which-key-integration)
   :init
   (setq lsp-keymap-prefix "C-c l")
   :config
-  (lsp-enable-which-key-integration t))
+  (setq lsp-completion-enable-additional-text-edit nil))
 
 (use-package lsp-ui
   :ensure t
@@ -645,10 +645,12 @@ folder, otherwise delete a word"
   (setq lsp-ui-doc-position 'bottom))
 
 (use-package dap-mode
+  :after lsp-mode
   :ensure t
   :custom
   (lsp-enable-dap-auto-configure nil)
   :config
+  (dap-auto-configure-mode)
   (dap-ui-mode 1)
   (dap-tooltip-mode 1)
   (require 'dap-node)
@@ -855,3 +857,16 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+	 '(meghanada yaml-mode ws-butler which-key web-mode vterm-toggle visual-fill-column vertico use-package typescript-mode super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier ox-reveal org-superstar org-present org-appear orderless openwith no-littering neotree minions marginalia magit lua-mode lsp-ui lsp-java lorem-ipsum lispyville java-snippets java-imports ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful haskell-mode general flycheck evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-box command-log-mode cider ccls bookmark-view apheleia all-the-icons-dired ac-html)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(vertico-current ((t (:background "#3a3f5a")))))
