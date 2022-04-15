@@ -251,7 +251,7 @@ main = do
     xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.xmonad/lib/Scripts/xmobarrc")
     xmonad $ ewmh def
         { manageHook         = myManageHook <+> manageDocks
-        , handleEventHook    = docksEventHook -- <+> fullscreenEventHook
+        , handleEventHook    = docksEventHook <+> fullscreenEventHook
         , modMask            = myModMask
         , terminal           = myTerminal
         , startupHook        = myStartupHook
