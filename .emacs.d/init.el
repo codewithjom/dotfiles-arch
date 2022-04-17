@@ -706,10 +706,10 @@ folder, otherwise delete a word"
   (apheleia-global-mode +1))
 
 (use-package prettier-js
-  ;; :hook ((js2-mode . prettier-js-mode)
-  ;;        (typescript-mode . prettier-js-mode))
-  :config
-  (setq prettier-js-show-errors nil))
+:hook ((js2-mode . prettier-js-mode)
+       (typescript-mode . prettier-js-mode))
+:config
+(setq prettier-js-show-errors nil))
 
 (use-package ccls
   :hook ((c-mode c++-mode objc-mode cuda-mode) .
