@@ -110,6 +110,7 @@
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
+(setq-default truncate-lines t)
 
 ;; Disable line numbers for some modes
 (dolist (mode '(org-mode-hook
@@ -839,16 +840,3 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-	 '(haskell-mode lsp-haskell ws-butler which-key vterm-toggle visual-fill-column vertico use-package super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier ox-reveal org-superstar org-present org-appear orderless openwith no-littering neotree minions marginalia magit lsp-ui lsp-java lorem-ipsum lispyville ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful general frontside-javascript evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-box command-log-mode cider ccls bookmark-view apheleia all-the-icons-dired ac-html)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(vertico-current ((t (:background "#3a3f5a")))))
