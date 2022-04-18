@@ -19,6 +19,7 @@ home = os.path.expanduser('~')
 
 browser1 = "brave"
 browser2 = "vimb"
+browser3 = "qutebrowser"
 emacs = "emacsclient -c -a 'emacs'"
 terminal = "alacritty"
 file_manager = "pcmanfm"
@@ -29,6 +30,7 @@ keys = [
     # APPLICATIONS
     Key([mod], "b", lazy.spawn(browser1)),
     Key([mod], "v", lazy.spawn(browser2)),
+    Key([mod,s], "b", lazy.spawn(browser3)),
     Key([mod,s], ret, lazy.spawn(emacs)),
     Key([mod], ret, lazy.spawn(terminal)),
     Key([mod,s], "f", lazy.spawn(file_manager)),
@@ -70,7 +72,7 @@ groups = [Group("main", layout='monadtall'),
                 matches=[Match(wm_class=["Brave-browser", "Min", "qutebrowser", "Vimb"])]),
 
           Group("dev", layout='monadtall',
-                matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
+                matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio", "Emacs"])]),
 
           Group("doc", layout='monadtall',
                 matches=[Match(wm_class=["DesktopEditors"])]),

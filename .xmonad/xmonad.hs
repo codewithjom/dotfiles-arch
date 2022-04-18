@@ -106,12 +106,12 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- spawn "killall conky"   -- kill current conky on each restart
+  spawn "killall conky"   -- kill current conky on each restart
 
-  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
 
-  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
+  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.png &"
 
   setWMName "LG3D"
 
@@ -188,6 +188,7 @@ myManageHook = composeAll
      , className =? "Tor Browser"        --> doShift ( myWorkspaces !! 1 )
      , className =? "jetbrains-idea-ce"  --> doShift ( myWorkspaces !! 2 )
      , className =? "jetbrains-studio"   --> doShift ( myWorkspaces !! 2 )
+     , className =? "Emacs"              --> doShift ( myWorkspaces !! 2 )
      , className =? "Subl"               --> doShift ( myWorkspaces !! 2 )
      , className =? "DesktopEditors"     --> doShift ( myWorkspaces !! 3 )
      , className =? "VirtualBox Manager" --> doShift ( myWorkspaces !! 4 )
@@ -209,6 +210,8 @@ myKeys =
     -- KB_GROUP Useful programs to have a keybinding for launch
         , ("M-<Return>", spawn (myTerminal))
         , ("M-b", spawn (myBrowser))
+        , ("M-v", spawn ("vimb"))
+        , ("M-S-b", spawn ("qutebrowser"))
         , ("M-S-<Return>", spawn (myEmacs))
         , ("M-S-f", spawn (myFileManager))
         , ("C-<Return>", spawn (myScreenshot))
