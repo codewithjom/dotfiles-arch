@@ -124,24 +124,24 @@ extension_defaults = widget_defaults.copy()
 
 def init_widgets_list():
     widgets_list = [
-        widget.Sep(
-            linewidth = 0,
-            padding = 3,
-            foreground = colors[0],
-            background = colors[0]
-        ),
-        widget.Image(
-            filename = "~/.config/qtile/scripts/archlinux.png",
-            scale = True,
-            margin = 3,
-            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)}
-        ),
-        widget.Sep(
-            linewidth = 0,
-            padding = 3,
-            foreground = colors[0],
-            background = colors[0]
-        ),
+        # widget.Sep(
+        #     linewidth = 0,
+        #     padding = 3,
+        #     foreground = colors[0],
+        #     background = colors[0]
+        # ),
+        # widget.Image(
+        #     filename = "~/.config/qtile/scripts/archlinux.png",
+        #     scale = True,
+        #     margin = 3,
+        #     mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)}
+        # ),
+        # widget.Sep(
+        #     linewidth = 0,
+        #     padding = 3,
+        #     foreground = colors[0],
+        #     background = colors[0]
+        # ),
         widget.GroupBox(
             font = "Ubuntu Bold",
             fontsize = 9,
