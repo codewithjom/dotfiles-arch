@@ -26,6 +26,7 @@ alias ga 'git add '
 alias gl 'git log --oneline'
 alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
 alias mpv 'devour mpv'
+alias mp3 'mpv'
 alias sxiv 'devour sxiv'
 alias zathura 'devour zathura'
 
