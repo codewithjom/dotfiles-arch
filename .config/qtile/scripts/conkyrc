@@ -29,7 +29,7 @@ conky.config = {
 	alignment = 'top_right',				 -- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
 									                 -- middle-left,middle-middle,middle-right,none
 	--gap_x = -1910,
-	gap_x = 25,							         -- pixels between right or left border
+	gap_x = 35,							         -- pixels between right or left border
 	gap_y = 90,							         -- pixels between bottom or left border
 	minimum_height = 200,		         -- minimum height of window
 	minimum_width = 260,		         -- minimum height of window
@@ -78,18 +78,18 @@ conky.config = {
 	own_window_argb_value = 255,			 	-- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,			-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
-	own_window_colour = '#282828',			-- set colour if own_window_transparent no
+	own_window_colour = '#2E3440',			-- set colour if own_window_transparent no
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',
 	own_window_transparent = false,			-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'qtile_conky',		-- set the name manually  - default conky "hostname"
 	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
 
 
-	--Colors (Gruvbox)
-    color0 = '#b16286',
-    color1 = '#a89984',
-    color2 = '#689d6a',
-    color3 = '#98971a',
+	--Colors (Nord)
+    color0 = '#B48EAD',
+    color1 = '#E5E9F0',
+    color2 = '#88C0D0',
+    color3 = '#8FBCBB',
 
 };
 

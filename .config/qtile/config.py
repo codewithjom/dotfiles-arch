@@ -95,8 +95,8 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
                 "margin": 15,
-                "border_focus": "8ec07c",
-                "border_normal": "282828"
+                "border_focus": "88C0D0",
+                "border_normal": "2E3440"
                 }
 
 layouts = [
@@ -106,14 +106,14 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-colors = [["#282828", "#282828"], # 0 BG
-          ["#cc241d", "#fb4934"], # 1 RED
-          ["#98971a", "#b8bb26"], # 2 GREEN
-          ["#d79921", "#fabd2f"], # 3 YELLOW
-          ["#458588", "#83a598"], # 4 BLUE
-          ["#b16286", "#d3869b"], # 5 MAGENTA
-          ["#689d6a", "#8ec07c"], # 6 CYAN
-          ["#a89984", "#ebdbb2"], # 7 FG
+colors = [["#2E3440", "#2E3440"], # 0 BG
+          ["#BF616A", "#BF616A"], # 1 RED
+          ["#A3BE8C", "#A3BE8C"], # 2 GREEN
+          ["#EBCB8B", "#EBCB8B"], # 3 YELLOW
+          ["#81A1C1", "#81A1C1"], # 4 BLUE
+          ["#B48EAD", "#B48EAD"], # 5 MAGENTA
+          ["#88C0D0", "#8FBCBB"], # 6 CYAN
+          ["#E5E9F0", "#ECEFF4"], # 7 FG
           ["#7c6f64", "#f9f5d7"]] # 8 SHADE-1
 
 widget_defaults = dict(

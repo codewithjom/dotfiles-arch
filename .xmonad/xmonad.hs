@@ -66,7 +66,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
-import Colors.GruvboxDark
+import Colors.Nord
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -145,10 +145,10 @@ floats   = renamed [Replace "floats"]
 -- Theme for showWName which prints current workspace when you change workspaces.
 myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
-    { swn_font              = "xft:Roboto Mono Nerd Font:bold:size=60"
+    { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 1.0
-    , swn_bgcolor           = "#282828"
-    , swn_color             = "#ebdbb2"
+    , swn_bgcolor           = "#2E3440"
+    , swn_color             = "#D8DEE9"
     }
 
 -- The layout hook

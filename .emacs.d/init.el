@@ -127,27 +127,27 @@
 (setq ad-redefinition-action 'accept)
 
 (use-package doom-themes
-  :init (load-theme 'doom-gruvbox t))
+  :init (load-theme 'doom-nord t))
 
-(defvar jd/default-font-size 110)
-(defvar jd/default-variable-font-size 110)
+(defvar jd/default-font-size 120)
+(defvar jd/default-variable-font-size 120)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "Roboto Mono Nerd Font"
+                      :font "FantasqueSansMono Nerd Font"
                       :height jd/default-font-size
                       :weight 'medium)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "Roboto Mono Nerd Font"
+                      :font "FantasqueSansMono Nerd Font"
                       :height jd/default-font-size
                       :weight 'medium)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Roboto Mono Nerd Font"
+                      :font "FantasqueSansMono Nerd Font"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 
@@ -538,7 +538,7 @@ folder, otherwise delete a word"
 		(org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 	;; Increase the size of various headings
-	(set-face-attribute 'org-document-title nil :font "Roboto Mono Nerd Font" :weight 'bold :height 1.3)
+	(set-face-attribute 'org-document-title nil :font "FantasqueSansMono Nerd Font" :weight 'bold :height 1.3)
 	(dolist (face '((org-level-1 . 1.3)
 									(org-level-2 . 1.2)
 									(org-level-3 . 1.1)
@@ -547,7 +547,7 @@ folder, otherwise delete a word"
 									(org-level-6 . 1.05)
 									(org-level-7 . 1.05)
 									(org-level-8 . 1.05)))
-	(set-face-attribute (car face) nil :font "Fira Code" :weight 'medium :height (cdr face)))
+	(set-face-attribute (car face) nil :font "FantasqueSansMono Nerd Font" :weight 'medium :height (cdr face)))
 
 	(require 'org-indent)
 	(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
