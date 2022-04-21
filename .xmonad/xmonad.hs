@@ -106,9 +106,9 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  spawn "killall conky"   -- kill current conky on each restart
+  -- spawn "killall conky"   -- kill current conky on each restart
 
-  spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
 
   spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.png &"
@@ -147,7 +147,7 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 1.0
-    , swn_bgcolor           = "#2E3440"
+    , swn_bgcolor           = "#3B4252"
     , swn_color             = "#D8DEE9"
     }
 
