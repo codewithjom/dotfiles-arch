@@ -114,7 +114,7 @@ colors = [["#2E3440", "#2E3440"], # 0 BG
           ["#B48EAD", "#B48EAD"], # 5 MAGENTA
           ["#88C0D0", "#8FBCBB"], # 6 CYAN
           ["#E5E9F0", "#ECEFF4"], # 7 FG
-          ["#7c6f64", "#f9f5d7"]] # 8 SHADE-1
+          ["#DDDDDD", "#ADDbDE"]] # 8 SHADE-1
 
 widget_defaults = dict(
     font="Ubuntu Bold",
@@ -152,12 +152,12 @@ def init_widgets_list():
             padding_y = 3,
             padding_x = 3,
             borderwidth = 3,
-            active = colors[6],
-            inactive = colors[8],
+            active = colors[8],
+            inactive = colors[6],
             rounded = False,
-            highlight_color = ['#282828', '#928374'],
-            highlight_method = "line",
-            this_current_screen_border = ['#282828','#928374'],
+            highlight_color = colors[8],
+            highlight_method = "text",
+            this_current_screen_border = colors[2],
             this_screen_border = colors [4],
             other_current_screen_border = colors[6],
             other_screen_border = colors[4],
