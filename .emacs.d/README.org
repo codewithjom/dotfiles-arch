@@ -914,7 +914,7 @@ These templates enable you to type things like =<el= and then hit =Tab= to expan
 
   (defun jd/search-org-files ()
     (interactive)
-    (counsel-rg "" "~/Repo/notes/" nil "Search Notes: "))
+    (counsel-rg "" "~/Repo/org-book/" nil "Search Notes: "))
 
 #+end_src
 

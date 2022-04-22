@@ -575,7 +575,7 @@ folder, otherwise delete a word"
 
 (defun jd/search-org-files ()
   (interactive)
-  (counsel-rg "" "~/Repo/notes/" nil "Search Notes: "))
+  (counsel-rg "" "~/Repo/org-book/" nil "Search Notes: "))
 
 (defun jd/org-present-prepare-slide ()
   (org-overview)
