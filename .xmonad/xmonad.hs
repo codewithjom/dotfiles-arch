@@ -66,7 +66,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
-import Colors.Nord
+import Colors.GruvboxDark
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -111,7 +111,7 @@ myStartupHook = do
   -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
 
-  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.png &"
+  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
 
   setWMName "LG3D"
 
@@ -147,8 +147,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 1.0
-    , swn_bgcolor           = "#3B4252"
-    , swn_color             = "#D8DEE9"
+    , swn_bgcolor           = "#282828"
+    , swn_color             = "#ebdbb2"
     }
 
 -- The layout hook

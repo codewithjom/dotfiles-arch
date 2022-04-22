@@ -432,7 +432,7 @@ font:
 # *tomorrow-night
 # *tokyo-night
 
-colors: *nord
+colors: *gruvbox-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
