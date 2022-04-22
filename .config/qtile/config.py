@@ -356,11 +356,12 @@ def init_widgets_list():
             foreground = colors[0],
             background = colors[0]
         ),
-        widget.Systray(
-          background = colors[0],
-          icon_size = 20,
-          padding = 1
-        ),]
+        # widget.Systray(
+        #   background = colors[0],
+        #   icon_size = 20,
+        #   padding = 1
+        # ),
+        ]
     return widgets_list
 
 def init_widgets_screen1():
