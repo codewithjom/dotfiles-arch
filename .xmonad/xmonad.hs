@@ -111,7 +111,7 @@ myStartupHook = do
   spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
 
-  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
+  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.png &"
 
   setWMName "LG3D"
 
