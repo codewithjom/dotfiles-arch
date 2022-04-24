@@ -106,9 +106,9 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- spawn "killall conky"   -- kill current conky on each restart
+  spawn "killall conky"   -- kill current conky on each restart
 
-  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
 
   spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
@@ -263,7 +263,7 @@ main = do
         , borderWidth        = myBorderWidth
         , normalBorderColor  = myNormColor
         , focusedBorderColor = myFocusColor
-        , logHook = dynamicLogWithPP $ namedScratchpadFilterOutWorkspacePP $ xmobarPP
+        , logHook = dynamicLogWithPP $ xmobarPP
               -- XMOBAR SETTINGS
               { ppOutput = \x -> hPutStrLn xmproc0 x   -- xmobar on monitor 1
                 -- Current workspace
@@ -275,7 +275,7 @@ main = do
                 -- Hidden workspaces (no windows)
               , ppHiddenNoWindows = xmobarColor color05 ""  . clickable
                 -- Title of active window
-              , ppTitle = xmobarColor color08 "" . shorten 60
+              , ppTitle = xmobarColor color08 "" . shorten 70
                 -- Separator character
               , ppSep =  "<fc=" ++ color09 ++ "> <fn=1>|</fn> </fc>"
                 -- Urgent workspace
