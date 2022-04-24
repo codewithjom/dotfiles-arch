@@ -94,8 +94,8 @@ conky.config = {
 };
 
 conky.text = [[
-${alignc}${color0}${font2}${time %I:%M %p}${font}
-${voffset 6}${alignc}${color0}${font3}${time %b %d, %Y}${font}${color}
+# ${alignc}${color0}${font2}${time %I:%M %p}${font}
+# ${voffset 6}${alignc}${color0}${font3}${time %b %d, %Y}${font}${color}
 ${voffset 18}${goto 12}${color3}CPU${goto 50}$cpu%
 ${color2}${goto 12}${cpubar 8,254}
 ${voffset 5}${goto 12}$font${color1}${top name 1}$alignr$color${top cpu 1}%
