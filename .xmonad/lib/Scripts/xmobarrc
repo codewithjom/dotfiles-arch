@@ -1,13 +1,12 @@
 -- Xmobar (http://projects.haskell.org/xmobar/)
--- Color scheme: Gruvbox Dark
-
+-- Color scheme: Dracula
 Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:hinting=true"
        , additionalFonts = [ "xft:Mononoki:pixelsize=11:antialias=true:hinting=true"
                            , "xft:Font Awesome 6 Free Solid:pixelsize=12"
                            , "xft:Font Awesome 6 Brands:pixelsize=12"
                            ]
-       , bgColor      = "#282828"
-       , fgColor      = "#ebdbb2"
+       , bgColor      = "#282a36"
+       , fgColor      = "#f8f8f2"
        -- Position TopSize and BottomSize take 3 arguments:
        --   an alignment parameter (L/R/C) for Left, Right or Center.
        --   an integer for the percentage width, so 100 would be 100%.
@@ -18,14 +17,18 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
        , allDesktops  = True
        , persistent   = True
        , commands = [
-       -- Echos a "penguin" icon in front of the kernel output.
-       Run Com "echo" ["<fn=3>\xf17c</fn>"] "penguin" 3600
+			     -- Echos a "penguin" icon in front of the kernel output.
+			 Run Com "echo" ["<fn=3>\xf17c</fn>"] "penguin" 3600
            -- Get kernel version (script found in .local/bin)
        , Run Com ".local/bin/kernel" [] "kernel" 36000
            -- Cpu usage in percent
        , Run Cpu ["-t", "<fn=2>\xf7e4</fn>  cpu: [ <total>% ]","-H","50","--high","red"] 20
            -- Disk space free
        , Run DiskU [("/", "<fn=2>\xf0c7</fn>  hdd: <free> free")] [] 60
+			     -- Echos an "up arrow" icon in front of the uptime output.
+       , Run Com "echo" ["<fn=2>\xf0aa</fn>"] "uparrow" 3600
+           -- Uptime
+       , Run Uptime ["-t", "uptime: <days>d <hours>h"] 360
            -- Echos a "box" icon in front of the pacman updates.
        , Run Com "echo" ["<fn=2>\xf49e</fn>"] "box" 3600
            -- Check for pacman updates (script found in .local/bin)
@@ -37,8 +40,10 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
            -- Time and date
        , Run Date "<fn=2>\xf017</fn>  %a, %b %d %Y - [ %I:%M %p ] " "date" 50
        , Run UnsafeStdinReader
-       ]
+
+			 ]
+
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %UnsafeStdinReader% }{ <fc=#d3869b>%penguin%  %kernel%</fc>    <fc=#b8bb26><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#d79921>%disku%</fc>    <fc=#689d6a>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#fb4934>%baticon%  %battery%</fc>    <fc=#83a598>%date%</fc>"
+       , template = "<fc=#666666>|</fc> %UnsafeStdinReader% }{ <fc=#bd93f9>%penguin%  %kernel%</fc>    <fc=#f1fa8c><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#5af78e>%disku%</fc>    <fc=#ff79c6>%uparrow%  %uptime%</fc>    <fc=#8be9fd>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#ff6e67>%baticon%  %battery%</fc>    <fc=#caa9fa>%date%</fc> <fc=#666666>|</fc>"
        }

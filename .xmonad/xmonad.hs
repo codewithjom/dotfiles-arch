@@ -66,7 +66,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
-import Colors.GruvboxDark
+import Colors.Dracula
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -106,10 +106,15 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  spawn "killall conky"   -- kill current conky on each restart
+  -- spawn "killall conky"   -- kill current conky on each restart
 
-  spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
+  spawn ("lxsession")
+  spawn ("picom --experimental-backends -b")
+  spawn ("nm-applet")
+  spawn ("volumeicon")
+  spawn ("xsetroot -cursor_name left_ptr")
 
   spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.png &"
 
@@ -147,8 +152,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 1.0
-    , swn_bgcolor           = "#282828"
-    , swn_color             = "#ebdbb2"
+    , swn_bgcolor           = "#282a36"
+    , swn_color             = "#f8f8f2"
     }
 
 -- The layout hook
@@ -188,7 +193,6 @@ myManageHook = composeAll
      , className =? "Tor Browser"        --> doShift ( myWorkspaces !! 1 )
      , className =? "jetbrains-idea-ce"  --> doShift ( myWorkspaces !! 2 )
      , className =? "jetbrains-studio"   --> doShift ( myWorkspaces !! 2 )
-     , className =? "Emacs"              --> doShift ( myWorkspaces !! 2 )
      , className =? "Subl"               --> doShift ( myWorkspaces !! 2 )
      , className =? "DesktopEditors"     --> doShift ( myWorkspaces !! 3 )
      , className =? "VirtualBox Manager" --> doShift ( myWorkspaces !! 4 )

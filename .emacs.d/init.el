@@ -127,7 +127,7 @@
 (setq ad-redefinition-action 'accept)
 
 (use-package doom-themes
-  :init (load-theme 'doom-gruvbox t))
+  :init (load-theme 'doom-dracula t))
 
 (defvar jd/default-font-size 120)
 (defvar jd/default-variable-font-size 120)
