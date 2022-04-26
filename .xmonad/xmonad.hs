@@ -116,7 +116,7 @@ myStartupHook = do
   spawn ("volumeicon")
   spawn ("xsetroot -cursor_name left_ptr")
 
-  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.png &"
+  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
 
   setWMName "LG3D"
 
