@@ -197,6 +197,7 @@ myManageHook = composeAll
      , className =? "DesktopEditors"     --> doShift ( myWorkspaces !! 3 )
      , className =? "VirtualBox Manager" --> doShift ( myWorkspaces !! 4 )
      , className =? "discord"            --> doShift ( myWorkspaces !! 5 )
+     , className =? "Thunderbird"        --> doShift ( myWorkspaces !! 5 )
      , className =? "mpv"                --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"               --> doShift ( myWorkspaces !! 8 )
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
