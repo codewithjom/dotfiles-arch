@@ -99,7 +99,7 @@ myNormColor :: String       -- Border color of normal windows
 myNormColor   = colorBack   -- This variable is imported from Colors.THEME
 
 myFocusColor :: String      -- Border color of focused windows
-myFocusColor  = color15     -- This variable is imported from Colors.THEME
+myFocusColor  = color05     -- This variable is imported from Colors.THEME
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
@@ -116,7 +116,7 @@ myStartupHook = do
   spawn ("volumeicon")
   spawn ("xsetroot -cursor_name left_ptr")
 
-  spawnOnce "nitrogen --set-scaled ~/.xmonad/lib/Scripts/wall.jpg &"
+  spawnOnce "nitrogen --set-scaled --restore &"
 
   setWMName "LG3D"
 
