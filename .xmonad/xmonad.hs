@@ -151,7 +151,7 @@ floats   = renamed [Replace "floats"]
 myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
-    , swn_fade              = 1.0
+    , swn_fade              = 0.3
     , swn_bgcolor           = "#282a36"
     , swn_color             = "#f8f8f2"
     }
