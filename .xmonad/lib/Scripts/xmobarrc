@@ -25,10 +25,6 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
        , Run Cpu ["-t", "<fn=2>\xf7e4</fn>  cpu: [ <total>% ]","-H","50","--high","red"] 20
            -- Disk space free
        , Run DiskU [("/", "<fn=2>\xf0c7</fn>  hdd: <free> free")] [] 60
-			     -- Echos an "up arrow" icon in front of the uptime output.
-       , Run Com "echo" ["<fn=2>\xf0aa</fn>"] "uparrow" 3600
-           -- Uptime
-       , Run Uptime ["-t", "uptime: <days>d <hours>h"] 360
            -- Echos a "box" icon in front of the pacman updates.
        , Run Com "echo" ["<fn=2>\xf49e</fn>"] "box" 3600
            -- Check for pacman updates (script found in .local/bin)
@@ -45,5 +41,5 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
 
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %UnsafeStdinReader% }{ <fc=#bd93f9>%penguin%  %kernel%</fc>    <fc=#f1fa8c><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#5af78e>%disku%</fc>    <fc=#ff79c6>%uparrow%  %uptime%</fc>    <fc=#8be9fd>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#ff6e67>%baticon%  %battery%</fc>    <fc=#caa9fa>%date%</fc> "
+       , template = " %UnsafeStdinReader% }{ <fc=#bd93f9>%penguin%  %kernel%</fc>    <fc=#f1fa8c><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#5af78e>%disku%</fc>    <fc=#8be9fd>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#ff6e67>%baticon%  %battery%</fc>    <fc=#caa9fa>%date%</fc> "
        }
