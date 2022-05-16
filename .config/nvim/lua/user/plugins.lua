@@ -67,7 +67,6 @@ return packer.startup(function(use)
   use "navarasu/onedark.nvim"
 	use "morhetz/gruvbox"
   use "folke/tokyonight.nvim"
-  use "arcticicestudio/nord-vim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -115,6 +114,7 @@ return packer.startup(function(use)
   use "suan/vim-instant-markdown"
   use "tribela/vim-transparent"
   use "prettier/vim-prettier"
+  use "hail2u/vim-css3-syntax"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

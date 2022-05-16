@@ -7,5 +7,6 @@ let g:coc_global_extension = [
 \ 'coc-eslint',
 \ 'coc-prettier',
 \ 'coc-json',
+\ 'coc-css',
 \ ]
 ]]
