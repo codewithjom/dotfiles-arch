@@ -17,7 +17,7 @@ ret = "Return"
 s = "shift"
 home = os.path.expanduser('~')
 
-browser1 = "brave"
+browser1 = "firefox"
 browser2 = "vimb"
 emacs = "emacsclient -c -a 'emacs'"
 terminal = "alacritty"
@@ -94,7 +94,7 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
                 "margin": 8,
-                "border_focus": "50fa7b",
+                "border_focus": "bd93f9",
                 "border_normal": "282a36"
                 }
 
