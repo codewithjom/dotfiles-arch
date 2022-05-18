@@ -2,7 +2,7 @@ vim.cmd [[
 try
   syntax enable
   set background=dark
-  colorscheme dracula
+  colorscheme onedark
   " let g:neosolorized_termtrans=1
   " runtime ../../colors/NeoSolarized.vim
   " colorscheme NeoSolarized

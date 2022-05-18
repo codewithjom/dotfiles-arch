@@ -94,8 +94,8 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
                 "margin": 8,
-                "border_focus": "bd93f9",
-                "border_normal": "282a36"
+                "border_focus": "5699af",
+                "border_normal": "282c34"
                 }
 
 layouts = [
@@ -105,14 +105,14 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-colors = [["#282a36", "#282a36"], # 0 BG
-          ["#ff5555", "#ff6e67"], # 1 RED
-          ["#50fa7b", "#5af78e"], # 2 GREEN
-          ["#f1fa8c", "#f4f99d"], # 3 YELLOW
-          ["#bd93f9", "#caa9fa"], # 4 BLUE
-          ["#ff79c6", "#ff92d0"], # 5 MAGENTA
-          ["#8be9fd", "#9aedfe"], # 6 CYAN
-          ["#bfbfbf", "#f8f8f2"], # 7 FG
+colors = [["#282c34", "#282c34"], # 0 BG
+          ["#ff6c6b", "#da8548"], # 1 RED
+          ["#98be65", "#4db5bd"], # 2 GREEN
+          ["#da8548", "#ecbe7b"], # 3 YELLOW
+          ["#51afef", "#3071db"], # 4 BLUE
+          ["#c678dd", "#a9a1e1"], # 5 MAGENTA
+          ["#5699af", "#46d9ff"], # 6 CYAN
+          ["#bbc2cf", "#bbc2cf"], # 7 FG
           ["#839496", "#839496"], # 8 SHADE-1
           ["#c5c8c6", "#c5c8c6"]] # 9 SHADE-2
 
@@ -425,7 +425,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='pinentry-gtk-2'),
 ])
 
-auto_fullscreen = True
+auto_fullscreen = False
 focus_on_window_activation = "focus"
 reconfigure_screens = True
 auto_minimize = True

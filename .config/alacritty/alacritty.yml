@@ -432,7 +432,7 @@ font:
 # *tomorrow-night
 # *tokyo-night
 
-colors: *dracula
+colors: *one-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
