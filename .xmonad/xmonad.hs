@@ -196,6 +196,7 @@ myManageHook = composeAll
      , className =? "Subl"               --> doShift ( myWorkspaces !! 2 )
      , className =? "DesktopEditors"     --> doShift ( myWorkspaces !! 3 )
      , className =? "VirtualBox Manager" --> doShift ( myWorkspaces !! 4 )
+     , className =? "Virt-manager"       --> doShift ( myWorkspaces !! 4 )
      , className =? "discord"            --> doShift ( myWorkspaces !! 5 )
      , className =? "Thunderbird"        --> doShift ( myWorkspaces !! 5 )
      , className =? "Spotify"            --> doShift ( myWorkspaces !! 6 )
