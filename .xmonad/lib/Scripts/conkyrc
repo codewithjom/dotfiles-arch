@@ -78,24 +78,24 @@ conky.config = {
 	own_window_argb_value = 255,			 	-- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,			-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
-	own_window_colour = '#282828',			-- set colour if own_window_transparent no
+	own_window_colour = '#282c34',			-- set colour if own_window_transparent no
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',
 	own_window_transparent = false,			-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'xmonad_conky',		-- set the name manually  - default conky "hostname"
 	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
 
 
-	--Colors (Gruvbox)
-    color0 = '#b16286',
-    color1 = '#ebdbb2',
-    color2 = '#689d6a',
-    color3 = '#458588',
+	--Colors (One Dark)
+    color0 = '#46d9ff',
+    color1 = '#bbc2cf',
+    color2 = '#51afef',
+    color3 = '#5699af',
 
 };
 
 conky.text = [[
-# ${alignc}${color0}${font2}${time %I:%M %p}${font}
-# ${voffset 6}${alignc}${color0}${font3}${time %b %d, %Y}${font}${color}
+${alignc}${color0}${font2}${time %I:%M %p}${font}
+${voffset 6}${alignc}${color0}${font3}${time %b %d, %Y}${font}${color}
 ${voffset 18}${goto 12}${color3}CPU${goto 50}$cpu%
 ${color2}${goto 12}${cpubar 8,254}
 ${voffset 5}${goto 12}$font${color1}${top name 1}$alignr$color${top cpu 1}%
@@ -108,22 +108,22 @@ ${goto 12}${color1}${top_mem name 2}$alignr$color${top_mem mem_res 2}
 ${goto 12}${color1}${top_mem name 3}$alignr$color${top_mem mem_res 3}
 ${voffset 14}${color3}FILE SYSTEM ${color3}${fs_used /}/${fs_size /}
 ${color2}${fs_bar 8,254 /}
-# ${voffset 18}${color1}${alignc}${font4}XMONAD KEYBINDINGS${font}${color}
-# ${color1}${hr}${color}
-# ${color1}[S]+[RET]${alignr}${color2}open terminal${color}
-# ${color1}[S]+q${alignr}${color2}close window${color}
-# ${color1}[S]+jk${alignr}${color2}move win focus${color}
-# ${color1}[S]+[SHIFT]+jk${alignr}${color2}move window${color}
-# ${color1}[S]+[1-9]${alignr}${color2}switch workspace${color}
-# ${color1}[S]+[SHIFT]+[1-9]${alignr}${color2}send window${color}
-# ${color1}${hr}${color}
-# ${color1}[S]+[SHIFT]+[RET]${alignr}${color2}emacs${color}
-# ${color1}[S]+b${alignr}${color2}brave browser${color}
-# ${color1}[S]+d${alignr}${color2}open dmenu${color}
-# ${color1}[S]+[SHIFT]+f${alignr}${color2}file manager${color}
-# ${color1}[ctrl]+[RET]${alignr}${color2}screenshot${color}
-# ${color1}${hr}${color}
-# ${color1}[S]+x${alignr}${color2}quit xmonad${color}
-# ${color1}${hr}${color}
 ${color3}UPTIME ${color3} $uptime
+${voffset 18}${color1}${alignc}${font4}XMONAD KEYBINDINGS${font}${color}
+${color1}${hr}${color}
+${color1}[S]+[RET]${alignr}${color2}open terminal${color}
+${color1}[S]+q${alignr}${color2}close window${color}
+${color1}[S]+jk${alignr}${color2}move win focus${color}
+${color1}[S]+[SHIFT]+jk${alignr}${color2}move window${color}
+${color1}[S]+[1-9]${alignr}${color2}switch workspace${color}
+${color1}[S]+[SHIFT]+[1-9]${alignr}${color2}send window${color}
+${color1}${hr}${color}
+${color1}[S]+[SHIFT]+[RET]${alignr}${color2}emacs${color}
+${color1}[S]+b${alignr}${color2}firefox${color}
+${color1}[S]+d${alignr}${color2}open dmenu${color}
+${color1}[S]+[SHIFT]+f${alignr}${color2}file manager${color}
+${color1}[ctrl]+[RET]${alignr}${color2}screenshot${color}
+${color1}${hr}${color}
+${color1}[S]+x${alignr}${color2}logout xmonad${color}
+${color1}${hr}${color}
 ]];

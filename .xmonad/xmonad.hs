@@ -66,7 +66,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
-import Colors.Dracula
+import Colors.DoomOne
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -99,16 +99,16 @@ myNormColor :: String       -- Border color of normal windows
 myNormColor   = colorBack   -- This variable is imported from Colors.THEME
 
 myFocusColor :: String      -- Border color of focused windows
-myFocusColor  = color05     -- This variable is imported from Colors.THEME
+myFocusColor  = colorFore     -- This variable is imported from Colors.THEME
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- spawn "killall conky"   -- kill current conky on each restart
+  spawn "killall conky"   -- kill current conky on each restart
 
-  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
   spawn ("lxsession")
   spawn ("picom --experimental-backends -b")
@@ -226,6 +226,10 @@ myKeys =
         , ("M-q", kill1)       -- Kill the currently focused client
         , ("M-S-q", killAll)   -- Kill all windows on current workspace
 
+    -- KB_GROUP Workspaces
+        , ("M-.", nextScreen)  -- Switch focus to next monitor/projector
+        , ("M-,", prevScreen)  -- Switch focus to prev monitor/projector
+
     -- KB_GROUP Floating windows
         , ("M-f", sendMessage (T.Toggle "floats")) -- Toggles my 'floats' layout
         , ("M-t", withFocused $ windows . W.sink)  -- Push floating window back to tile
@@ -281,7 +285,7 @@ main = do
                 -- Hidden workspaces (no windows)
               , ppHiddenNoWindows = xmobarColor color05 ""  . clickable
                 -- Title of active window
-              , ppTitle = xmobarColor color08 "" . shorten 70
+              , ppTitle = xmobarColor colorFore "" . shorten 70
                 -- Separator character
               , ppSep =  "<fc=" ++ color09 ++ "> <fn=1>|</fn> </fc>"
                 -- Urgent workspace

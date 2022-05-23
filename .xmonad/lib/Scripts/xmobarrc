@@ -5,8 +5,8 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
                            , "xft:Font Awesome 6 Free Solid:pixelsize=12"
                            , "xft:Font Awesome 6 Brands:pixelsize=12"
                            ]
-       , bgColor      = "#282a36"
-       , fgColor      = "#f8f8f2"
+       , bgColor      = "#282c34"
+       , fgColor      = "#ff6c6b"
        -- Position TopSize and BottomSize take 3 arguments:
        --   an alignment parameter (L/R/C) for Left, Right or Center.
        --   an integer for the percentage width, so 100 would be 100%.
@@ -41,5 +41,5 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
 
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %UnsafeStdinReader% }{ <fc=#bd93f9>%penguin%  %kernel%</fc>    <fc=#f1fa8c><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#5af78e>%disku%</fc>    <fc=#8be9fd>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#ff6e67>%baticon%  %battery%</fc>    <fc=#caa9fa>%date%</fc> "
+       , template = " %UnsafeStdinReader% }{ <fc=#51afef>%penguin%  %kernel%</fc>    <fc=#ecbe7b><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#a9a1e1>%disku%</fc>    <fc=#c678dd>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#da8548>%baticon%  %battery%</fc>    <fc=#46d9ff>%date%</fc> "
        }
