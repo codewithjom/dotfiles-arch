@@ -62,6 +62,14 @@ keys = [
     Key([mod], "f",lazy.window.toggle_floating()),
     Key([mod], "space",lazy.window.toggle_fullscreen()),
 
+    # SWITCH KEYBOARD FOCUS (PROJECTOR/MONITOR)
+    Key([mod], "w",lazy.to_screen(0)),
+    Key([mod], "e",lazy.to_screen(1)),
+
+    # SWITCH FOCUS (PROJECTOR/MONITOR)
+    Key([mod], "period",lazy.next_screen()),
+    Key([mod], "comma",lazy.prev_screen()),
+
     ]
 
 groups = [Group("main", layout='monadtall'),
@@ -425,7 +433,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='pinentry-gtk-2'),
 ])
 
-auto_fullscreen = False
+auto_fullscreen = True
 focus_on_window_activation = "focus"
 reconfigure_screens = True
 auto_minimize = True
