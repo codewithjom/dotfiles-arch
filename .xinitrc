@@ -13,6 +13,10 @@ picom --experimental-backends -b &
 nm-applet &
 volumeicon &
 xsetroot -cursor_name left_ptr &
+pamac-tray &
 blueberry-tray &
 
+# only choose 1 window manager
 exec xmonad
+# exec qtile start
+# exec startxfce4
