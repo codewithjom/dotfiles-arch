@@ -152,8 +152,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 0.3
-    , swn_bgcolor           = "#282a36"
-    , swn_color             = "#f8f8f2"
+    , swn_bgcolor           = "#282c34"
+    , swn_color             = "#bbc2cf"
     }
 
 -- The layout hook
