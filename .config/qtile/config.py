@@ -141,7 +141,7 @@ def init_widgets_list():
             background = colors[0]
         ),
         widget.GroupBox(
-            font = "Ubuntu Bold",
+            font = "Hack Nerd Font Bold",
             fontsize = 9,
             margin_y = 3,
             margin_x = 0,
