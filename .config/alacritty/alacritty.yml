@@ -35,7 +35,7 @@ scrolling:
 font:
   normal:
     family: Victor Mono Nerd Font
-    style: Regular
+    style: Medium
 
   bold:
     family: FantasqueSansMono Nerd Font
