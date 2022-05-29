@@ -34,8 +34,8 @@ scrolling:
 # you can add comment if you have your own font
 font:
   normal:
-    family: FantasqueSansMono Nerd Font
-    style: Medium
+    family: Victor Mono Nerd Font
+    style: Regular
 
   bold:
     family: FantasqueSansMono Nerd Font
@@ -49,7 +49,7 @@ font:
     family: FantasqueSansMono Nerd Font
     style: BoldItalic
 
-  size: 11.0 # Font Size
+  size: 10.0 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
