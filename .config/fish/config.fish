@@ -12,9 +12,9 @@ function fish_user_key_bindings
 end
 
 # aliases
-alias ls 'exa -l --icons --color=always --group-directories-first'
-alias la 'exa -a --icons --color=always --group-directories-first'
-alias ll 'exa -al --icons --color=always --group-directories-first'
+alias ls 'exa -lG --color=always --group-directories-first'
+alias la 'exa -aG --color=always --group-directories-first'
+alias ll 'exa -alG --color=always --group-directories-first'
 alias vim 'nvim'
 alias vi 'vim'
 alias rm 'rm -rf'
@@ -24,6 +24,8 @@ alias gs 'git status -s'
 alias gc 'git commit '
 alias ga 'git add '
 alias gl 'git log --oneline'
+alias gp 'git push'
+alias gd 'git diff'
 alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
 alias mpvid 'devour mpv'
 alias sxiv 'devour sxiv'
