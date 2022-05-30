@@ -75,7 +75,7 @@ keys = [
 groups = [Group("main", layout='monadtall'),
 
           Group("web", layout='monadtall',
-                matches=[Match(wm_class=["Brave-browser", "Min", "qutebrowser", "Vimb", "firefox"])]),
+                matches=[Match(wm_class=["Brave-browser", "Min", "qutebrowser", "Vimb", "firefox", "Chromium"])]),
 
           Group("dev", layout='monadtall',
                 matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),

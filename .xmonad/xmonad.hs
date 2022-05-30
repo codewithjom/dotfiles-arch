@@ -191,6 +191,7 @@ myManageHook = composeAll
      , className =? "qutebrowser"        --> doShift ( myWorkspaces !! 1 )
      , className =? "Vimb"               --> doShift ( myWorkspaces !! 1 )
      , className =? "Tor Browser"        --> doShift ( myWorkspaces !! 1 )
+     , className =? "Chromium"           --> doShift ( myWorkspaces !! 1 )
      , className =? "jetbrains-idea-ce"  --> doShift ( myWorkspaces !! 2 )
      , className =? "jetbrains-studio"   --> doShift ( myWorkspaces !! 2 )
      , className =? "Subl"               --> doShift ( myWorkspaces !! 2 )
