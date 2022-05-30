@@ -72,7 +72,7 @@ keys = [
 
     ]
 
-groups = [Group("main", layout='monadtall'),
+groups = [Group("ter", layout='monadtall'),
 
           Group("web", layout='monadtall',
                 matches=[Match(wm_class=["Brave-browser", "Min", "qutebrowser", "Vimb", "firefox", "Chromium"])]),
@@ -83,14 +83,14 @@ groups = [Group("main", layout='monadtall'),
           Group("doc", layout='monadtall',
                 matches=[Match(wm_class=["DesktopEditors"])]),
 
+          Group("vm", layout='monadtall',
+                matches=[Match(wm_class=["VirtualBox Manager", "Virt-Manager"])]),
+
           Group("chat", layout='monadtall',
                 matches=[Match(wm_class=["discord", "Thunderbird"])]),
 
           Group("mus", layout='monadtall',
                 matches=[Match(wm_class=["Spotify"])]),
-
-          Group("vm", layout='floating',
-                matches=[Match(wm_class=["VirtualBox Manager"])]),
 
           Group("vid", layout='monadtall',
                 matches=[Match(wm_class=["mpv"])]),
