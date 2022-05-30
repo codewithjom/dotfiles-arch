@@ -142,7 +142,7 @@ def init_widgets_list():
         ),
         widget.GroupBox(
             font = "Hack Nerd Font Bold",
-            fontsize = 9,
+            fontsize = 10,
             margin_y = 3,
             margin_x = 0,
             padding_y = 3,
