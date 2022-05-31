@@ -12,9 +12,9 @@ function fish_user_key_bindings
 end
 
 # aliases
-alias ls 'exa -l --color=always --group-directories-first'
-alias la 'exa -aG --color=always --group-directories-first'
-alias ll 'exa -alG --color=always --group-directories-first'
+alias ls 'exa -al --icons --color=always'
+alias la 'exa -aG --icons --color=always --group-directories-first'
+alias ll 'exa -alG --icons --color=always --group-directories-first'
 alias vim 'nvim'
 alias vi 'vim'
 alias rm 'rm -rf'
