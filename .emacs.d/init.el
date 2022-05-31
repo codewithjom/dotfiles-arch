@@ -129,27 +129,27 @@
 (use-package doom-themes
   :init (load-theme 'doom-one t))
 
-(defvar jd/default-font-size 120)
-(defvar jd/default-variable-font-size 120)
+(defvar jd/default-font-size 130)
+(defvar jd/default-variable-font-size 130)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "JetBrains Mono"
                       :height jd/default-font-size
-                      :weight 'medium)
+                      :weight 'light)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "JetBrains Mono"
                       :height jd/default-font-size
-                      :weight 'medium)
+                      :weight 'light)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "Iosevka Aile"
                       :height jd/default-variable-font-size
-                      :weight 'regular))
+                      :weight 'light))
 
 (if (daemonp)
     (add-hook 'server-after-make-frame-hook
@@ -492,7 +492,7 @@ folder, otherwise delete a word"
 	:defer t
 	:hook (org-mode . jd/org-mode-setup)
 	:config
-	(setq org-ellipsis " ▼"
+	(setq org-ellipsis "..."
 				org-hide-emphasis-markers t
 				org-src-fontify-natively t
 				org-fontify-quote-and-verse-blocks nil
@@ -534,20 +534,20 @@ folder, otherwise delete a word"
 		(org-directory "~/Repo/notes")
 		(org-superstar-remove-leading-stars t)
 		;; (org-ellipsis "...")
-		(org-superstar-item-bullet-alist '((?+ . ?) (?- . ?✦)))
+		(org-superstar-item-bullet-alist '((?+ . ?✦) (?- . ?)))
 		(org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 	;; Increase the size of various headings
-	(set-face-attribute 'org-document-title nil :font "FantasqueSansMono Nerd Font" :weight 'bold :height 1.3)
-	(dolist (face '((org-level-1 . 1.3)
-									(org-level-2 . 1.2)
-									(org-level-3 . 1.1)
-									(org-level-4 . 1.0)
+	(set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'bold :height 1.3)
+	(dolist (face '((org-level-1 . 1.4)
+									(org-level-2 . 1.3)
+									(org-level-3 . 1.2)
+									(org-level-4 . 1.1)
 									(org-level-5 . 1.05)
 									(org-level-6 . 1.05)
 									(org-level-7 . 1.05)
 									(org-level-8 . 1.05)))
-	(set-face-attribute (car face) nil :font "FantasqueSansMono Nerd Font" :weight 'medium :height (cdr face)))
+	(set-face-attribute (car face) nil :font "Iosevka Aile" :weight 'medium :height (cdr face)))
 
 	(require 'org-indent)
 	(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
@@ -840,17 +840,3 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auth-source-save-behavior nil)
- '(package-selected-packages
-	 '(sudo-edit daemons emms vterm-toggle vterm highlight-indent-guides rainbow-mode rainbow-delimiters smartparens yasnippet flycheck lsp-java prettier skewer-mode impatient-mode lorem-ipsum ac-html web-mode helpful ccls prettier-js apheleia js2-mode typescript-mode nvm cider lispyville lispy dap-mode lsp-ui lsp-mode magit org-appear ox-reveal org-present org-superstar simple-httpd bookmark-view openwith dired-collapse dired-ranger dired-single dired-rainbow all-the-icons-dired visual-fill-column company-box company marginalia consult orderless corfu vertico counsel ivy-rich ivy-hydra ivy hydra neotree ws-butler evil-nerd-commenter super-save doom-modeline minions all-the-icons diminish emojify doom-themes which-key command-log-mode evil-collection evil general no-littering use-package)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(vertico-current ((t (:background "#3a3f5a")))))

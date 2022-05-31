@@ -280,31 +280,31 @@ These days I bounce around between themes included with =DOOM Themes= since they
 
 ** Font
 
-Different platforms need different default font sizes, and =FantasqueSansMono Nerd Font= is currently my favorite face.
+Different platforms need different default font sizes, and =Iosevka Aile= is currently my favorite face.
 
 #+begin_src emacs-lisp
 
-  (defvar jd/default-font-size 120)
-  (defvar jd/default-variable-font-size 120)
+  (defvar jd/default-font-size 130)
+  (defvar jd/default-variable-font-size 130)
 
   (defun jd/set-font-faces ()
     (message "Setting faces!")
     (set-face-attribute 'default nil
-                        :font "FantasqueSansMono Nerd Font"
+                        :font "JetBrains Mono"
                         :height jd/default-font-size
-                        :weight 'medium)
+                        :weight 'light)
 
     ;; Set the fixed pitch face
     (set-face-attribute 'fixed-pitch nil
-                        :font "FantasqueSansMono Nerd Font"
+                        :font "JetBrains Mono"
                         :height jd/default-font-size
-                        :weight 'medium)
+                        :weight 'light)
 
     ;; Set the variable pitch face
     (set-face-attribute 'variable-pitch nil
-                        :font "FantasqueSansMono Nerd Font"
+                        :font "Iosevka Aile"
                         :height jd/default-variable-font-size
-                        :weight 'regular))
+                        :weight 'light))
 
   (if (daemonp)
       (add-hook 'server-after-make-frame-hook
@@ -817,7 +817,7 @@ Set up Org Mode with a baseline configuration. The following sections will add m
 		:defer t
 		:hook (org-mode . jd/org-mode-setup)
 		:config
-		(setq org-ellipsis " ▼"
+		(setq org-ellipsis "..."
 					org-hide-emphasis-markers t
 					org-src-fontify-natively t
 					org-fontify-quote-and-verse-blocks nil
@@ -859,20 +859,20 @@ Set up Org Mode with a baseline configuration. The following sections will add m
 			(org-directory "~/Repo/notes")
 			(org-superstar-remove-leading-stars t)
 			;; (org-ellipsis "...")
-			(org-superstar-item-bullet-alist '((?+ . ?) (?- . ?✦)))
+			(org-superstar-item-bullet-alist '((?+ . ?✦) (?- . ?)))
 			(org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 		;; Increase the size of various headings
-		(set-face-attribute 'org-document-title nil :font "FantasqueSansMono Nerd Font" :weight 'bold :height 1.3)
-		(dolist (face '((org-level-1 . 1.3)
-										(org-level-2 . 1.2)
-										(org-level-3 . 1.1)
-										(org-level-4 . 1.0)
+		(set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'bold :height 1.3)
+		(dolist (face '((org-level-1 . 1.4)
+										(org-level-2 . 1.3)
+										(org-level-3 . 1.2)
+										(org-level-4 . 1.1)
 										(org-level-5 . 1.05)
 										(org-level-6 . 1.05)
 										(org-level-7 . 1.05)
 										(org-level-8 . 1.05)))
-		(set-face-attribute (car face) nil :font "FantasqueSansMono Nerd Font" :weight 'medium :height (cdr face)))
+		(set-face-attribute (car face) nil :font "Iosevka Aile" :weight 'medium :height (cdr face)))
 
 		(require 'org-indent)
 		(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
@@ -893,7 +893,7 @@ Set up Org Mode with a baseline configuration. The following sections will add m
 
 ** Block Templates
 
-These templates enable you to type things like =<el= and then hit =Tab= to expand the template.
+These templates enable you to type things like =src= and then hit =Tab= to expand the template.
 
 #+begin_src emacs-lisp
 
