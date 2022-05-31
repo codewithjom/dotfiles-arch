@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# The script will update all of the configurations of JDOS.
+# Be sure that you have already installed JDOS.
+
+# Author: Jom Dollesin 
+# Email: codewithjom@gmail.com
+
+if [[ $(ls $HOME | grep .jdos-update) = 'jdos-update' ]]; then
+  echo ":: There is nothing to do!"
+else
+  mkdir $HOME/.jdos-update
+fi
+
+# DOTFILES
+git clone https://github.com/codewithjom/dotfiles.git $HOME/.jdos-update/dotfiles
+count=$(cd $HOME/.dotfiles;git log --oneline | wc -l;cd)
+
+if [[ $count = $(cd $HOME/.jdos-update/dotfiles;git rev-list --count HEAD;cd) ]]; then
+
+  echo ":: There is nothing to do!"
+
+else
+  
+  cd $HOME/.jdos-update/dotfiles
+  cp -rf .* ~/
+  rm -rf ~/.git ~/LICENSE ~/.stow-local-ignore
+  
+fi
+
+rm -rf $HOME/.jdos-update
