@@ -34,8 +34,8 @@ scrolling:
 # you can add comment if you have your own font
 font:
   normal:
-    family: Cascadia Code
-    style: Regular
+    family: FantasqueSansMono Nerd Font
+    style: Bold
 
   bold:
     family: FantasqueSansMono Nerd Font
