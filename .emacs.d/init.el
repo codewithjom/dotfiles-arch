@@ -129,8 +129,8 @@
 (use-package doom-themes
   :init (load-theme 'doom-one t))
 
-(defvar jd/default-font-size 130)
-(defvar jd/default-variable-font-size 130)
+(defvar jd/default-font-size 120)
+(defvar jd/default-variable-font-size 120)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")

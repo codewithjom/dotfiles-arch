@@ -284,8 +284,8 @@ Different platforms need different default font sizes, and =Iosevka Aile= is cur
 
 #+begin_src emacs-lisp
 
-  (defvar jd/default-font-size 130)
-  (defvar jd/default-variable-font-size 130)
+  (defvar jd/default-font-size 120)
+  (defvar jd/default-variable-font-size 120)
 
   (defun jd/set-font-faces ()
     (message "Setting faces!")
