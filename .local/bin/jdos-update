@@ -25,7 +25,7 @@ else
   cd $HOME/.jdos-update/dotfiles
   cp -rf .* ~/.dotfiles
   cd $HOME/.dotfiles/
-  cp -rfv .* ~/
+  cp -rf .* ~/
   rm -rf ~/.git ~/LICENSE ~/.stow-local-ignore
   rm -rf $HOME/.jdos-update
   echo ":: JDOS is successfully updated!"
