@@ -18,14 +18,16 @@ count=$(cd $HOME/.dotfiles;git log --oneline | wc -l;cd)
 
 if [[ $count = $(cd $HOME/.jdos-update/dotfiles;git rev-list --count HEAD;cd) ]]; then
 
-  echo ":: JDOS is up to date."
+  echo ":: JDOS is up to date. Nothing to do here!"
 
 else
   
   cd $HOME/.jdos-update/dotfiles
-  cp -rf .* ~/
+  cp -rf .* ~/.dotfiles
+  cd $HOME/.dotfiles/
+  cp -rfv .* ~/
   rm -rf ~/.git ~/LICENSE ~/.stow-local-ignore
+  rm -rf $HOME/.jdos-update
+  echo ":: JDOS is successfully updated!"
   
 fi
-
-rm -rf $HOME/.jdos-update
