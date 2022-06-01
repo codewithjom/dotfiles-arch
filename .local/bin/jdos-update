@@ -18,7 +18,7 @@ count=$(cd $HOME/.dotfiles;git log --oneline | wc -l;cd)
 
 if [[ $count = $(cd $HOME/.jdos-update/dotfiles;git rev-list --count HEAD;cd) ]]; then
 
-  echo ":: There is nothing to do!"
+  echo ":: JDOS is up to date."
 
 else
   
