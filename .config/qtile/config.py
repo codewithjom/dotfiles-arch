@@ -84,7 +84,7 @@ groups = [Group("ter", layout='monadtall'),
                 matches=[Match(wm_class=["DesktopEditors"])]),
 
           Group("vm", layout='monadtall',
-                matches=[Match(wm_class=["VirtualBox Manager", "Virt-Manager"])]),
+                matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
 
           Group("chat", layout='monadtall',
                 matches=[Match(wm_class=["discord", "Thunderbird"])]),
