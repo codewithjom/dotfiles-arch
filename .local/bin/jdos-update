@@ -7,27 +7,26 @@
 # Email: codewithjom@gmail.com
 
 if [[ $(ls $HOME | grep .jdos-update) = 'jdos-update' ]]; then
-  echo ":: There is nothing to do!"
+  echo ":: Please remove the .jdos-update directory!"
 else
   mkdir $HOME/.jdos-update
 fi
 
-# DOTFILES
-git clone https://github.com/codewithjom/dotfiles.git $HOME/.jdos-update/dotfiles
-count=$(cd $HOME/.dotfiles;git log --oneline | wc -l;cd)
+git clone https://github.com/codewithjom/jdos-repo.git $HOME/.jdos-update
+count=$(cd $HOME/.jdos-repo;git log --oneline | wc -l;cd)
 
-if [[ $count = $(cd $HOME/.jdos-update/dotfiles;git rev-list --count HEAD;cd) ]]; then
+if [[ $count = $(cd $HOME/.jdos-update;git rev-list --count HEAD;cd) ]]; then
 
   echo ":: JDOS is up to date. Nothing to do here!"
   rm -rf $HOME/.jdos-update
 
 else
   
-  cd $HOME/.jdos-update/dotfiles
-  cp -rf .* ~/.dotfiles
-  cd $HOME/.dotfiles/
+  cd $HOME/.jdos-update
+  cp -rf .* ~/.jdos-repo
+  cd $HOME/.jdos-repo
   cp -rf .* ~/
-  rm -rf ~/.git ~/LICENSE ~/.stow-local-ignore
+  rm -rf ~/.git ~/README.org
   rm -rf $HOME/.jdos-update
   echo ":: JDOS is successfully updated!"
   
