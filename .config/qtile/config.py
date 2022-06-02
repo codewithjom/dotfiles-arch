@@ -151,8 +151,8 @@ def init_widgets_list():
             active = colors[7],
             inactive = colors[8],
             rounded = False,
-            highlight_color = ['c678dd', '282a36'],
-            highlight_method = "text",
+            highlight_color = ['282c34'],
+            highlight_method = "line",
             this_current_screen_border = colors[5],
             this_screen_border = colors [4],
             other_current_screen_border = colors[6],
@@ -368,8 +368,8 @@ def init_widgets_screen2():
     return widgets_screen2
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1, size=24)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1, size=24))]
+    return [Screen(bottom=bar.Bar(widgets=init_widgets_screen1(), opacity=1, size=24)),
+            Screen(bottom=bar.Bar(widgets=init_widgets_screen2(), opacity=1, size=24))]
 
 if __name__ in ["config", "__main__"]:
     screens = init_screens()
