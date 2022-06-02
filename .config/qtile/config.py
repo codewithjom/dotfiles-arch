@@ -134,12 +134,6 @@ extension_defaults = widget_defaults.copy()
 
 def init_widgets_list():
     widgets_list = [
-        widget.Sep(
-            linewidth = 0,
-            padding = 3,
-            foreground = colors[0],
-            background = colors[0]
-        ),
         widget.GroupBox(
             font = "Hack Nerd Font Bold",
             fontsize = 10,
