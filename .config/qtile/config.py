@@ -17,7 +17,7 @@ ret = "Return"
 s = "shift"
 home = os.path.expanduser('~')
 
-browser1 = "firefox"
+browser1 = "qutebrowser"
 browser2 = "vimb"
 emacs = "emacsclient -c -a 'emacs'"
 terminal = "alacritty"
