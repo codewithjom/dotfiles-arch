@@ -147,7 +147,7 @@
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Fira Code"
+                      :font "Victor Mono Nerd Font"
                       :height jd/default-variable-font-size
                       :weight 'light))
 
