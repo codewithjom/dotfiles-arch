@@ -101,8 +101,8 @@ from libqtile.dgroups import simple_key_binder
 dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
-                "margin": 8,
-                "border_focus": "5699af",
+                "margin": 12,
+                "border_focus": "bbc2cf",
                 "border_normal": "282c34"
                 }
 
@@ -362,8 +362,8 @@ def init_widgets_screen2():
     return widgets_screen2
 
 def init_screens():
-    return [Screen(bottom=bar.Bar(widgets=init_widgets_screen1(), opacity=1, size=24)),
-            Screen(bottom=bar.Bar(widgets=init_widgets_screen2(), opacity=1, size=24))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1, size=24)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1, size=24))]
 
 if __name__ in ["config", "__main__"]:
     screens = init_screens()

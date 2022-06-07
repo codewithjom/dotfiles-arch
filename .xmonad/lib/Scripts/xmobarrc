@@ -11,7 +11,7 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
        --   an alignment parameter (L/R/C) for Left, Right or Center.
        --   an integer for the percentage width, so 100 would be 100%.
        --   an integer for the minimum pixel height for xmobar, so 24 would force a height of at least 24 pixels.
-       , position       = BottomSize L 100 24
+       , position       = TopSize L 100 24
        , lowerOnStart = True
        , hideOnStart  = False
        , allDesktops  = True
