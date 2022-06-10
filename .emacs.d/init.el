@@ -137,19 +137,19 @@
   (set-face-attribute 'default nil
                       :font "FantasqueSansMono Nerd Font"
                       :height jd/default-font-size
-                      :weight 'light)
+                      :weight 'regular)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
                       :font "FantasqueSansMono Nerd Font"
                       :height jd/default-font-size
-                      :weight 'light)
+                      :weight 'regular)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Victor Mono Nerd Font"
+                      :font "FantasqueSansMono Nerd Font"
                       :height jd/default-variable-font-size
-                      :weight 'light))
+                      :weight 'regular))
 
 (if (daemonp)
     (add-hook 'server-after-make-frame-hook
