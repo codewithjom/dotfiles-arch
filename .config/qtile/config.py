@@ -145,7 +145,7 @@ def init_widgets_list():
             active = colors[7],
             inactive = colors[8],
             rounded = False,
-            highlight_color = ['282c34'],
+            highlight_color = ['404040'],
             highlight_method = "line",
             this_current_screen_border = colors[5],
             this_screen_border = colors [4],
@@ -297,28 +297,28 @@ def init_widgets_list():
             foreground = colors[1],
             background = colors[0]
         ),
-        widget.TextBox(
-            text = '|',
-            font = "Ubuntu Mono",
-            background = colors[0],
-            foreground = '474747',
-            padding = 2,
-            fontsize = 14
-        ),
-        widget.TextBox(
-            text = '蓼',
-            font = "VictorMono Nerd Font",
-            background = colors[0],
-            foreground = colors[4],
-            padding = 2,
-            fontsize = 14
-        ),
-        widget.Volume(
-            foreground = colors[4],
-            background = colors[0],
-            fmt = 'Vol: {}',
-            padding = 5
-        ),
+        # widget.TextBox(
+        #     text = '|',
+        #     font = "Ubuntu Mono",
+        #     background = colors[0],
+        #     foreground = '474747',
+        #     padding = 2,
+        #     fontsize = 14
+        # ),
+        # widget.TextBox(
+        #     text = '蓼',
+        #     font = "VictorMono Nerd Font",
+        #     background = colors[0],
+        #     foreground = colors[4],
+        #     padding = 2,
+        #     fontsize = 14
+        # ),
+        # widget.Volume(
+        #     foreground = colors[4],
+        #     background = colors[0],
+        #     fmt = 'Vol: {}',
+        #     padding = 5
+        # ),
         widget.TextBox(
             text = '|',
             font = "Ubuntu Mono",
