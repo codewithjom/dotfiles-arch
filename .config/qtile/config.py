@@ -101,7 +101,7 @@ from libqtile.dgroups import simple_key_binder
 dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
-                "margin": 12,
+                "margin": 16,
                 "border_focus": "bbc2cf",
                 "border_normal": "282c34"
                 }
