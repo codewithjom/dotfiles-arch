@@ -102,7 +102,7 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
                 "margin": 16,
-                "border_focus": "bbc2cf",
+                "border_focus": "5699af",
                 "border_normal": "282c34"
                 }
 
@@ -146,7 +146,7 @@ def init_widgets_list():
             inactive = colors[8],
             rounded = False,
             highlight_color = ['404040'],
-            highlight_method = "line",
+            highlight_method = "text",
             this_current_screen_border = colors[5],
             this_screen_border = colors [4],
             other_current_screen_border = colors[6],
