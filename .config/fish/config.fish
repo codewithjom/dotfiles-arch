@@ -30,7 +30,7 @@ alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
 alias mpvid 'devour mpv'
 alias sxiv 'devour sxiv'
 alias zathura 'devour zathura'
-alias clear 'clear && colorscript -e 47'
+alias clear 'clear && colorscript -e 13'
 
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
