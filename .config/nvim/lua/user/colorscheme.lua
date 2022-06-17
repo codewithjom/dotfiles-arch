@@ -2,7 +2,8 @@ vim.cmd [[
 try
   syntax enable
   set background=dark
-  colorscheme onedark
+  let ayucolor="dark"
+  colorscheme ayu
   " let g:neosolorized_termtrans=1
   " runtime ../../colors/NeoSolarized.vim
   " colorscheme NeoSolarized

@@ -94,6 +94,7 @@
 (set-fringe-mode 10)        ; Give some breathing room
 (menu-bar-mode -1)          ; Disable the menu bar
 (setq visible-bell t)
+(blink-cursor-mode 0)
 ;; (global-hl-line-mode t)
 
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
@@ -127,7 +128,7 @@
 (setq ad-redefinition-action 'accept)
 
 (use-package doom-themes
-  :init (load-theme 'doom-one t))
+  :init (load-theme 'doom-ayu-dark t))
 
 (defvar jd/default-font-size 120)
 (defvar jd/default-variable-font-size 120)
@@ -846,7 +847,7 @@ folder, otherwise delete a word"
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-	 '(yaml-mode yaml yasnippet ws-butler which-key web-mode vterm-toggle visual-fill-column vertico use-package typescript-mode super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier ox-reveal org-superstar org-present org-appear orderless openwith no-littering neotree minions marginalia magit lsp-ui lsp-java lorem-ipsum lispyville ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful general flycheck evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-box command-log-mode cider ccls bookmark-view apheleia all-the-icons-dired ac-html)))
+	 '(lua-mode yasnippet yaml-mode yaml ws-butler which-key web-mode vterm-toggle visual-fill-column vertico use-package typescript-mode super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier ox-reveal org-superstar org-present org-appear orderless openwith no-littering neotree minions marginalia magit lsp-ui lsp-java lorem-ipsum lispyville ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful general flycheck evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-box command-log-mode cider ccls bookmark-view apheleia all-the-icons-dired ac-html)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
