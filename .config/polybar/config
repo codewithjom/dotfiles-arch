@@ -1,0 +1,117 @@
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[colors]
+background = #f0232635
+background-alt = #576075
+foreground = #A6Accd
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+underline-1 = #c792ea
+
+[bar/panel]
+width = 100%
+height = 24
+offset-x = 0
+offset-y = 0
+fixed-center = true
+enable-ipc = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-top = 5
+padding-left = 1
+padding-right = 1
+
+module-margin = 1
+
+font-0 = "JetBrains Mono Nerd Font:style=Medium:size=10;2"
+font-1 = "JetBrains Mono Nerd Font:style=Bold:size=10;2"
+font-2 = "JetBrains Mono Nerd Font:size=19;5"
+font-3 = "Material Icons Outlined:10;4"
+font-4 = "Material Icons Round:10;4"
+font-5 = "Source Han Sans CN:size=10;2"
+
+modules-left = exwm-workspace title
+modules-right = battery date
+
+tray-position = right
+tray-padding = 2
+tray-maxsize = 20
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/exwm-workspace]
+type = custom/ipc
+hook-0 = emacsclient -e "(jd/polybar-exwm-workspace)" | sed -e 's/^"//' -e 's/"$//'
+initial = 1
+format-padding = 1
+
+[module/title]
+type = internal/xwindow
+format-prefix = ""
+format-prefix-underline = #292d3e
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 1
+
+label = %title%
+label-maxlen = 80
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%a %b %e"
+date-alt = "%A %B %d %Y"
+
+time = %l:%M %p
+time-alt = %H:%M:%S
+
+format-prefix-foreground = ${colors.foreground-alt}
+
+label = %date% %time%
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 98
+time-format = %-l:%M
+
+label-charging = %percentage%%
+format-charging = <animation-charging>  <label-charging>
+
+label-discharging = %percentage%%
+format-discharging = <ramp-capacity>  <label-discharging>
+
+format-full = <ramp-capacity>  <label-full>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+# vim:ft=dosini
