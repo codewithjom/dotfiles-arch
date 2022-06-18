@@ -841,17 +841,141 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auth-source-save-behavior nil)
- '(package-selected-packages
-	 '(bufler exwm lua-mode yasnippet yaml-mode yaml ws-butler which-key web-mode vterm-toggle visual-fill-column vertico use-package typescript-mode super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier ox-reveal org-superstar org-present org-appear orderless openwith no-littering neotree minions marginalia magit lsp-ui lsp-java lorem-ipsum lispyville ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful general flycheck evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-box command-log-mode cider ccls bookmark-view apheleia all-the-icons-dired ac-html)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(vertico-current ((t (:background "#3a3f5a")))))
+
+;; EXWM
+(defun jd/run-in-background (command)
+  (let ((command-parts (split-string command "[ ]+")))
+    (apply #'call-process `(,(car command-parts) nil 0 nil ,@(cdr command-parts)))))
+
+(defvar jd/sxhkd-process nil)
+(defun jd/run-sxhkd ()
+  (interactive)
+  (setq jd/sxhkd-process
+        (start-process-shell-command
+         "sxhkd" nil "sxhkd -c ~/.emacs.d/exwm/sxhkdrc")))
+
+;; (defun jd/update-wallpaper ()
+;;   (interactive)
+;;   (start-process-shell-command
+;;    "nitrogen" nil
+;;    (format "nitrogen --set-scaled ~/.emacs.d/pics/wall.jpg")))
+
+(defun jd/exwm-init-hook ()
+  (exwm-workspace-switch-create 1)
+  ;; (jd/update-wallpaper)
+  (jd/run-sxhkd)
+  (jd/start-panel))
+
+(defun jd/exwm-update-class ()
+  (exwm-workspace-rename-buffer exwm-class-name))
+
+(defun jd/exwm-update-title ()
+  (pcase exwm-class-name
+    ("Vimb" (exwm-workspace-rename-buffer (format "vimb: %s" exwm-title)))
+    ("qutebrowser" (exwm-workspace-rename-buffer (format "qutebrowser: %s" exwm-title)))))
+
+(defun jd/configure-window-by-class ()
+  (interactive)
+  (pcase exwm-class-name
+   ("Vimb" (exwm-workspace-move-window 2))
+   ("qutebrowser" (exwm-workspace-move-window 2))
+   ("mpv" (exwm-floating-toggle-floating)
+          (exwm-layout-toggle-mode-line))
+   ("sxiv" (exwm-floating-toggle-floating)
+          (exwm-layout-toggle-mode-line))))
+
+(use-package exwm
+  :config
+  (setq exwm-workspace-number 5)
+  (add-hook 'exwm-update-class-hook #'jd/exwm-update-class)
+  (add-hook 'exwm-init-hook #'jd/exwm-init-hook)
+  (add-hook 'exwm-update-title-hook #'jd/exwm-update-title)
+  (add-hook 'exwm-manage-finish-hook #'jd/configure-window-by-class)
+  (require 'exwm-randr)
+  (exwm-randr-enable)
+  (start-process-shell-command
+   "xrandr" nil "xrandr --output eDP-1 --mode 1366x768 --pos 0x0 --rotate normal")
+  ;;(require 'exwm-systemtray)
+  ;;(exwm-systemtray-enable)
+  (setq exwm-input-prefix-keys
+    '(?\C-x
+      ?\C-u
+      ?\C-h
+      ?\M-x
+      ?\M-`
+      ?\M-&
+      ?\M-:
+      ?\C-\M-j  ;; Buffer list
+      ?\C-\ ))  ;; Ctrl+Space
+  (define-key exwm-mode-map [?\C-q] `exwm-input-send-next-key)
+  (setq exwm-input-global-keys
+        `(
+          ;; Reset to line-mode (C-c C-k switches to char-mode via exwm-input-release-keyboard)
+          ([?\s-r] . exwm-reset)
+
+          ;; Exwm-keybindings
+          ([?\s-f] . exwm-layout-set-fullscreen)
+          ([?\s-F] . exwm-floating-toggle-floating)
+          ([?\s-s] . split-window-right)
+          ([?\s-S] . split-window-below)
+
+          ;; Move between windows
+          ([?\s-j] . windmove-left)
+          ([?\s-k] . windmove-right)
+          ([?\s-K] . windmove-up)
+          ([?\s-J] . windmove-down)
+
+          ;; Launch applications via shell command
+          ([?\s-!] . (lambda (command)
+                       (interactive (list (read-shell-command "$ ")))
+                       (start-process-shell-command command nil command)))
+
+          ;; Switch workspace
+          ([?\s-w] . exwm-workspace-switch)
+          ([?\s-`] . (lambda () (interactive) (exwm-workspace-switch-create 0)))
+
+          ;; 's-N': Switch to certain workspace with Super (Win) plus a number key (0 - 9)
+          ,@(mapcar (lambda (i)
+                      `(,(kbd (format "s-%d" i)) .
+                        (lambda ()
+                          (interactive)
+                          (exwm-workspace-switch-create ,i))))
+                    (number-sequence 0 9))))
+
+  (exwm-input-set-key (kbd "s-s") 'split-window-right)
+  (exwm-input-set-key (kbd "s-t") '+vterm/here)
+  (exwm-input-set-key (kbd "C-M-j") 'counsel-switch-buffer)
+  (exwm-input-set-key (kbd "s-q") 'kill-current-buffer)
+
+  (exwm-enable))
+
+;; POLYBAR
+(defvar jd/polybar-process nil)
+
+(defun jd/kill-panel ()
+  (interactive )
+  (when jd/polybar-process
+    (ignore-errors
+      (kill-process jd/polybar-process)))
+  (setq jd/polybar-process nil))
+
+(defun jd/start-panel ()
+  (interactive)
+  (jd/kill-panel)
+  (setq jd/polybar-process (start-process-shell-command "polybar" nil "polybar panel")))
+
+(defun jd/send-polybar-hook (module-name hook-index)
+  (start-process-shell-command "polybar-msg" nil (format "polybar-msg hook %s %s" module-name hook-index)))
+
+(defun jd/update-polybar-exwm ()
+  (jd/send-polybar-hook "exwm-workspace" 1))
+
+(defun jd/polybar-exwm-workspace ()
+  (pcase exwm-workspace-current-index
+    (0 "ﮧ")
+    (1 "")
+    (2 "")
+    (3 "")
+    (4 "")))
+
+(add-hook 'exwm-workspace-switch-hook #'jd/update-polybar-exwm)
