@@ -6,9 +6,9 @@ margin-top = 0
 margin-bottom = 0
 
 [colors]
-background = #f0232635
+background = #0D1017
 background-alt = #576075
-foreground = #A6Accd
+foreground = #BFBDB6
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
