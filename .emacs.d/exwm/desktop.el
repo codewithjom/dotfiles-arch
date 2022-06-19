@@ -972,10 +972,10 @@ folder, otherwise delete a word"
 
 (defun jd/polybar-exwm-workspace ()
   (pcase exwm-workspace-current-index
-    (0 "ﮧ")
-    (1 "")
-    (2 "")
-    (3 "")
-    (4 "")))
+    (0 "💀")
+    (1 "🔥")
+    (2 "📡")
+    (3 "✨")
+    (4 "💣")))
 
 (add-hook 'exwm-workspace-switch-hook #'jd/update-polybar-exwm)
