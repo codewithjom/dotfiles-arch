@@ -17,5 +17,6 @@ pamac-tray &
 blueberry-tray &
 
 # only choose 1 window manager
-exec xmonad
-# exec qtile start
+# exec xmonad
+exec qtile start
+# exec /home/jd/.emacs.d/exwm/launch.sh
