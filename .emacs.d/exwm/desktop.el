@@ -103,8 +103,8 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq use-dialog-box nil) ;; Disable dialog boxes since they weren't working in Mac OSX
 
-;; (set-frame-parameter (selected-frame) 'alpha '(90 . 85))
-;; (add-to-list 'default-frame-alist '(alpha . (90 . 85)))
+(set-frame-parameter (selected-frame) 'alpha '(90 . 85))
+(add-to-list 'default-frame-alist '(alpha . (90 . 85)))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -854,15 +854,15 @@ folder, otherwise delete a word"
         (start-process-shell-command
          "sxhkd" nil "sxhkd -c ~/.emacs.d/exwm/sxhkdrc")))
 
-;; (defun jd/update-wallpaper ()
-;;   (interactive)
-;;   (start-process-shell-command
-;;    "nitrogen" nil
-;;    (format "nitrogen --set-scaled ~/.emacs.d/pics/wall.jpg")))
+(defun jd/update-wallpaper ()
+  (interactive)
+  (start-process-shell-command
+   "nitrogen" nil
+   (format "nitrogen --set-scaled ~/.emacs.d/exwm/wallpaper.jpg")))
 
 (defun jd/exwm-init-hook ()
   (exwm-workspace-switch-create 1)
-  ;; (jd/update-wallpaper)
+  (jd/update-wallpaper)
   (jd/run-sxhkd)
   (jd/start-panel))
 
