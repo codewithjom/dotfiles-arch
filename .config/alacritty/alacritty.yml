@@ -16,7 +16,8 @@ window:
   padding:
     x: 5
     y: 5
-  dynamic_padding: false
+  dynamic_padding:
+    false
 
     # opacity: 0.80
 
@@ -264,7 +265,7 @@ font:
   ### Palenight ###
   palenight: &palenight # Default colors
     primary:
-      background: "#292d3e"
+      background: "#121622"
       foreground: "#d0d0d0"
 
     # Normal colors
