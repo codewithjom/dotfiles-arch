@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # default arch init	scripts
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
 fi
 
 lxsession &
@@ -19,4 +19,4 @@ blueberry-tray &
 # only choose 1 window manager
 # exec xmonad
 exec qtile start
-# exec /home/jd/.emacs.d/exwm/launch.sh
+# exec $HOME/.emacs.d/exwm/launch.sh

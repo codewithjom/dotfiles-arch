@@ -576,7 +576,7 @@ folder, otherwise delete a word"
 
 (defun jd/search-org-files ()
   (interactive)
-  (counsel-rg "" "~/Repo/org-book/" nil "Search Notes: "))
+  (counsel-rg "" "~/OrgBook/" nil "Search Notes: "))
 
 (defun jd/org-present-prepare-slide ()
   (org-overview)
@@ -841,3 +841,15 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(auth-source-save-behavior nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(vertico-current ((t (:background "#3a3f5a")))))
