@@ -1,12 +1,13 @@
 -- Xmobar (http://projects.haskell.org/xmobar/)
--- Color scheme: Dracula
+-- Color scheme: Palenight
+
 Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:hinting=true"
        , additionalFonts = [ "xft:Mononoki:pixelsize=11:antialias=true:hinting=true"
                            , "xft:Font Awesome 6 Free Solid:pixelsize=12"
                            , "xft:Font Awesome 6 Brands:pixelsize=12"
                            ]
-       , bgColor      = "#282c34"
-       , fgColor      = "#ff6c6b"
+       , bgColor      = "#121622"
+       , fgColor      = "#f07178"
        -- Position TopSize and BottomSize take 3 arguments:
        --   an alignment parameter (L/R/C) for Left, Right or Center.
        --   an integer for the percentage width, so 100 would be 100%.
@@ -17,7 +18,7 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
        , allDesktops  = True
        , persistent   = True
        , commands = [
-           -- Echos a "penguin" icon in front of the kernel output.
+			 	 	 -- Echos a "penguin" icon in front of the kernel output.
        Run Com "echo" ["<fn=3>\xf17c</fn>"] "penguin" 3600
            -- Get kernel version (script found in .local/bin)
        , Run Com ".local/bin/kernel" [] "kernel" 36000
@@ -37,7 +38,7 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
        , Run Date "<fn=2>\xf017</fn>  %a, %b %d %Y - [ %I:%M %p ] " "date" 50
        , Run UnsafeStdinReader ]
 
-       , sepChar = "%"
+			 , sepChar = "%"
        , alignSep = "}{"
-       , template = " %UnsafeStdinReader% }{ <fc=#51afef>%penguin%  %kernel%</fc>    <fc=#ecbe7b><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#a9a1e1>%disku%</fc>    <fc=#c678dd>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#da8548>%baticon%  %battery%</fc>    <fc=#46d9ff>%date%</fc> "
+       , template = " %UnsafeStdinReader% }{ <fc=#82aaff>%penguin%  %kernel%</fc>    <fc=#ffcb6b><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#e1acff>%disku%</fc>    <fc=#c792ea>%box%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc>    <fc=#ffe585>%baticon%  %battery%</fc>    <fc=#a3f7ff>%date%</fc> "
        }

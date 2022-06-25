@@ -3,7 +3,7 @@ try
   syntax enable
   set background=dark
   " let ayucolor="mirage"
-  colorscheme onedark
+  colorscheme palenight
   " let g:neosolorized_termtrans=1
   " runtime ../../colors/NeoSolarized.vim
   " colorscheme NeoSolarized

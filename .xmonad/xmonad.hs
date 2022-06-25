@@ -66,7 +66,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
-import Colors.DoomOne
+import Colors.Palenight
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -106,9 +106,9 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- spawn "killall conky"   -- kill current conky on each restart
+  spawn "killall conky"   -- kill current conky on each restart
 
-  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
   spawn ("lxsession")
   spawn ("picom --experimental-backends -b")

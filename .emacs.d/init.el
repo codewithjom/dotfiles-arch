@@ -846,7 +846,9 @@ folder, otherwise delete a word"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auth-source-save-behavior nil))
+ '(auth-source-save-behavior nil)
+ '(package-selected-packages
+	 '(haskell-mode yasnippet yaml-mode yaml ws-butler which-key web-mode vterm-toggle visual-fill-column vertico use-package typescript-mode super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier ox-reveal org-superstar org-present org-appear orderless openwith no-littering neotree minions marginalia magit lua-mode lsp-ui lsp-java lorem-ipsum lispyville ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful general flycheck exwm evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-box command-log-mode cider ccls bufler bookmark-view apheleia all-the-icons-dired ac-html)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

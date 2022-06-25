@@ -78,18 +78,18 @@ conky.config = {
 	own_window_argb_value = 255,			 	-- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,			-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
-	own_window_colour = '#282c34',			-- set colour if own_window_transparent no
+	own_window_colour = '#121622',			-- set colour if own_window_transparent no
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',
 	own_window_transparent = false,			-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'qtile_conky',		-- set the name manually  - default conky "hostname"
 	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
 
 
-	--Colors (One Dark)
-    color0 = '#46d9ff',
-    color1 = '#bbc2cf',
-    color2 = '#51afef',
-    color3 = '#5699af',
+	--Colors (Palenight)
+    color0 = '#c3e88d',
+    color1 = '#a6accd',
+    color2 = '#82aaff',
+    color3 = '#89ddff',
 
 };
 
@@ -117,9 +117,12 @@ ${color1}[S]+jk${alignr}${color2}move win focus${color}
 ${color1}[S]+[SHIFT]+jk${alignr}${color2}move window${color}
 ${color1}[S]+[1-9]${alignr}${color2}switch workspace${color}
 ${color1}[S]+[SHIFT]+[1-9]${alignr}${color2}send window${color}
+${color1}[S]+w/e${alignr}${color2}switch keyboard focus
+${color1}[S]+[period]/[comma]${alignr}${color2}switch focus
 ${color1}${hr}${color}
 ${color1}[S]+[SHIFT]+[RET]${alignr}${color2}emacs${color}
 ${color1}[S]+b${alignr}${color2}qutebrowser${color}
+${color1}[S]+v${alignr}${color2}vimb${color}
 ${color1}[S]+d${alignr}${color2}open dmenu${color}
 ${color1}[S]+[SHIFT]+f${alignr}${color2}file manager${color}
 ${color1}[ctrl]+[RET]${alignr}${color2}screenshot${color}

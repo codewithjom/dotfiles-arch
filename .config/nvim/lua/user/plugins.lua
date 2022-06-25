@@ -68,6 +68,7 @@ return packer.startup(function(use)
 	use "morhetz/gruvbox"
   use "folke/tokyonight.nvim"
 	use "ayu-theme/ayu-vim"
+  use "kyazdani42/nvim-palenight.lua"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

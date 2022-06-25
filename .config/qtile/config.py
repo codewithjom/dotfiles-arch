@@ -102,8 +102,8 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 2,
                 "margin": 4,
-                "border_focus": "839496",
-                "border_normal": "282c34"
+                "border_focus": "89ddff",
+                "border_normal": "121622"
                 }
 
 layouts = [
@@ -113,16 +113,16 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-colors = [["#282c34", "#282c34"], # 0 BG
-          ["#ff6c6b", "#da8548"], # 1 RED
-          ["#98be65", "#4db5bd"], # 2 GREEN
-          ["#da8548", "#ecbe7b"], # 3 YELLOW
-          ["#51afef", "#3071db"], # 4 BLUE
-          ["#c678dd", "#a9a1e1"], # 5 MAGENTA
-          ["#5699af", "#46d9ff"], # 6 CYAN
-          ["#bbc2cf", "#bbc2cf"], # 7 FG
-          ["#839496", "#839496"], # 8 SHADE-1
-          ["#c5c8c6", "#c5c8c6"]] # 9 SHADE-2
+colors = [["#121622"], # 0 BG
+          ["#f07178"], # 1 RED
+          ["#c3e88d"], # 2 GREEN
+          ["#ffcb6b"], # 3 YELLOW
+          ["#82aaff"], # 4 BLUE
+          ["#c792ea"], # 5 MAGENTA
+          ["#89ddff"], # 6 CYAN
+          ["#a6accd"], # 7 FG
+          ["#839496"], # 8 SHADE-1
+          ["#c5c8c6"]] # 9 SHADE-2
 
 widget_defaults = dict(
     font="Ubuntu Bold",
@@ -142,7 +142,7 @@ def init_widgets_list():
             padding_y = 3,
             padding_x = 3,
             borderwidth = 3,
-            active = colors[7],
+            active = ['ffffff'],
             inactive = colors[8],
             rounded = False,
             highlight_color = ['404040'],
