@@ -106,9 +106,9 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  spawn "killall conky"   -- kill current conky on each restart
+  -- spawn "killall conky"   -- kill current conky on each restart
 
-  spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
   spawn ("lxsession")
   spawn ("picom --experimental-backends -b")
@@ -136,7 +136,7 @@ tall     = renamed [Replace "tall"]
            $ windowNavigation
            $ subLayout [] (smartBorders Simplest)
            $ limitWindows 12
-           $ mySpacing 4
+           $ mySpacing 2
            $ ResizableTall 1 (3/100) (1/2) []
 monocle  = renamed [Replace "monocle"]
            $ smartBorders
@@ -152,8 +152,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 0.3
-    , swn_bgcolor           = "#282c34"
-    , swn_color             = "#bbc2cf"
+    , swn_bgcolor           = "#121622"
+    , swn_color             = "#a6accd"
     }
 
 -- The layout hook
