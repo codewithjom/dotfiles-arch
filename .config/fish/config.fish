@@ -15,6 +15,7 @@ end
 alias ls 'exa -al --icons --color=always --group-directories-first'
 alias la 'exa -aG --icons --color=always --group-directories-first'
 alias ll 'exa -alG --icons --color=always --group-directories-first'
+alias vim 'nvim'
 alias rm 'rm -rf'
 alias mv 'mv -i'
 alias cp 'cp -rf'
