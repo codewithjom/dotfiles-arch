@@ -30,6 +30,7 @@ alias mpvid 'devour mpv'
 alias sxiv 'devour sxiv'
 alias zathura 'devour zathura'
 alias clear 'clear && colorscript -e 13'
+alias checkupdates 'checkupdates | less'
 
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
