@@ -11,6 +11,7 @@ Use my configuration:
   git clone https://github.com/codewithjom/emacs-config.git ~/.emacs.d
 
 #+end_src
+
 * About This Configuration
 
 This is an ongoing evolution of my original Emacs configuration files, inspired by a bunch of resources I've found online.
@@ -291,19 +292,19 @@ Different platforms need different default font sizes, and =Iosevka Aile= is cur
   (defun jd/set-font-faces ()
     (message "Setting faces!")
     (set-face-attribute 'default nil
-                        :font "FantasqueSansMono Nerd Font"
+                        :font "JetBrains Mono"
                         :height jd/default-font-size
                         :weight 'regular)
 
     ;; Set the fixed pitch face
     (set-face-attribute 'fixed-pitch nil
-                        :font "FantasqueSansMono Nerd Font"
+                        :font "JetBrains Mono"
                         :height jd/default-font-size
                         :weight 'regular)
 
     ;; Set the variable pitch face
     (set-face-attribute 'variable-pitch nil
-                        :font "FantasqueSansMono Nerd Font"
+                        :font "Iosevka Aile"
                         :height jd/default-variable-font-size
                         :weight 'regular))
 
@@ -361,13 +362,13 @@ Doom Modeline
   (use-package doom-modeline
     :init (doom-modeline-mode 1)
     :custom
-    (doom-modeline-height 25)
+    (doom-modeline-height 30)
     (doom-modeline-bar-width 3)
     (doom-modeline-lsp t)
-    (doom-modeline-github t)
-    (doom-modeline-minor-modes nil)
+    (doom-modeline-github nil)
+    (doom-modeline-minor-modes t)
     (doom-modeline-persp-name nil)
-    (doom-modeline-major-mode-icon t))
+    (doom-modeline-major-mode-icon nil))
 
   ;;(display-battery-mode 1)
   ;;(setq display-time-day-and-date t)
@@ -821,7 +822,7 @@ Set up Org Mode with a baseline configuration. The following sections will add m
 		(setq org-ellipsis "..."
 					org-hide-emphasis-markers t
 					org-src-fontify-natively t
-					org-fontify-quote-and-verse-blocks nil
+					org-fontify-quote-and-verse-blocks t
 					org-src-tab-acts-natively t
 					org-edit-src-content-indentation 2
 					org-hide-block-startup nil
@@ -864,16 +865,16 @@ Set up Org Mode with a baseline configuration. The following sections will add m
 			(org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 		;; Increase the size of various headings
-		(set-face-attribute 'org-document-title nil :font "FantasqueSansMono Nerd Font" :weight 'medium :height 1.5)
+		(set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'medium :height 1.3)
 		(dolist (face '((org-level-1 . 1.3)
 										(org-level-2 . 1.2)
 										(org-level-3 . 1.1)
 										(org-level-4 . 1.05)
-										(org-level-5 . 1.05)
-										(org-level-6 . 1.05)
-										(org-level-7 . 1.05)
-										(org-level-8 . 1.05)))
-		(set-face-attribute (car face) nil :font "Victor Mono Nerd Font" :weight 'bold :height (cdr face)))
+										(org-level-5 . 1.0)
+										(org-level-6 . 1.0)
+										(org-level-7 . 1.0)
+										(org-level-8 . 1.0)))
+		(set-face-attribute (car face) nil :font "Iosevka Aile" :weight 'bold :height (cdr face)))
 
 		(require 'org-indent)
 		(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
@@ -930,14 +931,13 @@ These templates enable you to type things like =src= and then hit =Tab= to expan
   (defun jd/org-present-prepare-slide ()
     (org-overview)
     (org-show-entry)
-    (org-show-subtree)
     (org-show-children))
 
   (defun jd/org-present-hook ()
-    (setq-local face-remapping-alist '((default (:height 1.3) variable-pitch)
+    (setq-local face-remapping-alist '((default (:height 1.5) variable-pitch)
                                        (header-line (:height 4.5) variable-pitch)
-                                       (org-code (:height 1.3) org-code)
-                                       (org-verbatim (:height 1.3) org-verbatim)
+                                       (org-code (:height 1.55) org-code)
+                                       (org-verbatim (:height 1.55) org-verbatim)
                                        (org-block (:height 1.25) org-block)
                                        (org-block-begin-line (:height 0.7) org-block)))
     (setq header-line-format " ")

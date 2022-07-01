@@ -136,19 +136,19 @@
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "JetBrains Mono"
                       :height jd/default-font-size
                       :weight 'regular)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "JetBrains Mono"
                       :height jd/default-font-size
                       :weight 'regular)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "Iosevka Aile"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 
@@ -180,13 +180,13 @@
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
   :custom
-  (doom-modeline-height 25)
+  (doom-modeline-height 30)
   (doom-modeline-bar-width 3)
   (doom-modeline-lsp t)
-  (doom-modeline-github t)
-  (doom-modeline-minor-modes nil)
+  (doom-modeline-github nil)
+  (doom-modeline-minor-modes t)
   (doom-modeline-persp-name nil)
-  (doom-modeline-major-mode-icon t))
+  (doom-modeline-major-mode-icon nil))
 
 ;;(display-battery-mode 1)
 ;;(setq display-time-day-and-date t)
@@ -496,7 +496,7 @@ folder, otherwise delete a word"
 	(setq org-ellipsis "..."
 				org-hide-emphasis-markers t
 				org-src-fontify-natively t
-				org-fontify-quote-and-verse-blocks nil
+				org-fontify-quote-and-verse-blocks t
 				org-src-tab-acts-natively t
 				org-edit-src-content-indentation 2
 				org-hide-block-startup nil
@@ -539,16 +539,16 @@ folder, otherwise delete a word"
 		(org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 	;; Increase the size of various headings
-	(set-face-attribute 'org-document-title nil :font "FantasqueSansMono Nerd Font" :weight 'medium :height 1.5)
+	(set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'medium :height 1.3)
 	(dolist (face '((org-level-1 . 1.3)
 									(org-level-2 . 1.2)
 									(org-level-3 . 1.1)
 									(org-level-4 . 1.05)
-									(org-level-5 . 1.05)
-									(org-level-6 . 1.05)
-									(org-level-7 . 1.05)
-									(org-level-8 . 1.05)))
-	(set-face-attribute (car face) nil :font "Victor Mono Nerd Font" :weight 'bold :height (cdr face)))
+									(org-level-5 . 1.0)
+									(org-level-6 . 1.0)
+									(org-level-7 . 1.0)
+									(org-level-8 . 1.0)))
+	(set-face-attribute (car face) nil :font "Iosevka Aile" :weight 'bold :height (cdr face)))
 
 	(require 'org-indent)
 	(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
@@ -581,14 +581,13 @@ folder, otherwise delete a word"
 (defun jd/org-present-prepare-slide ()
   (org-overview)
   (org-show-entry)
-  (org-show-subtree)
   (org-show-children))
 
 (defun jd/org-present-hook ()
-  (setq-local face-remapping-alist '((default (:height 1.3) variable-pitch)
+  (setq-local face-remapping-alist '((default (:height 1.5) variable-pitch)
                                      (header-line (:height 4.5) variable-pitch)
-                                     (org-code (:height 1.3) org-code)
-                                     (org-verbatim (:height 1.3) org-verbatim)
+                                     (org-code (:height 1.55) org-code)
+                                     (org-verbatim (:height 1.55) org-verbatim)
                                      (org-block (:height 1.25) org-block)
                                      (org-block-begin-line (:height 0.7) org-block)))
   (setq header-line-format " ")
@@ -841,17 +840,3 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auth-source-save-behavior nil)
- '(package-selected-packages
-	 '(haskell-mode yasnippet yaml-mode yaml ws-butler which-key web-mode vterm-toggle visual-fill-column vertico use-package typescript-mode super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier ox-reveal org-superstar org-present org-appear orderless openwith no-littering neotree minions marginalia magit lua-mode lsp-ui lsp-java lorem-ipsum lispyville ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful general flycheck exwm evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-box command-log-mode cider ccls bufler bookmark-view apheleia all-the-icons-dired ac-html)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(vertico-current ((t (:background "#3a3f5a")))))
