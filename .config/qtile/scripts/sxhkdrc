@@ -21,7 +21,7 @@ super + shift + d
 
 # dmenu
 super + d
-  dmenu_run -p 'Run: ' -nb '#282c34' -nf '#bbc2cf' -sb '#5699af' -sf '#000000' -fn 'FantasqueSansMono Nerd Font:medium:pixelsize=18'
+  dmenu_run -p 'Run: ' -nb '#121622' -nf '#a6accd' -sb '#89ddff' -sf '#000000' -fn 'Ubuntu Mono:normal:pixelsize=18'
 
 # make sxhkd reload its configuration files:
 super + Escape
