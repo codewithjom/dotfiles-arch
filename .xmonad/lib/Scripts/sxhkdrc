@@ -21,7 +21,7 @@ super + shift + d
 
 # dmenu
 super + d
-  dmenu_run -p 'Run: ' -nb '#282a36' -nf '#f8f8f2' -sb '#50fa7b' -sf '#000000' -fn 'FantasqueSansMono Nerd Font:medium:pixelsize=18'
+  dmenu_run -p 'Run: ' -nb '#282828' -nf '#ebdbb2' -sb '#b16286' -sf '#282828' -fn 'FantasqueSansMono Nerd Font:medium:pixelsize=18'
 
 # make sxhkd reload its configuration files:
 super + Escape

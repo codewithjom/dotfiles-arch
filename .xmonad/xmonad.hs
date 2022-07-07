@@ -66,7 +66,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
-import Colors.Palenight
+import Colors.GruvboxDark
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -106,15 +106,13 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- spawn "killall conky"   -- kill current conky on each restart
-
-  -- spawn ("sleep 2 && conky -c $HOME/.xmonad/lib/Scripts/conkyrc")
+  -- NOTE: remove the comments if user not using xinit.
+  -- spawn ("lxsession")
+  -- spawn ("picom --experimental-backends -b")
+  -- spawn ("nm-applet")
+  -- spawn ("volumeicon")
+  -- spawn ("xsetroot -cursor_name left_ptr")
   spawn ("sxhkd -c $HOME/.xmonad/lib/Scripts/sxhkdrc")
-  spawn ("lxsession")
-  spawn ("picom --experimental-backends -b")
-  spawn ("nm-applet")
-  spawn ("volumeicon")
-  spawn ("xsetroot -cursor_name left_ptr")
 
   spawnOnce "nitrogen --set-scaled --restore &"
 
@@ -152,8 +150,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 0.3
-    , swn_bgcolor           = "#121622"
-    , swn_color             = "#a6accd"
+    , swn_bgcolor           = "#282828"
+    , swn_color             = "#ebdbb2"
     }
 
 -- The layout hook

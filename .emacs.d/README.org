@@ -276,13 +276,13 @@ These days I bounce around between themes included with =DOOM Themes= since they
 #+begin_src emacs-lisp
 
   (use-package doom-themes
-    :init (load-theme 'doom-ayu-dark t))
+    :init (load-theme 'doom-gruvbox t))
 
 #+end_src
 
 ** Font
 
-Different platforms need different default font sizes, and =Iosevka Aile= is currently my favorite face.
+Different platforms need different default font sizes, and =JetBrains Mono Nerd Font= is currently my favorite face.
 
 #+begin_src emacs-lisp
 
@@ -292,19 +292,19 @@ Different platforms need different default font sizes, and =Iosevka Aile= is cur
   (defun jd/set-font-faces ()
     (message "Setting faces!")
     (set-face-attribute 'default nil
-                        :font "JetBrains Mono"
+                        :font "JetBrains Mono Nerd Font"
                         :height jd/default-font-size
                         :weight 'regular)
 
     ;; Set the fixed pitch face
     (set-face-attribute 'fixed-pitch nil
-                        :font "JetBrains Mono"
+                        :font "JetBrains Mono Nerd Font"
                         :height jd/default-font-size
                         :weight 'regular)
 
     ;; Set the variable pitch face
     (set-face-attribute 'variable-pitch nil
-                        :font "Iosevka Aile"
+                        :font "JetBrains Mono Nerd Font"
                         :height jd/default-variable-font-size
                         :weight 'regular))
 

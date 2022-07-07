@@ -128,7 +128,7 @@
 (setq ad-redefinition-action 'accept)
 
 (use-package doom-themes
-  :init (load-theme 'doom-ayu-dark t))
+  :init (load-theme 'doom-gruvbox t))
 
 (defvar jd/default-font-size 120)
 (defvar jd/default-variable-font-size 120)
@@ -136,19 +136,19 @@
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "JetBrains Mono"
+                      :font "JetBrains Mono Nerd Font"
                       :height jd/default-font-size
                       :weight 'regular)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "JetBrains Mono"
+                      :font "JetBrains Mono Nerd Font"
                       :height jd/default-font-size
                       :weight 'regular)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Iosevka Aile"
+                      :font "JetBrains Mono Nerd Font"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 

@@ -433,7 +433,7 @@ font:
 # *tomorrow-night
 # *tokyo-night
 
-colors: *palenight
+colors: *gruvbox-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
