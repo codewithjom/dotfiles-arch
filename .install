@@ -1,0 +1,119 @@
+#!/usr/bin/bash
+
+read -p "Do you want to install PARU the better AUR Helper? [Y/n] " yn
+case $yn in
+[Yy]*)
+    git clone https://aur.archlinux.org/paru.git $HOME/.paru
+    cd $HOME/.paru
+    makepkg -si --noconfirm
+    ;;
+[Nn]*) ;;
+"")
+    git clone https://aur.archlinux.org/paru.git $HOME/.paru
+    cd $HOME/.paru
+    makepkg -si --noconfirm
+    ;;
+*) echo "Please answer y/n TRY AGAIN!" ;;
+esac
+
+read -p "Do you want to install NEOVIM? [Y/n] " yn
+case $yn in
+[Yy]*)
+    sudo pacman -S neovim nodejs python-pip
+    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+    yarn global add neovim
+    paru -S npm
+    sudo npm i -g typescript typescript-language-server
+    python3 -m pip install --user --upgrade pynvim
+    cd
+    ;;
+[Nn]*) ;;
+"")
+    sudo pacman -S neovim nodejs python-pip
+    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+    yarn global add neovim
+    paru -S npm
+    sudo npm i -g typescript typescript-language-server
+    python3 -m pip install --user --upgrade pynvim
+    cd
+    ;;
+*) echo "Please answer y/n TRY AGAIN!" ;;
+esac
+
+read -p "Do you want to install LY as Display Manager? [Y/n] " yn
+case $yn in
+[Yy]*)
+    git clone https://aur.archlinux.org/ly $HOME/.ly
+    cd .ly
+    makepkg -si --noconfirm
+    sudo systemctl enable ly.service
+    ;;
+[Nn]*) ;;
+"")
+    git clone https://aur.archlinux.org/ly $HOME/.ly
+    cd .ly
+    makepkg -si --noconfirm
+    sudo systemctl enable ly.service
+    ;;
+*) echo "Please answer y/n TRY AGAIN!" ;;
+esac
+
+printf "\e[1;32m#########################################\e[0m\n"
+printf "\e[1;32m## Installing GTK, ICONS, CURSOR, ETC. ##\e[0m\n"
+printf "\e[1;32m#########################################\e[0m\n"
+
+paru -S python-iwlib skeuos-gtk sardi-icons sweet-cursor-theme-git
+paru -S --aur betterlockscreen preload picom-git light-git devour
+
+printf "\e[1;32m######################\e[0m\n"
+printf "\e[1;32m## Installing FONTS ##\e[0m\n"
+printf "\e[1;32m######################\e[0m\n"
+
+paru -S ttc-iosevka-aile ttf-cascadia-code ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-inconsolata ttf-jetbrains-mono ttf-ubuntu-font-family ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code nerd-fonts-roboto-mono nerd-fonts-fantasque-sans-mono adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts nerd-fonts-victor-mono
+
+printf "\e[1;32m#############################\e[0m\n"
+printf "\e[1;32m## Installing DEPENDENCIES ##\e[0m\n"
+printf "\e[1;32m#############################\e[0m\n"
+
+sudo pacman -S tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa python-pip openjdk11-src sxiv mpv pavucontrol plocate dunst pamixer conky alacritty blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs cmake dmenu xdo xdotool fisher ripgrep
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+if [[ $(which $SHELL) = '/bin/fish' ]]; then
+    chsh -s /bin/fish $USER
+else
+    sudo pacman -S fish
+    chsh -s /bin/fish $USER
+fi
+
+pip3 install psutil
+
+paru -S xmonad xmonad-contrib xmobar qtile sxhkd pfetch
+git clone https://github.com/codewithjom/dotfiles.git ~/Downloads/dotfiles
+cd ~/Downloads/dotfiles
+cp -rf .* ~/
+rm -rf ~/.git ~/README.org ~/.install ~/.stow-local-ignore ~/LICENSE
+
+# Enable daemon
+sudo systemctl enable tlp.service
+sudo systemctl enable ufw.service
+sudo systemctl enable betterlockscreen@$USER
+sudo systemctl enable preload.service
+sudo systemctl enable nvidia-hibernate.service
+sudo systemctl enable nvidia-persistenced.service
+sudo systemctl enable nvidia-resume.service
+sudo systemctl enable nvidia-suspend.service
+
+while true; do
+    read -p "Do you want to reboot? (recommended) [Y/n] " yn
+    case $yn in
+    [Yy]*) reboot ;;
+    [Nn]*)
+        exit
+        break
+        ;;
+    "") reboot ;;
+    *) printf "\e[1;32mPlease answer y or n.\e[0m\n" ;;
+    esac
+done
