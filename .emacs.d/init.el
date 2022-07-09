@@ -138,17 +138,17 @@
   (set-face-attribute 'default nil
                       :font "JetBrains Mono Nerd Font"
                       :height jd/default-font-size
-                      :weight 'regular)
+                      :weight 'light)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
                       :font "JetBrains Mono Nerd Font"
                       :height jd/default-font-size
-                      :weight 'regular)
+                      :weight 'light)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "JetBrains Mono Nerd Font"
+                      :font "Iosevka Aile"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 
