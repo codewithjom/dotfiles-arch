@@ -27,7 +27,7 @@ import qualified Data.Map as M
 -- Hooks
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, wrap, xmobarPP, xmobarColor, shorten, PP(..))
 import XMonad.Hooks.EwmhDesktops  -- for some fullscreen events, also for xcomposite in obs.
-import XMonad.Hooks.ManageDocks (avoidStruts, docksEventHook, manageDocks, ToggleStruts(..))
+import XMonad.Hooks.ManageDocks (avoidStruts, docks, manageDocks, ToggleStruts(..))
 import XMonad.Hooks.ManageHelpers (isFullscreen, doFullFloat, doCenterFloat)
 import XMonad.Hooks.ServerMode
 import XMonad.Hooks.SetWMName
@@ -262,9 +262,10 @@ myKeys =
 main :: IO ()
 main = do
     xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.xmonad/lib/Scripts/xmobarrc")
-    xmonad $ ewmh def
+    xmproc1 <- spawnPipe ("xmobar -x 0 $HOME/.xmonad/lib/Scripts/xmobarrc")
+    xmonad $ ewmh $ docks $ def
         { manageHook         = myManageHook <+> manageDocks
-        , handleEventHook    = docksEventHook -- <+> fullscreenEventHook
+        -- , handleEventHook    = docks -- <+> fullscreenEventHook
         , modMask            = myModMask
         , terminal           = myTerminal
         , startupHook        = myStartupHook
