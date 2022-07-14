@@ -103,8 +103,8 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq use-dialog-box nil) ;; Disable dialog boxes since they weren't working in Mac OSX
 
-(set-frame-parameter (selected-frame) 'alpha '(90 . 85))
-(add-to-list 'default-frame-alist '(alpha . (90 . 85)))
+;; (set-frame-parameter (selected-frame) 'alpha '(90 . 85))
+;; (add-to-list 'default-frame-alist '(alpha . (90 . 85)))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -128,7 +128,7 @@
 (setq ad-redefinition-action 'accept)
 
 (use-package doom-themes
-  :init (load-theme 'doom-gruvbox t))
+  :init (load-theme 'doom-dracula t))
 
 (defvar jd/default-font-size 110)
 (defvar jd/default-variable-font-size 110)

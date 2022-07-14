@@ -219,8 +219,8 @@ Set frame transparency and maximized windows by default:
 
 #+begin_src emacs-lisp
 
-  (set-frame-parameter (selected-frame) 'alpha '(90 . 85))
-  (add-to-list 'default-frame-alist '(alpha . (90 . 85)))
+  ;; (set-frame-parameter (selected-frame) 'alpha '(90 . 85))
+  ;; (add-to-list 'default-frame-alist '(alpha . (90 . 85)))
   (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
   (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -276,7 +276,7 @@ These days I bounce around between themes included with =DOOM Themes= since they
 #+begin_src emacs-lisp
 
   (use-package doom-themes
-    :init (load-theme 'doom-gruvbox t))
+    :init (load-theme 'doom-dracula t))
 
 #+end_src
 
