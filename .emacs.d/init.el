@@ -110,7 +110,7 @@
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
-;; (setq display-line-numbers-type 'relative)
+(setq display-line-numbers-type 'relative)
 (setq-default truncate-lines t)
 
 ;; Disable line numbers for some modes
@@ -192,6 +192,21 @@
 ;;(display-battery-mode 1)
 ;;(setq display-time-day-and-date t)
 ;;(display-time-mode 1)
+
+(use-package dashboard
+  :init
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  ;; (setq dashboard-startup-banner 'logo) ;; use emacs logo
+  (setq dashboard-startup-banner "~/.emacs.d/banner/logo.png")
+  (setq dashboard-center-content t)
+  (setq dashboard-items '((recents . 8)))
+
+  :config
+  (dashboard-setup-startup-hook)
+  (dashboard-modify-heading-icons '((recents . "file-text"))))
+
+(setq doom-fallback-buffer-name "*dashboard*")
 
 (use-package super-save
   :defer 1
