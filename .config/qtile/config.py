@@ -32,82 +32,46 @@ keys = [
     Key([mod], ret, lazy.spawn(terminal)),
     Key([mod, s], "f", lazy.spawn(file_manager)),
     Key([ctrl], ret, lazy.spawn(screenshot)),
+
     # ROFI
     Key([mod, s], "d", lazy.spawn("rofi -show drun")),
+
     # QTILE
     Key([mod], "x", lazy.shutdown()),  # LOGOUT
     Key([mod], "q", lazy.window.kill()),  # KILL WINDOW
     Key([mod, "shift"], "r", lazy.restart()),  # RESTART
     Key([mod], "Tab", lazy.next_layout()),  # CHANGE LAYOUTS
+
     # WINDOWS CONTROLS
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "k", lazy.layout.up()),
     Key([mod, s], "j", lazy.layout.shuffle_down(), lazy.layout.section_down()),
     Key([mod, s], "k", lazy.layout.shuffle_up(), lazy.layout.section_up()),
-    Key(
-        [mod],
-        "l",
-        lazy.layout.grow_right(),
-        lazy.layout.grow(),
-        lazy.layout.increase_ratio(),
-        lazy.layout.delete(),
-    ),
-    Key(
-        [mod],
-        "h",
-        lazy.layout.grow_left(),
-        lazy.layout.shrink(),
-        lazy.layout.decrease_ratio(),
-        lazy.layout.add(),
-    ),
+    Key([mod], "l", lazy.layout.grow_right(), lazy.layout.grow(), lazy.layout.increase_ratio(), lazy.layout.delete()),
+    Key([mod], "h", lazy.layout.grow_left(), lazy.layout.shrink(), lazy.layout.decrease_ratio(), lazy.layout.add()),
     Key([mod], "m", lazy.layout.maximize()),
     Key([mod], "f", lazy.window.toggle_floating()),
     Key([mod], "space", lazy.window.toggle_fullscreen()),
+
     # SWITCH KEYBOARD FOCUS (PROJECTOR/MONITOR)
     Key([mod], "w", lazy.to_screen(0)),
     Key([mod], "e", lazy.to_screen(1)),
+
     # SWITCH FOCUS (PROJECTOR/MONITOR)
     Key([mod], "period", lazy.next_screen()),
     Key([mod], "comma", lazy.prev_screen()),
 ]
 
 groups = [
-    Group("ter", layout="monadtall"),
-    Group(
-        "web",
-        layout="monadtall",
-        matches=[
-            Match(
-                wm_class=[
-                    "Brave-browser",
-                    "Min",
-                    "qutebrowser",
-                    "Vimb",
-                    "firefox",
-                    "Chromium",
-                ]
-            )
-        ],
-    ),
-    Group(
-        "dev",
-        layout="monadtall",
-        matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])],
-    ),
-    Group("doc", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
-    Group(
-        "virt",
-        layout="monadtall",
-        matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])],
-    ),
-    Group(
-        "chat",
-        layout="monadtall",
-        matches=[Match(wm_class=["discord", "Thunderbird"])],
-    ),
-    Group("mus", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
-    Group("vid", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
-    Group("xtra", layout="floating"),
+    Group("DEV", layout="monadtall"),
+    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox",])]),
+    Group("SYS", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
+    Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
+    Group("VIRT", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
+    Group("CHAT", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
+    Group("MUS", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
+    Group("VID", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
+    Group("XTRA", layout="floating"),
 ]
 
 from libqtile.dgroups import simple_key_binder
@@ -130,37 +94,41 @@ layouts = [
 
 colors = [
     ["#282828", "#282828"],  # 0 BG
-    ["#cc241d", "#fb4934"],  # 1 RED
-    ["#98971a", "#b8bb26"],  # 2 GREEN
-    ["#d79921", "#fabd2f"],  # 3 YELLOW
-    ["#458588", "#83a598"],  # 4 BLUE
-    ["#b16286", "#d3869b"],  # 5 MAGENTA
-    ["#689d6a", "#8ec07c"],  # 6 AQUA
-    ["#ebdbb2", "#a89984"],  # 7 FG
-    ["#bdae93"],  # 8 SHADE-1
-    ["#d5c4a1"],  # 9 SHADE-2
+    ["#1d2021", "#1d2021"],  # 1 BLACK
+    ["#ebdbb2", "#a89984"],  # 2 FG
+    ["#cc241d", "#fb4934"],  # 3 RED
+    ["#98971a", "#b8bb26"],  # 4 GREEN
+    ["#d79921", "#fabd2f"],  # 5 YELLOW
+    ["#458588", "#83a598"],  # 6 BLUE
+    ["#b16286", "#d3869b"],  # 7 MAGENTA
+    ["#689d6a", "#8ec07c"],  # 8 AQUA
 ]
 
-widget_defaults = dict(font="Ubuntu Bold", fontsize=11, padding=2, background=colors[0])
+widget_defaults = dict(
+    font="Ubuntu Bold",
+    fontsize=10,
+    padding=2,
+    background=colors[0])
+
 extension_defaults = widget_defaults.copy()
 
 
 def init_widgets_list():
     widgets_list = [
         widget.GroupBox(
-            font="Hack Nerd Font Bold",
-            fontsize=10,
+            font="Ubuntu Bold",
+            fontsize=8,
             margin_y=3,
             margin_x=0,
-            padding_y=3,
+            padding_y=5,
             padding_x=3,
             borderwidth=3,
-            active=colors[4],
-            inactive=colors[8],
+            active=colors[2],
+            inactive=colors[7],
             rounded=False,
-            highlight_color=["282828"],
+            highlight_color=colors[1],
             highlight_method="line",
-            this_current_screen_border=colors[7],
+            this_current_screen_border=colors[6],
             this_screen_border=colors[4],
             other_current_screen_border=colors[6],
             other_screen_border=colors[4],
@@ -173,19 +141,27 @@ def init_widgets_list():
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
-        widget.CurrentLayout(foreground=colors[2], background=colors[0], padding=5),
+        widget.CurrentLayout(
+            foreground=colors[2],
+            background=colors[0],
+            padding=5
+        ),
         widget.TextBox(
             text="|",
             font="Ubuntu Mono",
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.WindowCount(
-            text_format="{num}", show_zero=True, padding=2, foreground=colors[6]
+            text_format="{num}",
+            show_zero=True,
+            padding=2,
+            foreground=colors[6],
+            background=colors[0]
         ),
         widget.TextBox(
             text="|",
@@ -193,28 +169,37 @@ def init_widgets_list():
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
-        widget.WindowName(foreground=colors[6], background=colors[0], padding=0),
-        widget.Sep(linewidth=0, padding=6, foreground=colors[0], background=colors[0]),
+        widget.WindowName(
+            foreground=colors[6],
+            background=colors[0],
+            padding=0
+        ),
+        widget.Sep(
+            linewidth=0,
+            padding=6,
+            foreground=colors[0],
+            background=colors[0]
+        ),
         widget.TextBox(
             text="|",
             font="Ubuntu Mono",
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
             background=colors[0],
-            foreground=colors[5],
+            foreground=colors[4],
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.ThermalSensor(
-            foreground=colors[5],
+            foreground=colors[4],
             background=colors[0],
             threshold=90,
             fmt="{}",
@@ -226,26 +211,24 @@ def init_widgets_list():
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
             background=colors[0],
-            foreground=colors[7],
+            foreground=colors[6],
             padding=3,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.CheckUpdates(
             update_interval=1800,
             distro="Arch_checkupdates",
             display_format="Updates: {updates}",
             foreground=colors[0],
-            colour_have_updates=colors[7],
-            colour_no_updates=colors[7],
-            mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(terminal + " -e sudo pacman -Syu")
-            },
+            colour_have_updates=colors[6],
+            colour_no_updates=colors[6],
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -e sudo pacman -Syu")},
             padding=5,
             background=colors[0],
         ),
@@ -255,18 +238,18 @@ def init_widgets_list():
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
             background=colors[0],
-            foreground=colors[3],
+            foreground=colors[7],
             padding=3,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.Memory(
-            foreground=colors[3],
+            foreground=colors[7],
             background=colors[0],
             mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -e htop")},
             fmt="Mem: {}",
@@ -278,13 +261,13 @@ def init_widgets_list():
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
             background=colors[0],
-            foreground=colors[1],
+            foreground=colors[5],
             padding=2,
             fontsize=12,
         ),
@@ -293,7 +276,7 @@ def init_widgets_list():
             show_short_text=False,
             update_interval=50,
             padding=5,
-            foreground=colors[1],
+            foreground=colors[5],
             background=colors[0],
         ),
         # widget.TextBox(
@@ -324,7 +307,7 @@ def init_widgets_list():
             background=colors[0],
             foreground="474747",
             padding=2,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.TextBox(
             text="",
@@ -332,19 +315,31 @@ def init_widgets_list():
             background=colors[0],
             foreground=colors[2],
             padding=5,
-            fontsize=14,
+            fontsize=12,
         ),
         widget.Clock(
-            foreground=colors[2], background=colors[0], format="%a, %B %d - %I:%M %p"
+            foreground=colors[2],
+            background=colors[0],
+            format="%a, %B %d - %I:%M %p"
         ),
-        widget.Sep(linewidth=0, padding=5, foreground=colors[0], background=colors[0]),
-        widget.Systray(background=colors[0], icon_size=20, padding=1),
+        widget.Sep(
+            linewidth=0,
+            padding=5,
+            foreground=colors[0],
+            background=colors[0]
+        ),
+        widget.Systray(
+            background=colors[0],
+            icon_size=20,
+            padding=1
+        ),
     ]
     return widgets_list
 
 
 def init_widgets_screen1():
     widgets_screen1 = init_widgets_list()
+    del widgets_screen1[9:10]
     return widgets_screen1
 
 
@@ -355,8 +350,8 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1, size=24)),
-        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1, size=24)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
     ]
 
 
@@ -400,15 +395,8 @@ def switch_screens(qtile):
 
 
 mouse = [
-    Drag(
-        [mod],
-        "Button1",
-        lazy.window.set_position_floating(),
-        start=lazy.window.get_position(),
-    ),
-    Drag(
-        [mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()
-    ),
+    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
+    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
     Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
 
