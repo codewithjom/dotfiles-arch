@@ -286,8 +286,8 @@ Different platforms need different default font sizes, and =Fira Mono= is curren
 
 #+begin_src emacs-lisp
 
-  (defvar jd/default-font-size 118)
-  (defvar jd/default-variable-font-size 118)
+  (defvar jd/default-font-size 110)
+  (defvar jd/default-variable-font-size 110)
 
   (defun jd/set-font-faces ()
     (message "Setting faces!")
