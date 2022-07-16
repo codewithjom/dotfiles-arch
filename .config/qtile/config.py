@@ -190,6 +190,12 @@ def init_widgets_list():
             padding=2,
             fontsize=12,
         ),
+        widget.Sep(
+            linewidth=0,
+            padding=6,
+            foreground=colors[0],
+            background=colors[0]
+        ),
         widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
