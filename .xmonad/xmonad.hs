@@ -66,7 +66,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
-import Colors.GruvboxDark
+import Colors.Dracula
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -99,7 +99,7 @@ myNormColor :: String       -- Border color of normal windows
 myNormColor   = colorBack   -- This variable is imported from Colors.THEME
 
 myFocusColor :: String      -- Border color of focused windows
-myFocusColor  = colorFore     -- This variable is imported from Colors.THEME
+myFocusColor  = color07     -- This variable is imported from Colors.THEME
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
@@ -150,8 +150,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 0.3
-    , swn_bgcolor           = "#282828"
-    , swn_color             = "#ebdbb2"
+    , swn_bgcolor           = "#282a36"
+    , swn_color             = "#f8f8f2"
     }
 
 -- The layout hook
