@@ -50,7 +50,7 @@ font:
     family: FantasqueSansMono Nerd Font
     style: BoldItalic
 
-  size: 10.0 # Font Size
+  size: 10.5 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
