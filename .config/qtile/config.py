@@ -118,11 +118,11 @@ def init_widgets_list():
         widget.GroupBox(
             font="Ubuntu Bold",
             fontsize=8,
-            margin_y=3,
+            margin_y=5,
             margin_x=0,
             padding_y=5,
             padding_x=3,
-            borderwidth=3,
+            borderwidth=2,
             active=colors[2],
             inactive=colors[7],
             rounded=False,
