@@ -18,6 +18,5 @@ blueberry-tray &
 conky -c $HOME/.config/qtile/scripts/conkyrc &
 
 # only choose 1 window manager
-# exec xmonad
 exec qtile start
 # exec $HOME/.emacs.d/exwm/launch.sh
