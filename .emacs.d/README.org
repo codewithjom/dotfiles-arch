@@ -190,7 +190,7 @@ Clean up Emacs' user interface, make it more minimal:
   (set-fringe-mode 10)        ; Give some breathing room
   (menu-bar-mode -1)          ; Disable the menu bar
   (setq visible-bell t)
-  (blink-cursor-mode 0)
+  (blink-cursor-mode 1)
   ;; (global-hl-line-mode t)
 
 #+end_src
@@ -211,8 +211,8 @@ Set frame transparency and maximized windows by default:
 
 #+begin_src emacs-lisp
 
-  ;; (set-frame-parameter (selected-frame) 'alpha '(90 . 85))
-  ;; (add-to-list 'default-frame-alist '(alpha . (90 . 85)))
+  ;; (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
+  ;; (add-to-list 'default-frame-alist '(alpha . (95 . 90)))
   (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
   (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -224,7 +224,8 @@ Enable line numbers and customize their format:
 
   (column-number-mode)
   (global-display-line-numbers-mode t)
-  (setq display-line-numbers-type 'relative)
+  ;; (setq display-line-numbers-type 'relative) ;; set to relative line numbers
+  (display-line-numbers-mode) ;; set to default line numbers
   (setq-default truncate-lines t)
 
   ;; Disable line numbers for some modes
@@ -274,23 +275,23 @@ These days I bounce around between themes included with =DOOM Themes= since they
 
 ** Font
 
-Different platforms need different default font sizes, and =Fira Mono= is currently my favorite face.
+Different platforms need different default font sizes, and =FantasqueSansMono Nerd Font= is currently my favorite face.
 
 #+begin_src emacs-lisp
 
-  (defvar jd/default-font-size 110)
-  (defvar jd/default-variable-font-size 110)
+  (defvar jd/default-font-size 105)
+  (defvar jd/default-variable-font-size 105)
 
   (defun jd/set-font-faces ()
     (message "Setting faces!")
     (set-face-attribute 'default nil
-                        :font "Fira Mono"
+                        :font "FantasqueSansMono Nerd Font"
                         :height jd/default-font-size
                         :weight 'light)
 
     ;; Set the fixed pitch face
     (set-face-attribute 'fixed-pitch nil
-                        :font "Fira Mono"
+                        :font "FantasqueSansMono Nerd Font"
                         :height jd/default-font-size
                         :weight 'light)
 
@@ -354,8 +355,8 @@ Doom Modeline
   (use-package doom-modeline
     :init (doom-modeline-mode 1)
     :custom
-    (doom-modeline-height 15)
-    (doom-modeline-bar-width 6)
+    (doom-modeline-height 20)
+    (doom-modeline-bar-width 5)
     (doom-modeline-lsp t)
     (doom-modeline-github nil)
     (doom-modeline-minor-modes t)
@@ -382,7 +383,7 @@ An extensible emacs startup screen showing you what's most important.
     ;; (setq dashboard-startup-banner 'logo) ;; use emacs logo
     (setq dashboard-startup-banner "~/.emacs.d/banner/logo.png")
     (setq dashboard-center-content t)
-    (setq dashboard-items '((recents . 8)))
+    (setq dashboard-items '((recents . 15)))
 
     :config
     (dashboard-setup-startup-hook)
@@ -683,7 +684,7 @@ Marginalia provides helpful annotations for various types of minibuffer completi
 #+begin_src emacs-lisp
 
   (defun jd/org-mode-visual-fill()
-    (setq visual-fill-column-width 100
+    (setq visual-fill-column-width 110
           visual-fill-column-center-text t)
     (visual-fill-column-mode 1))
 
@@ -818,7 +819,7 @@ Set up Org Mode with a baseline configuration. The following sections will add m
 
 #+begin_src emacs-lisp
 
-  (setq-default fill-column 80)
+  (setq-default fill-column 90)
 
   (use-package simple-httpd
     :ensure t)

@@ -94,7 +94,7 @@
 (set-fringe-mode 10)        ; Give some breathing room
 (menu-bar-mode -1)          ; Disable the menu bar
 (setq visible-bell t)
-(blink-cursor-mode 0)
+(blink-cursor-mode 1)
 ;; (global-hl-line-mode t)
 
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
@@ -103,14 +103,15 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq use-dialog-box nil) ;; Disable dialog boxes since they weren't working in Mac OSX
 
-;; (set-frame-parameter (selected-frame) 'alpha '(90 . 85))
-;; (add-to-list 'default-frame-alist '(alpha . (90 . 85)))
+;; (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
+;; (add-to-list 'default-frame-alist '(alpha . (95 . 90)))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
-(setq display-line-numbers-type 'relative)
+;; (setq display-line-numbers-type 'relative) ;; set to relative line numbers
+(display-line-numbers-mode) ;; set to default line numbers
 (setq-default truncate-lines t)
 
 ;; Disable line numbers for some modes
@@ -130,19 +131,19 @@
 (use-package doom-themes
   :init (load-theme 'doom-dracula t))
 
-(defvar jd/default-font-size 110)
-(defvar jd/default-variable-font-size 110)
+(defvar jd/default-font-size 105)
+(defvar jd/default-variable-font-size 105)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "Fira Mono"
+                      :font "FantasqueSansMono Nerd Font"
                       :height jd/default-font-size
                       :weight 'light)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "Fira Mono"
+                      :font "FantasqueSansMono Nerd Font"
                       :height jd/default-font-size
                       :weight 'light)
 
@@ -180,8 +181,8 @@
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
   :custom
-  (doom-modeline-height 15)
-  (doom-modeline-bar-width 6)
+  (doom-modeline-height 20)
+  (doom-modeline-bar-width 5)
   (doom-modeline-lsp t)
   (doom-modeline-github nil)
   (doom-modeline-minor-modes t)
@@ -200,7 +201,7 @@
   ;; (setq dashboard-startup-banner 'logo) ;; use emacs logo
   (setq dashboard-startup-banner "~/.emacs.d/banner/logo.png")
   (setq dashboard-center-content t)
-  (setq dashboard-items '((recents . 8)))
+  (setq dashboard-items '((recents . 15)))
 
   :config
   (dashboard-setup-startup-hook)
@@ -385,7 +386,7 @@ folder, otherwise delete a word"
 (add-hook 'after-init-hook 'global-company-mode)
 
 (defun jd/org-mode-visual-fill()
-  (setq visual-fill-column-width 100
+  (setq visual-fill-column-width 110
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
@@ -492,7 +493,7 @@ folder, otherwise delete a word"
 
 (use-package bookmark-view)
 
-(setq-default fill-column 80)
+(setq-default fill-column 90)
 
 (use-package simple-httpd
   :ensure t)
