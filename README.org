@@ -26,5 +26,4 @@ These are the following programs that I configure:
 
 - .emacs.d (EMACS)
 - .local/bin (SHELL SCRIPTS)
-- .xmonad (WINDOW MANAGER)
 - .xinitrc (START WINDOW MANAGER)
