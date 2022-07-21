@@ -137,13 +137,13 @@
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "Fira Mono"
                       :height jd/default-font-size
                       :weight 'light)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "FantasqueSansMono Nerd Font"
+                      :font "JetBrains Mono"
                       :height jd/default-font-size
                       :weight 'light)
 
@@ -181,14 +181,14 @@
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
   :custom
-  (doom-modeline-height 20)
-  (doom-modeline-bar-width 5)
+  (doom-modeline-height 25)
+  (doom-modeline-bar-width 4)
   (doom-modeline-lsp t)
   (doom-modeline-github nil)
-  (doom-modeline-minor-modes t)
-  (doom-modeline-persp-name nil)
+  (doom-modeline-minor-modes nil)
+  (doom-modeline-persp-name t)
   (doom-modeline-buffer-file-name-style 'truncate-except-project)
-  (doom-modeline-major-mode-icon nil))
+  (doom-modeline-major-mode-icon t))
 
 ;;(display-battery-mode 1)
 ;;(setq display-time-day-and-date t)
@@ -493,7 +493,7 @@ folder, otherwise delete a word"
 
 (use-package bookmark-view)
 
-(setq-default fill-column 90)
+(setq-default fill-column 80)
 
 (use-package simple-httpd
   :ensure t)
@@ -557,16 +557,16 @@ folder, otherwise delete a word"
     (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
   ;; Increase the size of various headings
-  (set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'bold :height 1.3)
-  (dolist (face '((org-level-1 . 1.2)
-                  (org-level-2 . 1.1)
-                  (org-level-3 . 1.05)
-                  (org-level-4 . 1.0)
+  (set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'bold :height 1.5)
+  (dolist (face '((org-level-1 . 1.4)
+                  (org-level-2 . 1.3)
+                  (org-level-3 . 1.2)
+                  (org-level-4 . 1.1)
                   (org-level-5 . 1.1)
                   (org-level-6 . 1.1)
                   (org-level-7 . 1.1)
                   (org-level-8 . 1.1)))
-  (set-face-attribute (car face) nil :font "Iosevka Aile" :weight 'medium :height (cdr face)))
+  (set-face-attribute (car face) nil :font "JetBrains Mono" :weight 'medium :height (cdr face)))
 
   (require 'org-indent)
 
