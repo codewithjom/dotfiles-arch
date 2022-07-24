@@ -29,7 +29,7 @@ alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
 alias mpvid 'devour mpv'
 alias sxiv 'devour sxiv'
 alias zathura 'devour zathura'
-alias clear 'clear && colorscript -e 13'
+# alias clear 'clear && colorscript -e 13'
 alias checkupdates 'checkupdates | less'
 
 if status --is-login
@@ -39,6 +39,6 @@ if status --is-login
 end
 
 # Package name: shell-color-scripts
-colorscript -r
+# colorscript -r
 
 starship init fish | source
