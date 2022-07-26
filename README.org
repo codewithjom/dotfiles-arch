@@ -1,29 +1,6 @@
-[[https://raw.githubusercontent.com/codewithjom/jdos-repo/master/.config/qtile/scripts/.jdos.jpg]]
-
 #+title: Dotfiles
 #+author: Jom Dollesin
 
 *Warning*: Don't blindly use my settings unless you know what that entails. Use at your own risk!
 
-* Contents
-
-These are the following programs that I configure:
-
-- .config
-  + alacritty (TERMINAL)
-  + dunst (NOTIFICATION)
-  + fish (SHELL)
-  + mpv (MUSIC/VIDEO PLAYER)
-  + nvim (TEXT EDITOR)
-  + picom (COMPOSITOR FOR XORG)
-  + polybar (STATUS BAR)
-  + qtile (WINDOW MANAGER)
-  + qutebrowser (BROWSER)
-  + rofi (APP LAUNCHER)
-  + vimb (BROWSER)
-  + betterlockscreen (LOCKSCREEN)
-  + starship (PROMPT)
-
-- .emacs.d (EMACS)
-- .local/bin (SHELL SCRIPTS)
-- .xinitrc (START WINDOW MANAGER)
+[[https://raw.githubusercontent.com/codewithjom/jdos-repo/master/.config/qtile/scripts/.jdos.jpg]]
