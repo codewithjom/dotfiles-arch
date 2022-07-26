@@ -9,6 +9,7 @@
 # $ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 add_newline = false
+scan_timeout = 10
 
 [line_break]
 disabled = true
