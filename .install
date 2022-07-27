@@ -77,7 +77,7 @@ printf "\e[1;32m#############################\e[0m\n"
 printf "\e[1;32m## Installing DEPENDENCIES ##\e[0m\n"
 printf "\e[1;32m#############################\e[0m\n"
 
-sudo pacman -S tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa python-pip openjdk11-src sxiv mpv pavucontrol plocate dunst pamixer conky alacritty blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs cmake dmenu xdo xdotool fisher ripgrep
+sudo pacman -S tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa python-pip openjdk11-src sxiv mpv pavucontrol plocate dunst pamixer conky alacritty blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs cmake dmenu xdo xdotool fisher ripgrep tmux
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 if [[ $(which $SHELL) = '/bin/fish' ]]; then
