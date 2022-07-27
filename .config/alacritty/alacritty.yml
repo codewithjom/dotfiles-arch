@@ -433,7 +433,7 @@ font:
 # *tomorrow-night
 # *tokyo-night
 
-colors: *dracula
+colors: *solarized-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
