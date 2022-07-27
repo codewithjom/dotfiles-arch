@@ -15,7 +15,7 @@ volumeicon &
 xsetroot -cursor_name left_ptr &
 pamac-tray &
 blueberry-tray &
-conky -c $HOME/.config/qtile/scripts/conkyrc &
+# conky -c $HOME/.config/qtile/scripts/conkyrc &
 
 # only choose 1 window manager
 exec qtile start
