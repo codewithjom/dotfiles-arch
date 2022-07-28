@@ -63,15 +63,15 @@ keys = [
 ]
 
 groups = [
-    Group("DEV", layout="monadtall"),
-    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox",])]),
-    Group("SYS", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
-    Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
-    Group("VIRT", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
-    Group("CHAT", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
-    Group("MUS", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
-    Group("VID", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
-    Group("XTRA", layout="floating"),
+    Group("💻", layout="monadtall"),
+    Group("📡", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox",])]),
+    Group("💡", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
+    Group("📄", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
+    Group("🤖", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
+    Group("💬", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
+    Group("🎵", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
+    Group("🎥", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
+    Group("💀", layout="floating"),
 ]
 
 from libqtile.dgroups import simple_key_binder
@@ -81,8 +81,8 @@ dgroups_key_binder = simple_key_binder("mod4")
 layout_theme = {
     "border_width": 2,
     "margin": 8,
-    "border_focus": "073642",
-    "border_normal": "002b36",
+    "border_focus": "bbc2cf",
+    "border_normal": "282c34",
 }
 
 layouts = [
@@ -93,15 +93,15 @@ layouts = [
 ]
 
 colors = [
-    ["#002b36", "#002b36"],  # 0 BG
-    ["#073642", "#073642"],  # 1 BLACK
-    ["#839496", "#839496"],  # 2 FG
-    ["#dc322f", "#dc322f"],  # 3 RED
-    ["#859900", "#859900"],  # 4 GREEN
-    ["#b58900", "#b58900"],  # 5 YELLOW
-    ["#268bd2", "#268bd2"],  # 6 BLUE
-    ["#d33682", "#d33682"],  # 7 MAGENTA
-    ["#2aa198", "#2aa198"],  # 8 CYAN
+    ["#282c34", "#282c34"],  # 0 BG
+    ["#1c1f24", "#1c1f24"],  # 1 BLACK
+    ["#bbc2cf", "#bbc2cf"],  # 2 FG
+    ["#ff6c6b", "#da8548"],  # 3 RED
+    ["#98be65", "#4db5bd"],  # 4 GREEN
+    ["#da8548", "#ecbe7b"],  # 5 YELLOW
+    ["#51afef", "#3071db"],  # 6 BLUE
+    ["#c678dd", "#a9a1e1"],  # 7 MAGENTA
+    ["#5699af", "#46d9ff"],  # 8 CYAN
 ]
 
 widget_defaults = dict(
@@ -356,8 +356,9 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
-        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
+        Screen(),
+        # Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.9, size=24)),
+        # Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.9, size=24)),
     ]
 
 

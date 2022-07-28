@@ -19,10 +19,26 @@ super + Return
 super + shift + d
 	rofi -show drun
 
+# show polybar
+super + p
+	polybar -q qtile
+
+# kill polybar
+super + shift + p
+	killall -q polybar
+
 # dmenu
 super + d
-  dmenu_run -p 'Run: ' -nb '#002b36' -nf '#839496' -sb '#d33682' -sf '#073642' -fn 'Ubuntu:medium:pixelsize=16'
+  dmenu_run -p 'Run: ' -nb '#282c34' -nf '#bbc2cf' -sb '#c678dd' -sf '#1c1f24' -fn 'Ubuntu:medium:pixelsize=16'
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# show date
+alt + d
+  dunstify $(date)
+
+# show battery info
+alt + b
+  dunstify $(acpi)
