@@ -263,9 +263,8 @@ myKeys =
 
 main :: IO ()
 main = do
-    xmproc0 <- spawnPipe ("") -- Add comment to use the bar below
-    -- xmproc0 <- spawnPipe ("polybar -q bar") -- Use polybar
-    -- xmproc1 <- spawnPipe ("polybar -q bar") -- Use polybar
+    -- xmproc0 <- spawnPipe ("") -- Add comment to use the bar below
+    xmproc0 <- spawnPipe ("polybar -q bar") -- Use polybar
     -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc") -- Use xmobar
     -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc") -- Use xmobar
     xmonad $ ewmh $ docks $ def
