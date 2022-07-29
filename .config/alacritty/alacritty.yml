@@ -433,7 +433,7 @@ font:
 # *tomorrow-night
 # *tokyo-night
 
-colors: *solarized-dark
+colors: *one-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
@@ -444,7 +444,7 @@ cursor:
     shape: block # replace with block, underline, beam
     blinking: Always
 
-  blink_interval: 250
+  blink_interval: 200
 
 live_config_reload: true
 

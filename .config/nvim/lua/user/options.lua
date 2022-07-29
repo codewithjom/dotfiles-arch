@@ -31,7 +31,7 @@ local options = {
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line
   scrolloff = 5,                           -- is one of my fav
-  sidescrolloff = 5,
+  sidescrolloff = 10,
   guifont = "FantasqueSansMono Nerd Font:h17",   -- the font used in graphical neovim applications
 }
 
