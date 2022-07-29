@@ -15,7 +15,7 @@ secondary = #e60053
 alert = #bd2c40
 underline-1 = #6C7380
 
-[bar/qtile]
+[bar/bar]
 width = 100%
 height = 24
 offset-x = 0

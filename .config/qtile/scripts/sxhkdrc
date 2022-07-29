@@ -20,11 +20,11 @@ super + shift + d
 	rofi -show drun
 
 # show polybar
-super + p
-	polybar -q qtile
+alt + p
+	polybar -q bar
 
 # kill polybar
-super + shift + p
+alt + shift + p
 	killall -q polybar
 
 # dmenu
