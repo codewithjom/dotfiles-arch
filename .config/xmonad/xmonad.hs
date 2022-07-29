@@ -108,13 +108,8 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- NOTE: remove the comments if user not using xinit.
-  -- spawn ("lxsession")
-  -- spawn ("picom --experimental-backends -b")
-  -- spawn ("nm-applet")
-  -- spawn ("volumeicon")
-  -- spawn ("xsetroot -cursor_name left_ptr")
   spawn ("sxhkd -c $HOME/.config/xmonad/lib/scripts/sxhkdrc")
+  spawnOnce ("polybar -q bar")
 
   spawnOnce "nitrogen --set-scaled --restore &"
 
@@ -263,10 +258,10 @@ myKeys =
 
 main :: IO ()
 main = do
-    -- xmproc0 <- spawnPipe ("") -- Add comment to use the bar below
-    xmproc0 <- spawnPipe ("polybar -q bar") -- Use polybar
-    -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc") -- Use xmobar
-    -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc") -- Use xmobar
+    xmproc0 <- spawnPipe ("") -- Add comment to use the bar below
+    -- xmproc0 <- spawnPipe ("polybar -q bar") -- Use polybar
+    -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc")
+    -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc")
     xmonad $ ewmh $ docks $ def
         { manageHook         = myManageHook <+> manageDocks
         -- , handleEventHook    = docks -- <+> fullscreenEventHook
