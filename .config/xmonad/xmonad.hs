@@ -136,7 +136,7 @@ tall     = renamed [Replace "tall"]
            $ windowNavigation
            $ subLayout [] (smartBorders Simplest)
            $ limitWindows 12
-           $ mySpacing 2
+           $ mySpacing 6
            $ ResizableTall 1 (3/100) (1/2) []
 monocle  = renamed [Replace "monocle"]
            $ smartBorders
@@ -150,7 +150,7 @@ floats   = renamed [Replace "floats"]
 -- Theme for showWName which prints current workspace when you change workspaces.
 myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
-    { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
+    { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=50"
     , swn_fade              = 0.3
     , swn_bgcolor           = "#282c34"
     , swn_color             = "#bbc2cf"
@@ -165,7 +165,7 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
                                  ||| floats
 
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
-myWorkspaces = [" ter ", " web ", " dev ", " doc ", " virt ", " chat ", " mus ", " vid ", " xtra "]
+myWorkspaces = [" dev ", " web ", " sys ", " doc ", " virt ", " chat ", " mus ", " vid ", " xtra "]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
@@ -263,10 +263,11 @@ myKeys =
 
 main :: IO ()
 main = do
-    xmproc0 <- spawnPipe ("polybar -q bar")
-    xmproc1 <- spawnPipe ("polybar -q bar")
-    -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc")
-    -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc")
+    xmproc0 <- spawnPipe ("") -- Add comment to use the bar below
+    -- xmproc0 <- spawnPipe ("polybar -q bar") -- Use polybar
+    -- xmproc1 <- spawnPipe ("polybar -q bar") -- Use polybar
+    -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc") -- Use xmobar
+    -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc") -- Use xmobar
     xmonad $ ewmh $ docks $ def
         { manageHook         = myManageHook <+> manageDocks
         -- , handleEventHook    = docks -- <+> fullscreenEventHook

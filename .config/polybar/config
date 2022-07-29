@@ -6,7 +6,7 @@ margin-top = 0
 margin-bottom = 0
 
 [colors]
-background = #E60D1017
+background = #282C34
 background-alt = #576075
 foreground = #BFBDB6
 foreground-alt = #555
@@ -43,7 +43,7 @@ font-2 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 font-3 = SourceHanSansCN:fontformat=truetype:pixelsize=10:antialias=false;
 
 modules-left = ewmh title
-modules-right = battery date
+modules-right = checkupdates filesystem battery date
 
 tray-position = right
 tray-padding = 2
@@ -74,8 +74,8 @@ padding-right = 1
 
 module-margin = 1
 
-font-0 = JetBrainsMonoMedium:pixelsize=10;2
-font-1 = HackNerdFont:pixelsize=10;2
+font-0 = JetBrainsMonoMedium:pixelsize=10;4
+font-1 = HackNerdFont:pixelsize=10;4
 font-2 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 font-3 = SourceHanSansCN:fontformat=truetype:pixelsize=10:antialias=false;
 
@@ -100,8 +100,9 @@ format = <label-state>
 label-monitor = %name%
 
 label-active = %name%
-label-active-foreground = ${colors.foreground}
-label-active-padding = 1
+label-active-foreground = #1c1f24
+label-active-background = #c678dd
+label-active-padding = 0
 
 label-occupied = %icon%
 
@@ -171,5 +172,18 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+interval = 30
+fixed-values = true
+label-mounted = 🗃️ %free%
+
+[module/checkupdates]
+type = custom/script
+exec = checkupdates | wc -l
+interval = 1000
+label = 🛰️ %output% updates
 
 # vim:ft=dosini
