@@ -110,6 +110,13 @@ myStartupHook :: X ()
 myStartupHook = do
   spawn ("sxhkd -c $HOME/.config/xmonad/lib/scripts/sxhkdrc")
   spawnOnce ("polybar -q bar")
+  spawnOnce ("lxsession")
+  spawnOnce ("picom --experimental-backends -b")
+  spawnOnce ("nm-applet")
+  spawnOnce ("volumeicon")
+  spawnOnce ("xsetroot -cursor_name left_ptr")
+  spawnOnce ("pamac-tray")
+  spawnOnce ("blueberry-tray")
 
   spawnOnce "nitrogen --set-scaled --restore &"
 
