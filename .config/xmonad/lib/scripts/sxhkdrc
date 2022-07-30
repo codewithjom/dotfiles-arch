@@ -11,7 +11,7 @@ super + Right
 super + Left
 	$HOME/.local/bin/changebrightness down
 
-# terminal emulator
+# terminal emulator - fish shell
 super + Return
 	alacritty
 
@@ -29,7 +29,7 @@ alt + shift + p
 
 # dmenu
 super + d
-  dmenu_run -p 'Run: ' -nb '#282c34' -nf '#bbc2cf' -sb '#c678dd' -sf '#1c1f24' -fn 'Ubuntu:medium:pixelsize=16'
+  dmenu_run -p 'Run: ' -nb '#282c34' -nf '#bbc2cf' -sb '#c678dd' -sf '#1c1f24' -fn 'JetBrains Mono:medium:pixelsize=16'
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -42,3 +42,7 @@ alt + d
 # show battery info
 alt + b
   dunstify $(acpi)
+
+# lockscreen
+alt + shift + l
+	betterlockscreen -l
