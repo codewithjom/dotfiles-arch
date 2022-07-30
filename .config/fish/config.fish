@@ -3,9 +3,19 @@ set -U fish_user_paths $HOME/.local/bin $HOME/.yarn/bin:$HOME/.config/yarn/globa
 
 set fish_greeting ""
 set fish_history ""
-set TERM xterm-256color
-set EDITOR emacsclient -c -a emacs
-set VISUAL emacsclient -c -a emacs
+set -gx TERM xterm-256color
+# Set EDITOR/VISUAL as emacs
+# set EDITOR emacsclient -c -a emacs
+# set VISUAL emacsclient -c -a emacs
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
+# theme
+set -g theme_color_scheme terminal-dark
+set -g fish_prompt_pwd_dir_lenght 1
+set -g theme_display_user yes 
+set -g theme_hide_hostname no
+set -g theme_hostname always
 
 function fish_user_key_bindings
     fish_vi_key_bindings
@@ -31,6 +41,7 @@ alias sxiv 'devour sxiv'
 alias zathura 'devour zathura'
 # alias clear 'clear && colorscript -e 13'
 alias checkupdates 'checkupdates | less'
+alias . 'tmux new-session -s 1'
 
 if status --is-login
   if test -z "$DISPLAY" -a $XDG_VTNR = 1
