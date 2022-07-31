@@ -46,3 +46,7 @@ alt + b
 # lockscreen
 alt + shift + l
 	betterlockscreen -l
+
+# terminal emulator - bash shell
+alt + Return
+	alacritty -e bash
