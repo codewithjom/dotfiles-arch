@@ -11,7 +11,7 @@ super + Right
 super + Left
 	$HOME/.local/bin/changebrightness down
 
-# terminal emulator - fish shell
+# terminal emulator
 super + Return
 	alacritty
 
@@ -46,7 +46,3 @@ alt + b
 # lockscreen
 alt + shift + l
 	betterlockscreen -l
-
-# terminal emulator - bash shell
-alt + Return
-	alacritty -e bash
