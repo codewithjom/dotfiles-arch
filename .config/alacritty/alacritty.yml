@@ -58,36 +58,64 @@ font:
   ##      START OF COLOR SCHEMES       ##
   #######################################
 
-  ### One Dark ###
-  doom-one: &one-dark
+  ### Andromeda ###
+  andromeda: &andromeda
     primary:
-      background: "#282c34"
-      foreground: "#bbc2cf"
+      background: "#23262E"
+      foreground: "#D5CED9"
     cursor:
       text: CellBackground
-      cursor: "#528bff"
+      cursor: "#D5CED9"
     selection:
       text: CellForeground
-      background: "#3e4451"
+      background: "#23262E"
     normal:
-      black: "#1c1f24"
-      red: "#ff6c6b"
-      green: "#98be65"
-      yellow: "#da8548"
-      blue: "#51afef"
-      magenta: "#c678dd"
-      cyan: "#5699af"
-      white: "#202328"
+      black: "#20232A"
+      red: "#EE5d43"
+      green: "#96E072"
+      yellow: "#FFE66D"
+      blue: "#7CB7FF"
+      magenta: "#FF00AA"
+      cyan: "#00E8C6"
+      white: "#D5CED9"
     bright:
-      black: "#5b6268"
-      red: "#da8548"
-      green: "#4db5bd"
-      yellow: "#ecbe7b"
-      blue: "#3071db"
-      magenta: "#a9a1e1"
-      cyan: "#46d9ff"
-      white: "#dfdfdf"
+      black: "#2D313B"
+      red: "#EE5D43"
+      green: "#96E072"
+      yellow: "#FFE66D"
+      blue: "#7CB7FF"
+      magenta: "#FF00AA"
+      cyan: "#00E8C6"
+      white: "#D5CED9"
+  
+  ### Ayu Dark ###
+  ayu-dark: &ayu-dark
+    primary:
+      background: '0x0A0E14'
+      foreground: '0xB3B1AD'
 
+    # Normal colors
+    normal:
+      black:   '0x01060E'
+      red:     '0xEA6C73'
+      green:   '0x91B362'
+      yellow:  '0xF9AF4F'
+      blue:    '0x53BDFA'
+      magenta: '0xFAE994'
+      cyan:    '0x90E1C6'
+      white:   '0xC7C7C7'
+
+    # Bright colors
+    bright:
+      black:   '0x686868'
+      red:     '0xF07178'
+      green:   '0xC2D94C'
+      yellow:  '0xFFB454'
+      blue:    '0x59C2FF'
+      magenta: '0xFFEE99'
+      cyan:    '0x95E6CB'
+      white:   '0xFFFFFF'
+  
   ### Dracula ###
   dracula: &dracula
     primary:
@@ -262,6 +290,36 @@ font:
       cyan: "#5fb3b3"
       white: "#d8dee9"
 
+  ### One Dark ###
+  one-dark: &one-dark
+    primary:
+      background: "#282c34"
+      foreground: "#bbc2cf"
+    cursor:
+      text: CellBackground
+      cursor: "#528bff"
+    selection:
+      text: CellForeground
+      background: "#3e4451"
+    normal:
+      black: "#1c1f24"
+      red: "#ff6c6b"
+      green: "#98be65"
+      yellow: "#da8548"
+      blue: "#51afef"
+      magenta: "#c678dd"
+      cyan: "#5699af"
+      white: "#202328"
+    bright:
+      black: "#5b6268"
+      red: "#da8548"
+      green: "#4db5bd"
+      yellow: "#ecbe7b"
+      blue: "#3071db"
+      magenta: "#a9a1e1"
+      cyan: "#46d9ff"
+      white: "#dfdfdf"
+
   ### Palenight ###
   palenight: &palenight # Default colors
     primary:
@@ -421,19 +479,21 @@ font:
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
 ## ###################################################################
 # Available themes are:
-# *one-dark
+# *andromeda
+# *ayu-dark
 # *dracula
 # *gruvbox-dark
 # *monokai-pro
 # *nord
 # *oceanic-next
+# *one-dark
 # *palenight
 # *solarized-light
 # *solarized-dark
 # *tomorrow-night
 # *tokyo-night
 
-colors: *one-dark
+colors: *ayu-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
