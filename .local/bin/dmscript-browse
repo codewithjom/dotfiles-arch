@@ -6,10 +6,10 @@ DMENU="dmenu -l 10 -i -p"
 declare -a options=(
 # Search Engines
 "'bing' - https://www.bing.com/search?q="
-"'brave' - https://search.brave.com/"
-"'duckduckgo' - https://duckduckgo.com"
-"'google' - https://www.google.com/"
-"'qwant' - https://www.qwant.com"
+"'brave' - https://search.brave.com/search?q="
+"'duckduckgo' - https://duckduckgo.com/?q="
+"'google' - https://www.google.com/search?q="
+"'qwant' - https://www.qwant.com/?q="
 # Information/News
 "'cnn philippines' - https://www.cnnphilippines.com/"
 "'gma' - https://www.gmanetwork.com/news/"
@@ -21,7 +21,7 @@ declare -a options=(
 "'instagram' - https://instagram.com"
 "'netflix' - https://netflix.com"
 "'reddit' - https://www.reddit.com/search/?q="
-"'youtube' - https://www.youtube.com"
+"'youtube' - https://www.youtube.com/results?search_query="
 # Linux
 "'archaur' - https://aur.archlinux.org/packages"
 "'archpkg' - https://archlinux.org/packages"
@@ -30,7 +30,7 @@ declare -a options=(
 "'github' - https://github.com/"
 "'gitlab' - https://gitlab.com/"
 "'googleOpenSource' - https://opensource.google/projects/search?q="
-"'stackoverflow' - https://stackoverflow.com"
+"'stackoverflow' - https://stackoverflow.com/search?q="
 # Etc
 "'schoology' - https://app.schoology.com/home"
 "'umdc' - https://umdc.umindanao.edu.ph"
