@@ -19,6 +19,26 @@ super + Return
 super + shift + d
 	rofi -show drun
 
+# dmenu
+super + d
+  dmenu_run -l 10 -i -p 'Run: '
+
+# dmscript-edit (edit config file)
+super + s
+	dmscript-edit
+
+# dmscript-browse (quick browse)
+super + shift + b 
+	dmscript-browse
+
+# dmscript-colorscheme (choose colorscheme)
+super + c 
+	dmscript-colorscheme
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
 # show polybar
 alt + p
 	polybar -q bar
@@ -26,14 +46,6 @@ alt + p
 # kill polybar
 alt + shift + p
 	killall -q polybar
-
-# dmenu
-super + d
-  dmenu_run -p 'Run: ' -nb '#282c34' -nf '#bbc2cf' -sb '#c678dd' -sf '#1c1f24' -fn 'JetBrains Mono:medium:pixelsize=16'
-
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
 
 # show date
 alt + d

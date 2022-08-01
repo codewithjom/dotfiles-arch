@@ -490,8 +490,8 @@ font:
 # *palenight
 # *solarized-light
 # *solarized-dark
-# *tomorrow-night
 # *tokyo-night
+# *tomorrow-night
 
 colors: *ayu-dark
 

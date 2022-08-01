@@ -221,7 +221,6 @@ myKeys =
         , ("M-<Return>", spawn (myTerminal))
         , ("M-b", spawn (myBrowser))
         , ("M-v", spawn ("vimb"))
-        , ("M-S-b", spawn ("qutebrowser"))
         , ("M-S-<Return>", spawn (myEmacs))
         , ("M-S-f", spawn (myFileManager))
         , ("C-<Return>", spawn (myScreenshot))
