@@ -1,0 +1,49 @@
+#!/bin/bash
+
+DMBROWSER="brave"
+DMENU="dmenu -l 10 -i -p"
+
+declare -a options=(
+# Search Engines
+"'bing' - https://www.bing.com/search?q="
+"'brave' - https://search.brave.com/"
+"'duckduckgo' - https://duckduckgo.com"
+"'google' - https://www.google.com/"
+"'qwant' - https://www.qwant.com"
+# Information/News
+"'cnn philippines' - https://www.cnnphilippines.com/"
+"'gma' - https://www.gmanetwork.com/news/"
+"'googlenews' - https://news.google.com"
+"'wikipedia' - https://en.wikipedia.org/w/index.php?search="
+"'wiktionary' - https://en.wiktionary.org/w/index.php?search="
+# Social Media
+"'facebook' - https://facebook.com"
+"'instagram' - https://instagram.com"
+"'netflix' - https://netflix.com"
+"'reddit' - https://www.reddit.com/search/?q="
+"'youtube' - https://www.youtube.com"
+# Linux
+"'archaur' - https://aur.archlinux.org/packages"
+"'archpkg' - https://archlinux.org/packages"
+"'archwiki' - https://wiki.archlinux.org/index.php?search="
+# Development
+"'github' - https://github.com/"
+"'gitlab' - https://gitlab.com/"
+"'googleOpenSource' - https://opensource.google/projects/search?q="
+"'stackoverflow' - https://stackoverflow.com"
+# Etc
+"'schoology' - https://app.schoology.com/home"
+"'umdc' - https://umdc.umindanao.edu.ph"
+"'quipper' - https://learn.quipper.com/en/dashboard"
+"quit"
+)
+
+choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'BROWSE:')
+
+
+if [ "$choice" ]; then
+  cfg=$(printf '%s\n' "${choice}" | awk '{printf $NF}')
+  $DMBROWSER "$cfg"
+else
+  echo "Program terminated." && exit 1
+fi

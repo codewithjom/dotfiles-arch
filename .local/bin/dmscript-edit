@@ -1,0 +1,37 @@
+#!/bin/bash
+
+DMEDITOR="alacritty -e nvim"
+DMENU="dmenu -l 10 -i -p"
+
+declare -a options=(
+"'alacritty' - $HOME/.config/alacritty/alacritty.yml"
+"'bash' - $HOME/.bashrc"
+"'betterlockscreen' - $HOME/.config/betterlockscreenrc"
+"'dunst' - $HOME/.config/dunst/dunstrc"
+"'fish' - $HOME/.config/fish/config.fish"
+"'mpv' - $HOME/.config/mpv/mpv.conf"
+"'nvim' - $HOME/.config/nvim/"
+"'picom' - $HOME/.config/picom/picom.conf"
+"'polybar' - $HOME/.config/polybar/config"
+"'qtile' - $HOME/.config/qtile/config.py"
+"'qtile-sxhkdrc' - $HOME/.config/qtile/script/sxhkdrc"
+"'qutebrowser' - $HOME/.config/qutebrowser/config.py"
+"'rofi' - $HOME/.config/rofi/config.rasi"
+"'starship' - $HOME/.config/starship.toml"
+"'tmux' - $HOME/.tmux.conf"
+"'tmux-powerline' - $HOME/.tmux.powerline.conf"
+"'vimb' - $HOME/.config/vimb/config"
+"'xmonad' - $HOME/.config/xmonad/xmonad.hs"
+"'xmonad-sxhkdrc' - $HOME/.config/xmonad/lib/scripts/sxhkdrc"
+"quit"
+)
+
+choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'EDIT:')
+
+if [ "$choice" ]; then
+  cfg=$(printf '%s\n' "${choice}" | awk '{printf $NF}')
+  $DMEDITOR "$cfg"
+else
+  echo "Program terminated." && exit 1
+fi
+

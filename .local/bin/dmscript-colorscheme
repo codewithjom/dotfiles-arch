@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -euo pipefail
+DMENU="dmenu -l 10 -i -p"
+DMEDITOR="alacritty -e nvim"
+
+options=(
+  "andromeda"
+  "ayu-dark"
+  "dracula"
+  "gruvbox-dark"
+  "monokai-pro"
+  "nord"
+  "oceanic-next"
+  "one-dark"
+  "palenight"
+  "solarized-light"
+  "solarized-dark"
+  "tokyo-night"
+  "tomorrow-night"
+)
+
+choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Choose alacritty theme:')
+
+if [ "$choice" ]; then 
+  sed -i "s/^colors: .*/colors: \*$choice/g" "$HOME"/.config/alacritty/alacritty.yml
+else
+  echo "Program terminated." && exit 0
+fi
