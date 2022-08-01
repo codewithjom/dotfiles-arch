@@ -23,7 +23,6 @@ declare -a options=(
 "'vimb' - $HOME/.config/vimb/config"
 "'xmonad' - $HOME/.config/xmonad/xmonad.hs"
 "'xmonad-sxhkdrc' - $HOME/.config/xmonad/lib/scripts/sxhkdrc"
-"quit"
 )
 
 choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'EDIT:')

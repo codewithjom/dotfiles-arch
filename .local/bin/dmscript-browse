@@ -35,7 +35,6 @@ declare -a options=(
 "'schoology' - https://app.schoology.com/home"
 "'umdc' - https://umdc.umindanao.edu.ph"
 "'quipper' - https://learn.quipper.com/en/dashboard"
-"quit"
 )
 
 choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'BROWSE:')
