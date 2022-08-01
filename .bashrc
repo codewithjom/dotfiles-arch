@@ -7,15 +7,15 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 unset HISTFILE
 
 set -o vi
-bind -m vi-command 'Control-l: clear-scren'
-bind -m vi-insert 'Control-l: clear-scren'
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 bind "set completion-ignore-case on"
 
-alias ls='exa -al --color=always --group-directories-first --icons'
+alias ls='exa -l --color=always --group-directories-first --icons'
 alias la='exa -aG --color=always --group-directories-first --icons'
 alias ll='exa -alG --color=always --group-directories-first --icons'
 alias vim='nvim'
