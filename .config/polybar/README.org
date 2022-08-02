@@ -1,0 +1,137 @@
+#+title: Polybar
+#+author: Jom Dollesin
+
+[[https://github.com/polybar/polybar][Polybar]] aims to help user build beautiful and highly customizable status bars for their desktop environment, without the need of having a black belt in shell scripting.
+
+The main purpose of *Polybar* is to help users create awesome status bars. It has built-in functionality to display information about the most commonly used services. Some of the services included so far:
+
+- Systray icons
+- Window title
+- Playback controls and status display for MPD using libmpdclient
+- ALSA volume controls
+- Workspace and desktop panel for bspwm and i3
+- Workspace module for EWMH complaint window managers
+- Keyboard layout adn indicator status
+- CPU and memory load indicator
+- Battery display
+- Network connection details
+- Backlight level
+- Date and time label
+- Time-based shell script execution
+- Command output tailing
+- User-defined menu tree
+- Inter-process messaging
+- And [[https://github.com/polybar/polybar][more]]
+
+** Dependencies
+
+Install the following programs on your system before you use these themes.
+
+- =Polybar= : Ofcourse, the bar itself
+- =Rofi= : For App launcher, network, power and style menus
+- =pywal= : For pywal support
+- =calc= : For random colors support
+- =networkmanager_dmenu= : For network modules
+
+** Fonts
+
+Here's a list of all fonts used by these themes.
+
+=Text Fonts=
+
+- Iosevka Nerd Font
+- Fantasque Sans Mono
+- Noto Sans
+- Droid Sans
+- Terminus
+
+=Icon Fonts=
+
+- Iosevka Nerd Font
+- Icomoon Feather
+- Material Icons
+- Waffle (Siji)
+
+** Installation
+
+There are two ways to install these themes on your system.
+
+Both options has the same instruction:
+
+1. Install the original owner of the themes [[https://github.com/adi1090x/polybar-themes]]
+
+- First, Clone this repository:
+
+#+begin_src bash
+
+  git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
+
+#+end_src
+
+- Change the cloned directory and make =setup.sh= executable:
+
+#+begin_src bash
+
+  cd polybar-themes
+  chmod +x setup.sh
+
+#+end_src
+
+- Run =setup.sh= and select a style:
+
+#+begin_src bash
+
+  ./setup.sh
+
+#+end_src
+
+- Launch the bar
+
+#+begin_src bash
+
+  bash ~/.config/polybar/launch.sh
+
+  Usage : launch.sh --theme
+
+  Example : launch.sh --forest
+
+#+end_src
+
+2. Install my own configuration
+
+- First, Clone this repository:
+
+#+begin_src bash
+
+  git clone --depth=1 https://github.com/codewithjom/polybar-themes.git
+
+#+end_src
+
+- Change the cloned directory and make =setup.sh= executable:
+
+#+begin_src bash
+
+  cd polybar-themes
+  chmod +x setup.sh
+
+#+end_src
+
+- Run =setup.sh= and select a style:
+
+#+begin_src bash
+
+  ./setup.sh
+
+#+end_src
+
+- Launch the bar
+
+#+begin_src bash
+
+  bash ~/.config/polybar/launch.sh
+
+  Usage : launch.sh --theme
+
+  Example : launch.sh --forest
+
+#+end_src

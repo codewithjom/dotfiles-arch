@@ -17,17 +17,17 @@ ret = "Return"
 s = "shift"
 home = os.path.expanduser("~")
 
-browser1 = "qutebrowser"
-browser2 = "vimb"
-emacs = "emacsclient -c -a 'emacs'"
 terminal = "alacritty"
+browser1 = "qutebrowser"
+emacs = "emacsclient -c -a 'emacs'"
+editor = terminal + " -e nvim"
 file_manager = "pcmanfm"
 screenshot = "scrot 'screenshot-%s.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'"
 
 keys = [
     # APPLICATIONS
     Key([mod], "b", lazy.spawn(browser1)),
-    Key([mod], "v", lazy.spawn(browser2)),
+    Key([mod], "n", lazy.spawn(editor)),
     Key([mod, s], ret, lazy.spawn(emacs)),
     Key([mod], ret, lazy.spawn(terminal)),
     Key([mod, s], "f", lazy.spawn(file_manager)),
@@ -63,15 +63,14 @@ keys = [
 ]
 
 groups = [
-    Group("💻", layout="monadtall"),
-    Group("📡", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox",])]),
-    Group("💡", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
-    Group("📄", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
-    Group("🤖", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
-    Group("💬", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
-    Group("🎵", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
-    Group("🎥", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
-    Group("💀", layout="floating"),
+    Group("DEV", layout="monadtall"),
+    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox",])]),
+    Group("SYS", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
+    Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
+    Group("VIR", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
+    Group("MSG", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
+    Group("MUS", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
+    Group("VID", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
 ]
 
 from libqtile.dgroups import simple_key_binder
@@ -356,9 +355,9 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        Screen(),
-        # Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.9, size=24)),
-        # Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.9, size=24)),
+        # Screen(),
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.9, size=24)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.9, size=24)),
     ]
 
 

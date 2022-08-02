@@ -86,7 +86,7 @@ myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs'"  -- Makes emacs keybindings easier to type
 
 myEditor :: String
-myEditor = "emacsclient -c -a 'emacs'"  -- Sets emacs as editor
+myEditor = "alacritty -e nvim"  -- Sets neovim as editor
 
 myFileManager :: String
 myFileManager = "pcmanfm"   -- Sets pcmanfm as file manager
@@ -109,7 +109,10 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 myStartupHook :: X ()
 myStartupHook = do
   spawn ("sxhkd -c $HOME/.config/xmonad/lib/scripts/sxhkdrc")
-  spawnOnce ("polybar -q bar")
+  spawn ("bash ~/.config/polybar/launch.sh --forest")
+  -- spawn ("killall trayer")
+  -- spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
+
   spawnOnce ("lxsession")
   spawnOnce ("picom --experimental-backends -b")
   spawnOnce ("nm-applet")
@@ -167,7 +170,7 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
                                  ||| floats
 
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
-myWorkspaces = [" dev ", " web ", " sys ", " doc ", " virt ", " chat ", " mus ", " vid ", " xtra "]
+myWorkspaces = ["DEV", "WEB", "SYS", "DOC", "VIR", "MSG", "MUS", "VID"]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
@@ -220,7 +223,7 @@ myKeys =
     -- KB_GROUP Useful programs to have a keybinding for launch
         , ("M-<Return>", spawn (myTerminal))
         , ("M-b", spawn (myBrowser))
-        , ("M-v", spawn ("vimb"))
+        , ("M-n", spawn (myEditor))
         , ("M-S-<Return>", spawn (myEmacs))
         , ("M-S-f", spawn (myFileManager))
         , ("C-<Return>", spawn (myScreenshot))
@@ -282,6 +285,7 @@ main = do
         , logHook = dynamicLogWithPP $ xmobarPP
               -- XMOBAR SETTINGS
               { ppOutput = \x -> hPutStrLn xmproc0 x   -- xmobar on monitor 1
+                              -- >> hPutStrLn xmproc1 x   -- xmobar on monitor 2
                 -- Current workspace
               , ppCurrent = xmobarColor color06 "" . wrap "[" "]"
                 -- Visible but not current workspace
