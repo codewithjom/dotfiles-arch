@@ -133,24 +133,24 @@ mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 mySpacing' :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
 mySpacing' i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
--- Defining a bunch of layouts, many that I don't use.
+-- There are bunch of layouts, many that I don't use.
 -- limitWindows n sets maximum number of windows displayed for layout.
 -- mySpacing n sets the gap size around the windows.
 tall     = renamed [Replace "tall"]
            $ smartBorders
            $ windowNavigation
            $ subLayout [] (smartBorders Simplest)
-           $ limitWindows 12
-           $ mySpacing 6
+           $ limitWindows 5
+           $ mySpacing 8
            $ ResizableTall 1 (3/100) (1/2) []
 monocle  = renamed [Replace "monocle"]
            $ smartBorders
            $ windowNavigation
            $ subLayout [] (smartBorders Simplest)
-           $ limitWindows 20 Full
+           $ Full
 floats   = renamed [Replace "floats"]
            $ smartBorders
-           $ limitWindows 20 simplestFloat
+           $ simplestFloat
 
 -- Theme for showWName which prints current workspace when you change workspaces.
 myShowWNameTheme :: SWNConfig
@@ -162,12 +162,13 @@ myShowWNameTheme = def
     }
 
 -- The layout hook
-myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts floats
-               $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) myDefaultLayout
-             where
-               myDefaultLayout =     withBorder myBorderWidth tall
-                                 ||| noBorders monocle
-                                 ||| floats
+myLayoutHook = avoidStruts 
+               $ mouseResize 
+               $ windowArrange 
+               $ T.toggleLayouts floats
+               $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) myDefaultLayout 
+                 where 
+                   myDefaultLayout = withBorder myBorderWidth tall ||| noBorders monocle  ||| floats
 
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
 myWorkspaces = ["DEV", "WEB", "SYS", "DOC", "VIR", "MSG", "MUS", "VID"]
@@ -240,6 +241,12 @@ myKeys =
         , ("M-f", sendMessage (T.Toggle "floats")) -- Toggles my 'floats' layout
         , ("M-t", withFocused $ windows . W.sink)  -- Push floating window back to tile
         , ("M-S-t", sinkAll)                       -- Push ALL floating windows to tile
+
+    -- KB_GROUP Window spacing
+        , ("C-M1-j", decWindowSpacing 4)
+        , ("C-M1-k", incWindowSpacing 4)
+        , ("C-M1-h", decScreenSpacing 4)
+        , ("C-M1-l", incScreenSpacing 4)
 
     -- KB_GROUP Windows navigation
         , ("M-m", windows W.focusMaster)  -- Move focus to the master window
