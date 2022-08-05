@@ -1,6 +1,7 @@
 #!/bin/bash
 
-DMEDITOR="alacritty -e nvim"
+# DMEDITOR="alacritty -e nvim"
+DMEDITOR="emacs"
 DMENU="dmenu -l 10 -i -p"
 
 declare -a options=(

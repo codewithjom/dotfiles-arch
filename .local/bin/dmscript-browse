@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DMBROWSER="brave"
+DMBROWSER="qutebrowser"
 DMENU="dmenu -l 10 -i -p"
 
 declare -a options=(
