@@ -110,8 +110,8 @@
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
-;; (setq display-line-numbers-type 'relative) ;; set to relative line numbers
-(display-line-numbers-mode) ;; set to default line numbers
+(setq display-line-numbers-type 'relative) ;; set to relative line numbers
+;; (display-line-numbers-mode) ;; set to default line numbers
 (setq-default truncate-lines t)
 
 ;; Disable line numbers for some modes
