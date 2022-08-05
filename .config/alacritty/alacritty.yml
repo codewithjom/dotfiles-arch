@@ -50,7 +50,7 @@ font:
     family: Caskaydia Cove Nerd Font
     style: BoldItalic
 
-  size: 10 # Font Size
+  size: 9 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
