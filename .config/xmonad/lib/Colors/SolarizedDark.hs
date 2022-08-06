@@ -4,7 +4,7 @@ import XMonad
 
 colorScheme = "solarized-dark"
 
-colorBack = "#002b36"
+colorBack = "#001b26"
 colorFore = "#839496"
 
 color01 = "#073642"

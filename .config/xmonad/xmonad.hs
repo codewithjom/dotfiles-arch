@@ -68,7 +68,7 @@ import XMonad.Util.SpawnOnce
 
 -- Set colorscheme for xmobar 
 -- See more colors in lib/Colors
-import Colors.DoomOne
+import Colors.SolarizedDark
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
