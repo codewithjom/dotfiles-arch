@@ -25,15 +25,15 @@ super + d
 
 # dmscript-edit (edit config file)
 super + s
-	dmscript-edit
+	$HOME/.local/bin/dmscript-edit
 
 # dmscript-browse (quick browse)
 super + shift + b 
-	dmscript-browse
+	$HOME/.local/bin/dmscript-browse
 
 # dmscript-colorscheme (choose colorscheme)
 super + c 
-	dmscript-colorscheme
+	$HOME/.local/bin/dmscript-colorscheme
 
 # make sxhkd reload its configuration files:
 super + Escape
