@@ -68,7 +68,7 @@ import XMonad.Util.SpawnOnce
 
 -- Set colorscheme for xmobar 
 -- See more colors in lib/Colors
-import Colors.GruvboxDark
+import Colors.SolarizedDark
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -157,8 +157,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=50"
     , swn_fade              = 0.3
-    , swn_bgcolor           = "#282828"
-    , swn_color             = "#ebdbb2"
+    , swn_bgcolor           = "#001b26"
+    , swn_color             = "#839496"
     }
 
 -- The layout hook
