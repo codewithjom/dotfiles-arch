@@ -33,3 +33,5 @@ alias mpvid='devour mpv'
 alias sxiv='devour sxiv'
 alias zathura='devour zathura'
 alias checkupdates='checkupdates | less'
+
+eval "$(starship init bash)"
