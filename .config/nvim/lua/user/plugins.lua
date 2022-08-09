@@ -69,6 +69,10 @@ return packer.startup(function(use)
   use "folke/tokyonight.nvim"
 	use "ayu-theme/ayu-vim"
   use "kyazdani42/nvim-palenight.lua"
+  use {
+    "svrana/neosolarized.nvim",
+    requires = { "tjdevries/colorbuddy.nvim" }
+  }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

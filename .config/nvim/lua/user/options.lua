@@ -32,6 +32,10 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 5,                           -- is one of my fav
   sidescrolloff = 10,
+  winblend = 0,
+  wildoptions = "pum",
+  pumblend = 5,
+  background = "dark",
   guifont = "FantasqueSansMono Nerd Font:h17",   -- the font used in graphical neovim applications
 }
 

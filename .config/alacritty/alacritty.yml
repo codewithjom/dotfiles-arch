@@ -36,7 +36,7 @@ scrolling:
 font:
   normal:
     family: Caskaydia Cove Nerd Font
-    style: Bold
+    style: normal
 
   bold:
     family: Caskaydia Cove Nerd Font
@@ -384,12 +384,12 @@ font:
   ### Solarized Dark ###
   solarized-dark: &solarized-dark # Default colors
     primary:
-      background: "#002b36" # base03
+      background: "#001b26" # base03
       foreground: "#839496" # base0
 
     # Cursor colors
     cursor:
-      text: "#002b36" # base03
+      text: "#001b26" # base03
       cursor: "#839496" # base0
 
     # Normal colors
@@ -405,7 +405,7 @@ font:
 
     # Bright colors
     bright:
-      black: "#002b36" # base03
+      black: "#001b26" # base03
       red: "#cb4b16" # orange
       green: "#586e75" # base01
       yellow: "#657b83" # base00
@@ -493,7 +493,7 @@ font:
 # *tokyo-night
 # *tomorrow-night
 
-colors: *ayu-dark
+colors: *solarized-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
