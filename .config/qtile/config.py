@@ -92,15 +92,15 @@ layouts = [
 ]
 
 colors = [
-    ["#282c34", "#282c34"],  # 0 BG
-    ["#1c1f24", "#1c1f24"],  # 1 BLACK
-    ["#bbc2cf", "#bbc2cf"],  # 2 FG
-    ["#ff6c6b", "#da8548"],  # 3 RED
-    ["#98be65", "#4db5bd"],  # 4 GREEN
-    ["#da8548", "#ecbe7b"],  # 5 YELLOW
-    ["#51afef", "#3071db"],  # 6 BLUE
-    ["#c678dd", "#a9a1e1"],  # 7 MAGENTA
-    ["#5699af", "#46d9ff"],  # 8 CYAN
+    ["#282828", "#282828"],  # 0 BG
+    ["#282828", "#928374"],  # 1 BLACK
+    ["#ebdbb2", "#ebdbb2"],  # 2 FG
+    ["#cc241d", "#fb4934"],  # 3 RED
+    ["#98971a", "#b8bb26"],  # 4 GREEN
+    ["#d79921", "#fabd2f"],  # 5 YELLOW
+    ["#458588", "#83a598"],  # 6 BLUE
+    ["#b16286", "#d3869b"],  # 7 MAGENTA
+    ["#689d6a", "#8ec07c"],  # 8 CYAN
 ]
 
 widget_defaults = dict(
@@ -117,7 +117,7 @@ def init_widgets_list():
         widget.GroupBox(
             font="Ubuntu Bold",
             fontsize=9,
-            margin_y=5,
+            margin_y=4,
             margin_x=0,
             padding_y=5,
             padding_x=3,
