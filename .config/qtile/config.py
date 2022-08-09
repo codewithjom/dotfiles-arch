@@ -116,7 +116,7 @@ def init_widgets_list():
     widgets_list = [
         widget.GroupBox(
             font="Ubuntu Bold",
-            fontsize=8,
+            fontsize=9,
             margin_y=5,
             margin_x=0,
             padding_y=5,
@@ -355,10 +355,10 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        Screen(),
+        # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qitle
-        # Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.9, size=24)),
-        # Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.9, size=24)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=24)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=24)),
     ]
 
 
