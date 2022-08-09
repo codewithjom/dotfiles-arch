@@ -824,6 +824,8 @@ Set up Org Mode with a baseline configuration. The following sections will add m
   (use-package simple-httpd
     :ensure t)
 
+  (setq org-image-actual-width nil)
+
   (defun jd/org-mode-setup ()
     (org-indent-mode)
     (variable-pitch-mode 1)

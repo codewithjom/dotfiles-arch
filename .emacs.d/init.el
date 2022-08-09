@@ -498,6 +498,8 @@ folder, otherwise delete a word"
 (use-package simple-httpd
   :ensure t)
 
+(setq org-image-actual-width nil)
+
 (defun jd/org-mode-setup ()
   (org-indent-mode)
   (variable-pitch-mode 1)
