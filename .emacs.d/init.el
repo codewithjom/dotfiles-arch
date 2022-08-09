@@ -143,13 +143,13 @@
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "JetBrains Mono"
+                      :font "Fira Mono"
                       :height jd/default-font-size
                       :weight 'light)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Iosevka Aile"
+                      :font "Cascadia Code"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 
@@ -557,7 +557,7 @@ folder, otherwise delete a word"
     (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
   ;; Increase the size of various headings
-  (set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'bold :height 1.5)
+  (set-face-attribute 'org-document-title nil :font "Cascadia Code" :weight 'bold :height 1.5)
   (dolist (face '((org-level-1 . 1.4)
                   (org-level-2 . 1.3)
                   (org-level-3 . 1.2)
@@ -566,7 +566,7 @@ folder, otherwise delete a word"
                   (org-level-6 . 1.1)
                   (org-level-7 . 1.1)
                   (org-level-8 . 1.1)))
-  (set-face-attribute (car face) nil :font "JetBrains Mono" :weight 'medium :height (cdr face)))
+  (set-face-attribute (car face) nil :font "Cascadia Code" :weight 'medium :height (cdr face)))
 
   (require 'org-indent)
 
