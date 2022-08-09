@@ -19,7 +19,7 @@ home = os.path.expanduser("~")
 
 terminal = "alacritty"
 browser1 = "qutebrowser"
-emacs = "emacsclient -c -a 'emacs'"
+emacs = "emacs"
 editor = terminal + " -e nvim"
 file_manager = "pcmanfm"
 screenshot = "scrot 'screenshot-%s.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'"

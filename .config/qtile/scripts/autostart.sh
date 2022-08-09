@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash ~/.config/polybar/launch.sh --forest &
+# bash ~/.config/polybar/launch.sh --forest &
 lxsession &
 picom --experimental-backends -b &
 nm-applet &
