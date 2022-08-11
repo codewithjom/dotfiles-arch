@@ -21,7 +21,7 @@ super + shift + d
 
 # dmenu
 super + d
-  dmenu_run -l 10 -i -p 'Run: '
+  dmenu_run -nb '#001b26' -l 10 -i -p 'Run: '
 
 # dmscript-edit (edit config file)
 super + s
