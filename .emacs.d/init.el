@@ -386,7 +386,7 @@ folder, otherwise delete a word"
 (add-hook 'after-init-hook 'global-company-mode)
 
 (defun jd/org-mode-visual-fill()
-  (setq visual-fill-column-width 110
+  (setq visual-fill-column-width 130
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
@@ -559,7 +559,7 @@ folder, otherwise delete a word"
     (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
   ;; Increase the size of various headings
-  (set-face-attribute 'org-document-title nil :font "Cascadia Code" :weight 'bold :height 1.5)
+  (set-face-attribute 'org-document-title nil :font "Cascadia Code" :weight 'bold :height 1.8)
   (dolist (face '((org-level-1 . 1.4)
                   (org-level-2 . 1.3)
                   (org-level-3 . 1.2)
