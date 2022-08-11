@@ -79,15 +79,14 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {
     "border_width": 2,
-    "margin": 12,
-    "border_focus": "689d6a",
-    "border_normal": "282828",
+    "margin": 20,
+    "border_focus": "2aa198",
+    "border_normal": "001b26",
 }
 
 layouts = [
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
-    layout.Stack(num_stacks=2),
     layout.Floating(**layout_theme),
 ]
 
