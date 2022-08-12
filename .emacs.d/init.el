@@ -110,8 +110,8 @@
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
-(setq display-line-numbers-type 'relative) ;; set to relative line numbers
-;; (display-line-numbers-mode) ;; set to default line numbers
+;; (setq display-line-numbers-type 'relative) ;; set to relative line numbers
+(display-line-numbers-mode) ;; set to default line numbers
 (setq-default truncate-lines t)
 
 ;; Disable line numbers for some modes
@@ -131,8 +131,8 @@
 (use-package doom-themes
   :init (load-theme 'doom-solarized-dark t))
 
-(defvar jd/default-font-size 105)
-(defvar jd/default-variable-font-size 105)
+(defvar jd/default-font-size 110)
+(defvar jd/default-variable-font-size 110)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
@@ -180,14 +180,18 @@
 
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
+  :hook (after-init . doom-modeline-init)
+  :custom-face
+  (mode-line ((t (:height 0.95))))
+  (mode-line-inactive ((t (:height 0.95))))
   :custom
-  (doom-modeline-height 25)
-  (doom-modeline-bar-width 4)
+  (doom-modeline-height 15)
+  (doom-modeline-bar-width 6)
   (doom-modeline-lsp t)
   (doom-modeline-github nil)
-  (doom-modeline-minor-modes nil)
+  (doom-modeline-minor-modes t)
   (doom-modeline-persp-name t)
-  (doom-modeline-buffer-file-name-style 'truncate-except-project)
+  ;; (doom-modeline-buffer-file-name-style 'truncate-except-project)
   (doom-modeline-major-mode-icon t))
 
 ;;(display-battery-mode 1)
@@ -201,7 +205,7 @@
   ;; (setq dashboard-startup-banner 'logo) ;; use emacs logo
   (setq dashboard-startup-banner "~/.emacs.d/banner/logo.png")
   (setq dashboard-center-content t)
-  (setq dashboard-items '((recents . 15)))
+  (setq dashboard-items '((recents . 10)))
 
   :config
   (dashboard-setup-startup-hook)
@@ -585,6 +589,35 @@ folder, otherwise delete a word"
   ;; Get rid of the background on column views
   (set-face-attribute 'org-column nil :background nil)
   (set-face-attribute 'org-column-title nil :background nil))
+
+(use-package org-roam
+  :ensure t
+  :init
+  (setq org-roam-v2-ack t)
+  :custom
+  (org-roam-directory "~/Notes")
+  (org-roam-completion-everywhere t)
+  (org-roam-capture-templates
+   '(("d" "default" plain
+     "%?"
+     :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}" "#+title: ${title}\n")
+     :unnarrowed t)
+     ("l" "programming language" plain
+      "* Get Started\n\n- Topic: %?\n- Language: \n\n"
+      :if-new (file+head "${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("b" "book notes" plain
+      "\n* Source\n\nAuthor: %^{Author}\nTitle: ${title}\n\n"
+      :if-new (file+head "${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("p" "project" plain "* Goals\n\n%?\n\n* Tasks\n\n** TODO Add initial tasks\n\n* Dates\n\n"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project")
+      :unnarrowed t)))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert))
+  :config
+  (org-roam-setup))
 
 (require 'org-tempo)
 
