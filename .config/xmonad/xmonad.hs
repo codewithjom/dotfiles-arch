@@ -243,10 +243,10 @@ myKeys =
         , ("M-S-t", sinkAll)                       -- Push ALL floating windows to tile
 
     -- KB_GROUP Window spacing
-        , ("C-M1-j", decWindowSpacing 4)
-        , ("C-M1-k", incWindowSpacing 4)
-        , ("C-M1-h", decScreenSpacing 4)
-        , ("C-M1-l", incScreenSpacing 4)
+        , ("C-M-j", decWindowSpacing 4)
+        , ("C-M-k", incWindowSpacing 4)
+        , ("C-M-h", decScreenSpacing 4)
+        , ("C-M-l", incScreenSpacing 4)
 
     -- KB_GROUP Windows navigation
         , ("M-m", windows W.focusMaster)  -- Move focus to the master window
