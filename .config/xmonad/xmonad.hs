@@ -141,7 +141,7 @@ tall     = renamed [Replace "tall"]
            $ windowNavigation
            $ subLayout [] (smartBorders Simplest)
            $ limitWindows 5
-           $ mySpacing 12
+           $ mySpacing 8
            $ ResizableTall 1 (3/100) (1/2) []
 monocle  = renamed [Replace "monocle"]
            $ smartBorders
