@@ -131,8 +131,8 @@
 (use-package doom-themes
   :init (load-theme 'doom-solarized-dark t))
 
-(defvar jd/default-font-size 110)
-(defvar jd/default-variable-font-size 110)
+(defvar jd/default-font-size 120)
+(defvar jd/default-variable-font-size 120)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
@@ -390,7 +390,7 @@ folder, otherwise delete a word"
 (add-hook 'after-init-hook 'global-company-mode)
 
 (defun jd/org-mode-visual-fill()
-  (setq visual-fill-column-width 130
+  (setq visual-fill-column-width 110
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
