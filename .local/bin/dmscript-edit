@@ -9,6 +9,7 @@ declare -a options=(
 "'bash' - $HOME/.bashrc"
 "'betterlockscreen' - $HOME/.config/betterlockscreenrc"
 "'dunst' - $HOME/.config/dunst/dunstrc"
+"'emacs' - $HOME/.emacs.d/README.org"
 "'fish' - $HOME/.config/fish/config.fish"
 "'mpv' - $HOME/.config/mpv/mpv.conf"
 "'nvim' - $HOME/.config/nvim/"

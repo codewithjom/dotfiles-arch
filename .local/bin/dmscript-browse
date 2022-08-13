@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DMBROWSER="qutebrowser"
+DMBROWSER="firefox"
 DMENU="dmenu -l 10 -i -p"
 
 declare -a options=(

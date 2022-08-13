@@ -54,4 +54,4 @@ end
 
 # fisher install IlanCosman/tide@v5 (Fish prompt)
 # Remove comment below if not using custom prompt (fisher/tide)
-starship init fish | source
+# starship init fish | source
