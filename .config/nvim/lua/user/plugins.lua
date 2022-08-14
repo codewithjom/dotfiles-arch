@@ -104,6 +104,7 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "dinhhuy258/git.nvim"
 
   -- Coc (Conquer of Completion)
   use {'neoclide/coc.nvim', branch = 'release'}
