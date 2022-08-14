@@ -91,15 +91,15 @@ layouts = [
 ]
 
 colors = [
-    ["#001b26", "#001b26"],  # 0 BG
-    ["#073642", "#001b26"],  # 1 BLACK
-    ["#839496", "#839496"],  # 2 FG
-    ["#dc322f", "#cb4b16"],  # 3 RED
-    ["#859900", "#586e75"],  # 4 GREEN
-    ["#b58900", "#657b83"],  # 5 YELLOW
-    ["#268bd2", "#839496"],  # 6 BLUE
-    ["#d33682", "#6c71c4"],  # 7 MAGENTA
-    ["#2aa198", "#93a1a1"],  # 8 CYAN
+    ["#0A0E14", "#0A0E14"],  # 0 BG
+    ["#01060E", "#686868"],  # 1 BLACK
+    ["#B3B1AD", "#B3B1AD"],  # 2 FG
+    ["#EA6C73", "#F07178"],  # 3 RED
+    ["#91B362", "#C2D94C"],  # 4 GREEN
+    ["#F9AF4F", "#FFB454"],  # 5 YELLOW
+    ["#53BDFA", "#59C2FF"],  # 6 BLUE
+    ["#FAE994", "#FFEE99"],  # 7 MAGENTA
+    ["#90E1C6", "#95E6CB"],  # 8 CYAN
 ]
 
 widget_defaults = dict(
