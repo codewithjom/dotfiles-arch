@@ -15,7 +15,7 @@ env:
 window:
   padding:
     x: 3
-    y: 0
+    y: 3
   dynamic_padding:
     false
 
