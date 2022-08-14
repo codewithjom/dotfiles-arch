@@ -198,20 +198,20 @@
 ;;(setq display-time-day-and-date t)
 ;;(display-time-mode 1)
 
-(use-package dashboard
-  :init
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
-  ;; (setq dashboard-startup-banner 'logo) ;; use emacs logo
-  (setq dashboard-startup-banner "~/.emacs.d/banner/logo.png")
-  (setq dashboard-center-content t)
-  (setq dashboard-items '((recents . 10)))
+;; (use-package dashboard
+;;   :init
+;;   (setq dashboard-set-heading-icons t)
+;;   (setq dashboard-set-file-icons t)
+;;   ;; (setq dashboard-startup-banner 'logo) ;; use emacs logo
+;;   (setq dashboard-startup-banner "~/.emacs.d/banner/logo.png")
+;;   (setq dashboard-center-content t)
+;;   (setq dashboard-items '((recents . 10)))
 
-  :config
-  (dashboard-setup-startup-hook)
-  (dashboard-modify-heading-icons '((recents . "file-text"))))
+;;   :config
+;;   (dashboard-setup-startup-hook)
+;;   (dashboard-modify-heading-icons '((recents . "file-text"))))
 
-(setq doom-fallback-buffer-name "*dashboard*")
+;; (setq doom-fallback-buffer-name "*dashboard*")
 
 (use-package super-save
   :defer 1
