@@ -31,22 +31,22 @@ bufferline.setup {
   },
   highlights = {
     separator = {
-      guifg = '#073642',
-      guibg = '#001b26',
+      fg = '#073642',
+      bg = '#001b26',
     },
     separator_selected = {
-      guifg = '#073642',
+      fg = '#073642',
     },
     background = {
-      guifg = '#657b83',
-      guibg = '#001b26'
+      fg = '#657b83',
+      bg = '#001b26'
     },
     buffer_selected = {
-      guifg = '#fdf6e3',
-      gui = "bold",
+      fg = '#fdf6e3',
+      bold = true,
     },
     fill = {
-      guibg = '#073642'
+      bg = '#073642'
     }
   },
 }
