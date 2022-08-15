@@ -131,25 +131,25 @@
 (use-package doom-themes
   :init (load-theme 'doom-solarized-dark t))
 
-(defvar jd/default-font-size 120)
-(defvar jd/default-variable-font-size 120)
+(defvar jd/default-font-size 115)
+(defvar jd/default-variable-font-size 115)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "Fira Mono"
+                      :font "JetBrains Mono"
                       :height jd/default-font-size
                       :weight 'light)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "Fira Mono"
+                      :font "JetBrains Mono"
                       :height jd/default-font-size
                       :weight 'light)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Cascadia Code"
+                      :font "Iosevka Aile"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 
@@ -563,16 +563,16 @@ folder, otherwise delete a word"
     (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
   ;; Increase the size of various headings
-  (set-face-attribute 'org-document-title nil :font "Cascadia Code" :weight 'bold :height 1.8)
-  (dolist (face '((org-level-1 . 1.4)
-                  (org-level-2 . 1.3)
-                  (org-level-3 . 1.2)
-                  (org-level-4 . 1.1)
+  (set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'bold :height 1.3)
+  (dolist (face '((org-level-1 . 1.2)
+                  (org-level-2 . 1.1)
+                  (org-level-3 . 1.05)
+                  (org-level-4 . 1.0)
                   (org-level-5 . 1.1)
                   (org-level-6 . 1.1)
                   (org-level-7 . 1.1)
                   (org-level-8 . 1.1)))
-  (set-face-attribute (car face) nil :font "Cascadia Code" :weight 'medium :height (cdr face)))
+  (set-face-attribute (car face) nil :font "Iosevka Aile" :weight 'medium :height (cdr face)))
 
   (require 'org-indent)
 
