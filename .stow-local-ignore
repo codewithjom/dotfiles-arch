@@ -1,6 +1,12 @@
+.config/alacritty
+.config/nvim
+.config/polybar
+.config/qtile
+.config/xmonad
+.emacs.d
 .git
-.xinitrc
-.install
 .dotfiles.jpg
+.install
+.xinitrc
 LICENSE
 README.org
