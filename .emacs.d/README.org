@@ -981,7 +981,7 @@ These templates enable you to type things like =src= and then hit =Tab= to expan
 
   (defun jd/search-org-files ()
     (interactive)
-    (counsel-rg "" "~/OrgBook/" nil "Search Notes: "))
+    (counsel-rg "" "~/Notes/" nil "Search Notes: "))
 
 #+end_src
 
