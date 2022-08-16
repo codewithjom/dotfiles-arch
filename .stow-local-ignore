@@ -1,4 +1,5 @@
 .config/alacritty
+.config/fish/conf.d/tide.fish
 .config/nvim
 .config/polybar
 .config/qtile
