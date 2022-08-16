@@ -131,8 +131,8 @@
 (use-package doom-themes
   :init (load-theme 'doom-solarized-dark t))
 
-(defvar jd/default-font-size 115)
-(defvar jd/default-variable-font-size 115)
+(defvar jd/default-font-size 105)
+(defvar jd/default-variable-font-size 105)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
@@ -182,17 +182,17 @@
   :init (doom-modeline-mode 1)
   :hook (after-init . doom-modeline-init)
   :custom-face
-  (mode-line ((t (:height 0.95))))
-  (mode-line-inactive ((t (:height 0.95))))
+  (mode-line ((t (:height 0.85))))
+  (mode-line-inactive ((t (:height 0.85))))
   :custom
   (doom-modeline-height 15)
   (doom-modeline-bar-width 6)
   (doom-modeline-lsp t)
   (doom-modeline-github nil)
   (doom-modeline-minor-modes t)
-  (doom-modeline-persp-name t)
-  ;; (doom-modeline-buffer-file-name-style 'truncate-except-project)
-  (doom-modeline-major-mode-icon t))
+  (doom-modeline-persp-name nil)
+  (doom-modeline-buffer-file-name-style 'truncate-except-project)
+  (doom-modeline-major-mode-icon nil))
 
 ;;(display-battery-mode 1)
 ;;(setq display-time-day-and-date t)
