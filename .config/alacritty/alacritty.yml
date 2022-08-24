@@ -14,12 +14,12 @@ env:
 
 window:
   padding:
-    x: 3
-    y: 3
+    x: 5
+    y: 0
   dynamic_padding:
     false
 
-  opacity: 0.80
+  opacity: 0.90
 
   title: Alacritty
   dynamic_title: false
@@ -384,12 +384,12 @@ font:
   ### Solarized Dark ###
   solarized-dark: &solarized-dark # Default colors
     primary:
-      background: "#001b26" # base03
+      background: "#001b21" # base03
       foreground: "#839496" # base0
 
     # Cursor colors
     cursor:
-      text: "#001b26" # base03
+      text: "#001b21" # base03
       cursor: "#839496" # base0
 
     # Normal colors
@@ -405,7 +405,7 @@ font:
 
     # Bright colors
     bright:
-      black: "#001b26" # base03
+      black: "#001b21" # base03
       red: "#cb4b16" # orange
       green: "#586e75" # base01
       yellow: "#657b83" # base00
