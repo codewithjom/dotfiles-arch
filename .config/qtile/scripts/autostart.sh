@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bash ~/.config/polybar/launch.sh --blocks &
+# bash ~/.config/polybar/launch.sh --hack &
 lxsession &
 picom --experimental-backends -b &
 nm-applet &

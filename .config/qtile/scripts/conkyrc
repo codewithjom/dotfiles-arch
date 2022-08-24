@@ -78,18 +78,18 @@ conky.config = {
 	own_window_argb_value = 255,			 	-- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,			-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
-	own_window_colour = '#282a36',			-- set colour if own_window_transparent no
+	own_window_colour = '#0A0E14',			-- set colour if own_window_transparent no
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',
 	own_window_transparent = false,			-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'qtile_conky',		-- set the name manually  - default conky "hostname"
 	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
 
 
-	--Colors (Dracula)
-    color0 = '#ff79c6',
-    color1 = '#f8f8f2',
-    color2 = '#bd93f9',
-    color3 = '#8be9fd',
+	--Colors (Ayu_Dark)
+    color0 = '#B3B1AD',
+    color1 = '#90E1C6',
+    color2 = '#686868',
+    color3 = '#91B362',
 
 };
 
@@ -115,15 +115,17 @@ ${color1}[S]+[RET]${alignr}${color2}open terminal${color}
 ${color1}[S]+q${alignr}${color2}close window${color}
 ${color1}[S]+jk${alignr}${color2}move win focus${color}
 ${color1}[S]+[SHIFT]+jk${alignr}${color2}move window${color}
-${color1}[S]+[1-9]${alignr}${color2}switch workspace${color}
-${color1}[S]+[SHIFT]+[1-9]${alignr}${color2}send window${color}
+${color1}[S]+[1-8]${alignr}${color2}switch workspace${color}
+${color1}[S]+[SHIFT]+[1-8]${alignr}${color2}send window${color}
 ${color1}[S]+w/e${alignr}${color2}switch keyboard focus
 ${color1}[S]+[period]/[comma]${alignr}${color2}switch focus
 ${color1}${hr}${color}
 ${color1}[S]+[SHIFT]+[RET]${alignr}${color2}emacs${color}
 ${color1}[S]+b${alignr}${color2}qutebrowser${color}
-${color1}[S]+v${alignr}${color2}vimb${color}
 ${color1}[S]+d${alignr}${color2}open dmenu${color}
+${color1}[S]+s${alignr}${color2}edit config file${color}
+${color1}[S]+[SHIFT]+s${alignr}${color2}quick browse${color}
+${color1}[S]+c${alignr}${color2}choose colorscheme${color}
 ${color1}[S]+[SHIFT]+f${alignr}${color2}file manager${color}
 ${color1}[ctrl]+[RET]${alignr}${color2}screenshot${color}
 ${color1}${hr}${color}

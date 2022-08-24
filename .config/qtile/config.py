@@ -64,7 +64,7 @@ keys = [
 
 groups = [
     Group("DEV", layout="monadtall"),
-    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox",])]),
+    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Min"])]),
     Group("SYS", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
     Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
     Group("VIR", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
@@ -79,9 +79,9 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {
     "border_width": 2,
-    "margin": 20,
-    "border_focus": "2aa198",
-    "border_normal": "001b26",
+    "margin": 8,
+    "border_focus": "282828",
+    "border_normal": "0A0E14",
 }
 
 layouts = [
@@ -268,6 +268,50 @@ def init_widgets_list():
             fontsize=12,
         ),
         widget.TextBox(
+            text="",
+            font="VictorMono Nerd Font",
+            background=colors[0],
+            foreground=colors[2],
+            padding=2,
+            fontsize=12,
+        ),
+        widget.DF(
+            format="  {uf}{m}B",
+            visible_on_warn=False,
+            foreground=colors[2],
+            background=colors[0],
+        ),
+        widget.TextBox(
+            text="|",
+            font="Ubuntu Mono",
+            background=colors[0],
+            foreground="474747",
+            padding=2,
+            fontsize=12,
+        ),
+        widget.TextBox(
+            text=" ",
+            font="VictorMono Nerd Font",
+            background=colors[0],
+            foreground=colors[8],
+            padding=2,
+            fontsize=12,
+        ),
+        widget.Backlight (
+            update_interval=0.2,
+            backlight_name="intel_backlight",
+            foreground=colors[8],
+            background=colors[0],
+        ),
+        widget.TextBox(
+            text="|",
+            font="Ubuntu Mono",
+            background=colors[0],
+            foreground="474747",
+            padding=2,
+            fontsize=12,
+        ),
+        widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
             background=colors[0],
@@ -283,28 +327,28 @@ def init_widgets_list():
             foreground=colors[5],
             background=colors[0],
         ),
-        # widget.TextBox(
-        #     text = '|',
-        #     font = "Ubuntu Mono",
-        #     background = colors[0],
-        #     foreground = '474747',
-        #     padding = 2,
-        #     fontsize = 14
-        # ),
-        # widget.TextBox(
-        #     text = '蓼',
-        #     font = "VictorMono Nerd Font",
-        #     background = colors[0],
-        #     foreground = colors[4],
-        #     padding = 2,
-        #     fontsize = 14
-        # ),
-        # widget.Volume(
-        #     foreground = colors[4],
-        #     background = colors[0],
-        #     fmt = 'Vol: {}',
-        #     padding = 5
-        # ),
+        widget.TextBox(
+            text = '|',
+            font = "Ubuntu Mono",
+            background = colors[0],
+            foreground = '474747',
+            padding = 2,
+            fontsize = 14
+        ),
+        widget.TextBox(
+            text = '蓼',
+            font = "VictorMono Nerd Font",
+            background = colors[0],
+            foreground = colors[4],
+            padding = 2,
+            fontsize = 14
+        ),
+        widget.Volume(
+            foreground = colors[4],
+            background = colors[0],
+            fmt = 'Vol: {}',
+            padding = 5
+        ),
         widget.TextBox(
             text="|",
             font="Ubuntu Mono",

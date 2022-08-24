@@ -21,7 +21,7 @@ super + shift + d
 
 # dmenu
 super + d
-  dmenu_run -nb '#001b26' -l 10 -i -p 'Run: '
+  dmenu_run -l 10 -i -p 'Run: '
 
 # dmscript-edit (edit config file)
 super + s
@@ -41,7 +41,7 @@ super + Escape
 
 # show polybar
 alt + p
-	$HOME/.config/polybar/launch.sh --blocks
+	$HOME/.config/polybar/launch.sh --hack
 
 # kill polybar
 alt + shift + p
