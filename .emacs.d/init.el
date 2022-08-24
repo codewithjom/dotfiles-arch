@@ -103,8 +103,8 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq use-dialog-box nil) ;; Disable dialog boxes since they weren't working in Mac OSX
 
-;; (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
-;; (add-to-list 'default-frame-alist '(alpha . (95 . 90)))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 90))
+(add-to-list 'default-frame-alist '(alpha . (95 . 90)))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -185,8 +185,8 @@
   (mode-line ((t (:height 0.85))))
   (mode-line-inactive ((t (:height 0.85))))
   :custom
-  (doom-modeline-height 15)
-  (doom-modeline-bar-width 6)
+  (doom-modeline-height 25)
+  (doom-modeline-bar-width 3)
   (doom-modeline-lsp t)
   (doom-modeline-github nil)
   (doom-modeline-minor-modes t)
@@ -205,12 +205,16 @@
 ;;   ;; (setq dashboard-startup-banner 'logo) ;; use emacs logo
 ;;   (setq dashboard-startup-banner "~/.emacs.d/banner/logo.png")
 ;;   (setq dashboard-center-content t)
-;;   (setq dashboard-items '((recents . 10)))
+;;   (setq dashboard-items '((recents . 3)
+;;                           (bookmarks . 3)
+;;                           (registers . 3)))
 
 ;;   :config
 ;;   (dashboard-setup-startup-hook)
-;;   (dashboard-modify-heading-icons '((recents . "file-text"))))
+;;   (dashboard-modify-heading-icons '((recents . "file-text")
+;;                                     (bookmarks . "book"))))
 
+;; (setq dashboard-set-navigator t)
 ;; (setq doom-fallback-buffer-name "*dashboard*")
 
 (use-package super-save
