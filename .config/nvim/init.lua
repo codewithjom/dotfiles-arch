@@ -20,7 +20,5 @@ require "user.project"
 require "user.telescope"
 require "user.toggleterm"
 require "user.treesitter"
--- require "user.alpha"
+require "user.alpha"
 require "user.whichkey"
-
-

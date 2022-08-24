@@ -10,7 +10,6 @@ bufferline.setup {
     right_mouse_command = "Bdelete! %d",
     left_mouse_command = "buffer %d",
     middle_mouse_command = nil, 
-    indicator_icon = "▎",
     modified_icon = "●",
     left_trunc_marker = "",
     right_trunc_marker = "",
@@ -32,14 +31,14 @@ bufferline.setup {
   highlights = {
     separator = {
       fg = '#073642',
-      bg = '#001b26',
+      bg = '#002b36',
     },
     separator_selected = {
       fg = '#073642',
     },
     background = {
       fg = '#657b83',
-      bg = '#001b26'
+      bg = '#002b36'
     },
     buffer_selected = {
       fg = '#fdf6e3',

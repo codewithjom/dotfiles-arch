@@ -63,7 +63,6 @@ return packer.startup(function(use)
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "dracula/vim"
-  -- use "altercation/solarized"
   use "navarasu/onedark.nvim"
 	use "morhetz/gruvbox"
   use "folke/tokyonight.nvim"
@@ -109,7 +108,7 @@ return packer.startup(function(use)
   -- Coc (Conquer of Completion)
   use {'neoclide/coc.nvim', branch = 'release'}
 
-  -- Extra
+  -- Developments
   use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb"
   use "cohama/lexima.vim"

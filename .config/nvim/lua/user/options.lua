@@ -39,6 +39,7 @@ local options = {
   title = true,
   autoindent = true,
   smartindent = true,
+  breakindent = true,
   guifont = "FantasqueSansMono Nerd Font:h17",   -- the font used in graphical neovim applications
 }
 
