@@ -28,19 +28,15 @@ import qualified Data.Map as M
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, wrap, xmobarPP, xmobarColor, shorten, PP(..))
 import XMonad.Hooks.EwmhDesktops  -- for some fullscreen events, also for xcomposite in obs.
 import XMonad.Hooks.ManageDocks (avoidStruts, docks, manageDocks, ToggleStruts(..))
-import XMonad.Hooks.ManageHelpers (isFullscreen, doFullFloat, doCenterFloat)
+import XMonad.Hooks.ManageHelpers (isFullscreen, isDialog, doFullFloat, doCenterFloat)
 import XMonad.Hooks.ServerMode
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceHistory
 
 -- Layouts
 import XMonad.Layout.Accordion
-import XMonad.Layout.GridVariants (Grid(Grid))
 import XMonad.Layout.SimplestFloat
-import XMonad.Layout.Spiral
 import XMonad.Layout.ResizableTile
-import XMonad.Layout.Tabbed
-import XMonad.Layout.ThreeColumns
 
 -- Layouts modifiers
 import XMonad.Layout.LayoutModifier
@@ -68,7 +64,7 @@ import XMonad.Util.SpawnOnce
 
 -- Set colorscheme for xmobar 
 -- See more colors in lib/Colors
-import Colors.SolarizedDark
+import Colors.GruvboxDark
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -83,10 +79,10 @@ myBrowser :: String
 myBrowser = "qutebrowser"   -- Sets qutebrowser as browser
 
 myEmacs :: String
-myEmacs = "emacsclient -c -a 'emacs'"  -- Makes emacs keybindings easier to type
+myEmacs = "emacs"  -- Makes emacs keybindings easier to type
 
 myEditor :: String
-myEditor = "alacritty -e nvim"  -- Sets neovim as editor
+myEditor = "emacs"  -- Sets emacs as editor
 
 myFileManager :: String
 myFileManager = "pcmanfm"   -- Sets pcmanfm as file manager
@@ -98,10 +94,10 @@ myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
 
 myNormColor :: String       -- Border color of normal windows
-myNormColor   = colorBack   -- This variable is imported from Colors.THEME
+myNormColor   = "#121622"   -- This variable is imported from Colors.THEME
 
 myFocusColor :: String      -- Border color of focused windows
-myFocusColor  = color07     -- This variable is imported from Colors.THEME
+myFocusColor  = colorBack   -- This variable is imported from Colors.THEME
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
@@ -141,7 +137,7 @@ tall     = renamed [Replace "tall"]
            $ windowNavigation
            $ subLayout [] (smartBorders Simplest)
            $ limitWindows 5
-           $ mySpacing 8
+           $ mySpacing 4
            $ ResizableTall 1 (3/100) (1/2) []
 monocle  = renamed [Replace "monocle"]
            $ smartBorders
@@ -157,7 +153,7 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=50"
     , swn_fade              = 0.3
-    , swn_bgcolor           = "#001b26"
+    , swn_bgcolor           = "#001b21"
     , swn_color             = "#839496"
     }
 
@@ -278,9 +274,9 @@ main = do
     -- xmproc0 <- spawnPipe ("polybar -q bar") -- Use polybar
     -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc")
     -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc")
-    xmonad $ ewmh $ docks $ def
+    xmonad $ ewmh $ ewmhFullscreen  $ docks $ def
         { manageHook         = myManageHook <+> manageDocks
-        -- , handleEventHook    = docks -- <+> fullscreenEventHook
+        -- , handleEventHook    = docks <+> fullscreenEventHook
         , modMask            = myModMask
         , terminal           = myTerminal
         , startupHook        = myStartupHook
