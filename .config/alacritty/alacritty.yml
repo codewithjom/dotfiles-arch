@@ -16,10 +16,9 @@ window:
   padding:
     x: 5
     y: 0
-  dynamic_padding:
-    false
+  dynamic_padding: false
 
-  opacity: 0.90
+  # opacity: 0.90
 
   title: Alacritty
   dynamic_title: false
@@ -36,7 +35,7 @@ scrolling:
 font:
   normal:
     family: Caskaydia Cove Nerd Font
-    style: normal
+    style: Regular
 
   bold:
     family: Caskaydia Cove Nerd Font
@@ -45,10 +44,6 @@ font:
   italic:
     family: Caskaydia Cove Nerd Font
     style: MediumItalic
-
-  bold_italic:
-    family: Caskaydia Cove Nerd Font
-    style: BoldItalic
 
   size: 10 # Font Size
 
@@ -87,35 +82,35 @@ font:
       magenta: "#FF00AA"
       cyan: "#00E8C6"
       white: "#D5CED9"
-  
+
   ### Ayu Dark ###
   ayu-dark: &ayu-dark
     primary:
-      background: '0x0A0E14'
-      foreground: '0xB3B1AD'
+      background: "0x0A0E14"
+      foreground: "0xB3B1AD"
 
     # Normal colors
     normal:
-      black:   '0x01060E'
-      red:     '0xEA6C73'
-      green:   '0x91B362'
-      yellow:  '0xF9AF4F'
-      blue:    '0x53BDFA'
-      magenta: '0xFAE994'
-      cyan:    '0x90E1C6'
-      white:   '0xC7C7C7'
+      black: "0x01060E"
+      red: "0xEA6C73"
+      green: "0x91B362"
+      yellow: "0xF9AF4F"
+      blue: "0x53BDFA"
+      magenta: "0xFAE994"
+      cyan: "0x90E1C6"
+      white: "0xC7C7C7"
 
     # Bright colors
     bright:
-      black:   '0x686868'
-      red:     '0xF07178'
-      green:   '0xC2D94C'
-      yellow:  '0xFFB454'
-      blue:    '0x59C2FF'
-      magenta: '0xFFEE99'
-      cyan:    '0x95E6CB'
-      white:   '0xFFFFFF'
-  
+      black: "0x686868"
+      red: "0xF07178"
+      green: "0xC2D94C"
+      yellow: "0xFFB454"
+      blue: "0x59C2FF"
+      magenta: "0xFFEE99"
+      cyan: "0x95E6CB"
+      white: "0xFFFFFF"
+
   ### Dracula ###
   dracula: &dracula
     primary:
@@ -504,7 +499,7 @@ cursor:
     shape: block # replace with block, underline, beam
     blinking: Always
 
-  blink_interval: 200
+  blink_interval: 150
 
 live_config_reload: true
 
