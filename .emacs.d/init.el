@@ -103,8 +103,8 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq use-dialog-box nil) ;; Disable dialog boxes since they weren't working in Mac OSX
 
-(set-frame-parameter (selected-frame) 'alpha '(95 . 90))
-(add-to-list 'default-frame-alist '(alpha . (95 . 90)))
+;; (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
+;; (add-to-list 'default-frame-alist '(alpha . (95 . 90)))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -131,8 +131,8 @@
 (use-package doom-themes
   :init (load-theme 'doom-solarized-dark t))
 
-(defvar jd/default-font-size 105)
-(defvar jd/default-variable-font-size 105)
+(defvar jd/default-font-size 110)
+(defvar jd/default-variable-font-size 110)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
@@ -149,7 +149,7 @@
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Iosevka Aile"
+                      :font "Cascadia Code"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 
@@ -394,7 +394,7 @@ folder, otherwise delete a word"
 (add-hook 'after-init-hook 'global-company-mode)
 
 (defun jd/org-mode-visual-fill()
-  (setq visual-fill-column-width 110
+  (setq visual-fill-column-width 120
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
@@ -564,19 +564,19 @@ folder, otherwise delete a word"
     (org-superstar-remove-leading-stars t)
     ;; (org-ellipsis "...")
     (org-superstar-item-bullet-alist '((?+ . ?✦) (?- . ?–)))
-    (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
+    (org-superstar-headline-bullets-list '("◉" "●" "○" "●" "○" "●" "○")))
 
   ;; Increase the size of various headings
-  (set-face-attribute 'org-document-title nil :font "Iosevka Aile" :weight 'bold :height 1.3)
-  (dolist (face '((org-level-1 . 1.2)
-                  (org-level-2 . 1.1)
-                  (org-level-3 . 1.05)
-                  (org-level-4 . 1.0)
-                  (org-level-5 . 1.1)
-                  (org-level-6 . 1.1)
-                  (org-level-7 . 1.1)
-                  (org-level-8 . 1.1)))
-  (set-face-attribute (car face) nil :font "Iosevka Aile" :weight 'medium :height (cdr face)))
+  (set-face-attribute 'org-document-title nil :font "Ubuntu" :weight 'bold :height 1.3)
+  (dolist (face '((org-level-1 . 1.3)
+                  (org-level-2 . 1.2)
+                  (org-level-3 . 1.1)
+                  (org-level-4 . 1.05)
+                  (org-level-5 . 1.05)
+                  (org-level-6 . 1.05)
+                  (org-level-7 . 1.05)
+                  (org-level-8 . 1.05)))
+  (set-face-attribute (car face) nil :font "FantasqueSans Mono Nerd Font" :weight 'bold :height (cdr face)))
 
   (require 'org-indent)
 
