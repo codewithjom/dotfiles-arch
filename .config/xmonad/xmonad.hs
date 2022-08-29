@@ -32,6 +32,7 @@ import XMonad.Hooks.ManageHelpers (isFullscreen, isDialog, doFullFloat, doCenter
 import XMonad.Hooks.ServerMode
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceHistory
+import XMonad.Hooks.Place
 
 -- Layouts
 import XMonad.Layout.Accordion
@@ -164,7 +165,7 @@ myLayoutHook = avoidStruts
                $ T.toggleLayouts floats
                $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) myDefaultLayout 
                  where 
-                   myDefaultLayout = withBorder myBorderWidth tall ||| noBorders monocle  ||| floats
+                   myDefaultLayout = withBorder myBorderWidth tall ||| noBorders monocle  ||| floats 
 
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
 myWorkspaces = ["DEV", "WEB", "SYS", "DOC", "VIR", "MSG", "MUS", "VID"]
@@ -175,16 +176,16 @@ clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
 
 myManageHook :: XMonad.Query (Data.Monoid.Endo WindowSet)
 myManageHook = composeAll
-     [ className =? "confirm"            --> doFloat
-     , className =? "file_progress"      --> doFloat
-     , className =? "dialog"             --> doFloat
-     , className =? "download"           --> doFloat
-     , className =? "error"              --> doFloat
-     , className =? "Gimp"               --> doFloat
-     , className =? "notification"       --> doFloat
-     , className =? "pinentry-gtk-2"     --> doFloat
-     , className =? "splash"             --> doFloat
-     , className =? "toolbar"            --> doFloat
+     [ className =? "confirm"            --> doCenterFloat
+     , className =? "file_progress"      --> doCenterFloat
+     , className =? "dialog"             --> doCenterFloat
+     , className =? "download"           --> doCenterFloat
+     , className =? "error"              --> doCenterFloat
+     , className =? "Gimp"               --> doCenterFloat
+     , className =? "notification"       --> doCenterFloat
+     , className =? "pinentry-gtk-2"     --> doCenterFloat
+     , className =? "splash"             --> doCenterFloat
+     , className =? "toolbar"            --> doCenterFloat
      , className =? "Yad"                --> doCenterFloat
      , title =? "Oracle VM VirtualBox Manager"  --> doFloat
      , title =? "Mozilla Firefox"        --> doShift ( myWorkspaces !! 1 )
@@ -271,11 +272,11 @@ myKeys =
 main :: IO ()
 main = do
     xmproc0 <- spawnPipe ("") -- Add comment to use the bar below
-    -- xmproc0 <- spawnPipe ("polybar -q bar") -- Use polybar
     -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc")
     -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc")
-    xmonad $ ewmh $ ewmhFullscreen  $ docks $ def
-        { manageHook         = myManageHook <+> manageDocks
+    -- $ ewmhFullscreen (add this below to apply fullscreen)
+    xmonad $ ewmh  $ docks $ def
+        { manageHook         = placeHook simpleSmart <+> myManageHook <+> manageDocks
         -- , handleEventHook    = docks <+> fullscreenEventHook
         , modMask            = myModMask
         , terminal           = myTerminal
