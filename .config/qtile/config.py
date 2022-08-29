@@ -64,7 +64,7 @@ keys = [
 
 groups = [
     Group("DEV", layout="monadtall"),
-    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Min"])]),
+    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Min","chromium"])]),
     Group("SYS", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
     Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
     Group("VIR", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
@@ -124,7 +124,7 @@ def init_widgets_list():
             active=colors[2],
             inactive=colors[7],
             rounded=False,
-            highlight_color=colors[0],
+            highlight_color="#01060E",
             highlight_method="line",
             this_current_screen_border=colors[6],
             this_screen_border=colors[4],
