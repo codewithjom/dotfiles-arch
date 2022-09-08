@@ -23,7 +23,7 @@ case $yn in
     curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
     yarn global add neovim
-    paru -S npm
+    paru -S npm neovim-colorbuddy-git
     sudo npm i -g typescript typescript-language-server
     python3 -m pip install --user --upgrade pynvim
     cd
@@ -34,7 +34,7 @@ case $yn in
     curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
     yarn global add neovim
-    paru -S npm
+    paru -S npm neovim-colorbuddy-git
     sudo npm i -g typescript typescript-language-server
     python3 -m pip install --user --upgrade pynvim
     cd
@@ -64,20 +64,27 @@ printf "\e[1;32m#########################################\e[0m\n"
 printf "\e[1;32m## Installing GTK, ICONS, CURSOR, ETC. ##\e[0m\n"
 printf "\e[1;32m#########################################\e[0m\n"
 
-paru -S python-iwlib skeuos-gtk sardi-icons sweet-cursor-theme-git
-paru -S --aur betterlockscreen preload picom-git light-git devour
+paru -S python-iwlib skeuos-gtk sardi-icons sweet-cursor-theme-git pamac-aur pamac-tray-icon-plasma
+paru -S --aur betterlockscreen preload picom-git light-git devour chili-sddm-theme
 
 printf "\e[1;32m######################\e[0m\n"
 printf "\e[1;32m## Installing FONTS ##\e[0m\n"
 printf "\e[1;32m######################\e[0m\n"
 
-paru -S ttc-iosevka-aile ttf-cascadia-code ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-inconsolata ttf-jetbrains-mono ttf-ubuntu-font-family ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code nerd-fonts-roboto-mono nerd-fonts-fantasque-sans-mono adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts nerd-fonts-victor-mono
+paru -S ttc-iosevka-aile ttf-cascadia-code ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-inconsolata ttf-jetbrains-mono ttf-ubuntu-font-family ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code nerd-fonts-roboto-mono nerd-fonts-fantasque-sans-mono adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts nerd-fonts-victor-mono ttf-icomoon-feather ttf-iosevka-nerd
+
+printf "\e[1;32m#############################\e[0m\n"
+printf "\e[1;32m## Installing DEVELOPMENTS ##\e[0m\n"
+printf "\e[1;32m#############################\e[0m\n"
+
+sudo pacman -S openjdk11-src python-pip cmake mariadb mysql-workbench
+paru -S android-studio google-java-format xampp
 
 printf "\e[1;32m#############################\e[0m\n"
 printf "\e[1;32m## Installing DEPENDENCIES ##\e[0m\n"
 printf "\e[1;32m#############################\e[0m\n"
 
-sudo pacman -S tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa python-pip openjdk11-src sxiv mpv pavucontrol plocate dunst pamixer conky alacritty blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs cmake dmenu xdo xdotool fisher ripgrep tmux
+sudo pacman -S tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa sxiv mpv pavucontrol plocate dunst pamixer conky alacritty blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs dmenu xdo xdotool fisher ripgrep tmux aria2 gparted network-manager-applet networkmanager polybar prettier
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 if [[ $(which $SHELL) = '/bin/fish' ]]; then
