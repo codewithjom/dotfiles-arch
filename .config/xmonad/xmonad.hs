@@ -33,6 +33,7 @@ import XMonad.Hooks.ServerMode
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceHistory
 import XMonad.Hooks.Place
+import XMonad.Hooks.WindowSwallowing
 
 -- Layouts
 import XMonad.Layout.Accordion
@@ -204,7 +205,6 @@ myManageHook = composeAll
      , className =? "discord"            --> doShift ( myWorkspaces !! 5 )
      , className =? "Thunderbird"        --> doShift ( myWorkspaces !! 5 )
      , className =? "Spotify"            --> doShift ( myWorkspaces !! 6 )
-     , className =? "mpv"                --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"               --> doShift ( myWorkspaces !! 8 )
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , isFullscreen -->  doFullFloat
@@ -277,7 +277,7 @@ main = do
     -- $ ewmhFullscreen (add this below to apply fullscreen)
     xmonad $ ewmh  $ docks $ def
         { manageHook         = placeHook simpleSmart <+> myManageHook <+> manageDocks
-        -- , handleEventHook    = docks <+> fullscreenEventHook
+        , handleEventHook    = swallowEventHook (className =? "Alacritty" <||> className =? "XTerm") (return True)
         , modMask            = myModMask
         , terminal           = myTerminal
         , startupHook        = myStartupHook
