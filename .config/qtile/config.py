@@ -64,7 +64,7 @@ keys = [
 
 groups = [
     Group("DEV", layout="monadtall"),
-    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Min","chromium"])]),
+    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Min","chromium","Google-chrome"])]),
     Group("SYS", layout="monadtall", matches=[Match(wm_class=["jetbrains-idea-ce", "Subl", "jetbrains-studio"])]),
     Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
     Group("VIR", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),

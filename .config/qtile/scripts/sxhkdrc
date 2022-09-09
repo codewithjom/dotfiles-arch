@@ -19,6 +19,10 @@ super + Return
 super + shift + d
 	rofi -show drun
 
+# kill conky
+super + shift + c
+  killall conky
+
 # dmenu
 super + d
   dmenu_run -l 10 -i -p 'Run: '

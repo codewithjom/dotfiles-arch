@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # bash ~/.config/polybar/launch.sh --hack &
+conky -c ~/.config/qtile/scripts/conkyrc &
 lxsession &
 picom --experimental-backends -b &
 nm-applet &

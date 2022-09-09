@@ -29,8 +29,8 @@ conky.config = {
 	alignment = 'top_right',				 -- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
 									                 -- middle-left,middle-middle,middle-right,none
 	--gap_x = -1910,
-	gap_x = 35,							         -- pixels between right or left border
-	gap_y = 70,							         -- pixels between bottom or left border
+	gap_x = 30,							         -- pixels between right or left border
+	gap_y = 55,							         -- pixels between bottom or left border
 	minimum_height = 200,		         -- minimum height of window
 	minimum_width = 260,		         -- minimum height of window
 	maximum_width = 260,		         -- maximum height of window
@@ -119,12 +119,13 @@ ${color1}[S]+[1-8]${alignr}${color2}switch workspace${color}
 ${color1}[S]+[SHIFT]+[1-8]${alignr}${color2}send window${color}
 ${color1}[S]+w/e${alignr}${color2}switch keyboard focus
 ${color1}[S]+[period]/[comma]${alignr}${color2}switch focus
+${color1}[S]+[SHIFT]+c${alignr}${color2}kill conky
 ${color1}${hr}${color}
 ${color1}[S]+[SHIFT]+[RET]${alignr}${color2}emacs${color}
 ${color1}[S]+b${alignr}${color2}qutebrowser${color}
 ${color1}[S]+d${alignr}${color2}open dmenu${color}
 ${color1}[S]+s${alignr}${color2}edit config file${color}
-${color1}[S]+[SHIFT]+s${alignr}${color2}quick browse${color}
+${color1}[S]+[SHIFT]+b${alignr}${color2}quick browse${color}
 ${color1}[S]+c${alignr}${color2}choose colorscheme${color}
 ${color1}[S]+[SHIFT]+f${alignr}${color2}file manager${color}
 ${color1}[ctrl]+[RET]${alignr}${color2}screenshot${color}
