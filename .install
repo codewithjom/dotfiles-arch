@@ -77,7 +77,7 @@ printf "\e[1;32m#############################\e[0m\n"
 printf "\e[1;32m## Installing DEVELOPMENTS ##\e[0m\n"
 printf "\e[1;32m#############################\e[0m\n"
 
-sudo pacman -S openjdk11-src python-pip cmake mariadb mysql-workbench
+sudo pacman -S openjdk11-src python-pip cmake mariadb mysql-workbench python-jedi python-pylint clang
 paru -S android-studio google-java-format xampp
 
 printf "\e[1;32m#############################\e[0m\n"
@@ -96,7 +96,7 @@ fi
 
 pip3 install psutil
 
-paru -S qtile sxhkd pfetch
+paru -S qtile sxhkd pfetch xmonad xmonad-contrib
 git clone https://github.com/codewithjom/dotfiles.git ~/Downloads/dotfiles
 cd ~/Downloads/dotfiles
 cp -rf .* ~/
