@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DMBROWSER="Google-chrome"
+DMBROWSER="google-chrome-stable"
 DMENU="dmenu -l 10 -i -p"
 
 declare -a options=(
