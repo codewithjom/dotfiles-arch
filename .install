@@ -65,7 +65,7 @@ printf "\e[1;32m## Installing GTK, ICONS, CURSOR, ETC. ##\e[0m\n"
 printf "\e[1;32m#########################################\e[0m\n"
 
 paru -S python-iwlib skeuos-gtk sardi-icons sweet-cursor-theme-git pamac-aur pamac-tray-icon-plasma
-paru -S --aur betterlockscreen preload picom-git light-git devour chili-sddm-theme
+paru -S --aur betterlockscreen preload picom-git light-git devour chili-sddm-theme simple-mtpfs
 
 printf "\e[1;32m######################\e[0m\n"
 printf "\e[1;32m## Installing FONTS ##\e[0m\n"
