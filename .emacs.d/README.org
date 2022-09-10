@@ -354,7 +354,7 @@ Doom Modeline
 
   (use-package doom-modeline
     :init (doom-modeline-mode 1)
-    :hook (after-init . doom-modeline-init)
+    ;; :hook (after-init . doom-modeline-init)
     :custom-face
     (mode-line ((t (:height 0.85))))
     (mode-line-inactive ((t (:height 0.85))))
