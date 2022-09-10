@@ -65,7 +65,7 @@ printf "\e[1;32m## Installing GTK, ICONS, CURSOR, ETC. ##\e[0m\n"
 printf "\e[1;32m#########################################\e[0m\n"
 
 paru -S python-iwlib skeuos-gtk sardi-icons sweet-cursor-theme-git pamac-aur pamac-tray-icon-plasma
-paru -S --aur betterlockscreen preload picom-git light-git devour chili-sddm-theme simple-mtpfs
+paru -S --aur betterlockscreen preload picom-git light-git devour chili-sddm-theme simple-mtpfs networkmanager-dmenu-git
 
 printf "\e[1;32m######################\e[0m\n"
 printf "\e[1;32m## Installing FONTS ##\e[0m\n"
@@ -84,7 +84,7 @@ printf "\e[1;32m#############################\e[0m\n"
 printf "\e[1;32m## Installing DEPENDENCIES ##\e[0m\n"
 printf "\e[1;32m#############################\e[0m\n"
 
-sudo pacman -S tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa sxiv mpv pavucontrol plocate dunst pamixer conky alacritty blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs dmenu xdo xdotool fisher ripgrep tmux aria2 gparted network-manager-applet networkmanager polybar prettier
+sudo pacman -S tlp tlp-rdw ufw qutebrowser rofi lxappearance udisks2 pcmanfm scrot nitrogen lxsession volumeicon xcb-util-cursor exa sxiv mpv pavucontrol plocate dunst pamixer conky alacritty blueberry trayer fish brightnessctl blueman stow zathura zathura-pdf-poppler vimb gnome-keyring emacs dmenu xdo xdotool fisher ripgrep tmux aria2 gparted network-manager-applet networkmanager polybar prettier python-pywal
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 if [[ $(which $SHELL) = '/bin/fish' ]]; then
