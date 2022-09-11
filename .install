@@ -23,7 +23,7 @@ case $yn in
     curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
     yarn global add neovim
-    paru -S npm neovim-colorbuddy-git
+    paru -S npm neovim-colorbuddy-git instant-markdown-d
     sudo npm i -g typescript typescript-language-server
     python3 -m pip install --user --upgrade pynvim
     cd
