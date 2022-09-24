@@ -52,7 +52,7 @@ if status --is-login
 end
 
 # Package name: shell-color-scripts
-colorscript -r
+# colorscript -r
 
 # fisher install IlanCosman/tide@v5 (Fish prompt)
 # Remove comment below if not using custom prompt (fisher/tide)
