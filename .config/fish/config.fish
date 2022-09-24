@@ -40,7 +40,7 @@ alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
 alias mpvid 'devour mpv'
 alias sxiv 'devour sxiv'
 alias zathura 'devour zathura'
-# alias clear 'clear && colorscript -e 13'
+alias clear 'clear && colorscript -e 35'
 alias checkupdates 'checkupdates | less'
 alias . 'tmux new-session -s 1'
 alias how-old-am-i "sudo dumpe2fs $(mount | grep 'on \/ ' | awk '{print $1}') | grep 'Filesystem created:'"
@@ -52,8 +52,8 @@ if status --is-login
 end
 
 # Package name: shell-color-scripts
-# colorscript -r
+colorscript -r
 
 # fisher install IlanCosman/tide@v5 (Fish prompt)
 # Remove comment below if not using custom prompt (fisher/tide)
-# starship init fish | source
+starship init fish | source
