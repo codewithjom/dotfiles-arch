@@ -66,7 +66,7 @@ import XMonad.Util.SpawnOnce
 
 -- Set colorscheme for xmobar 
 -- See more colors in lib/Colors
-import Colors.GruvboxDark
+import Colors.Nord
 
 myFont :: String
 myFont = "xft:Roboto Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
@@ -96,10 +96,10 @@ myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
 
 myNormColor :: String       -- Border color of normal windows
-myNormColor   = "#121622"   -- This variable is imported from Colors.THEME
+myNormColor   = "#01060E"   -- This variable is imported from Colors.THEME
 
 myFocusColor :: String      -- Border color of focused windows
-myFocusColor  = colorBack   -- This variable is imported from Colors.THEME
+myFocusColor  = "#90E1C6"   -- This variable is imported from Colors.THEME
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
@@ -117,7 +117,8 @@ myStartupHook = do
   spawnOnce ("volumeicon")
   spawnOnce ("xsetroot -cursor_name left_ptr")
   spawnOnce ("pamac-tray")
-  spawnOnce ("blueberry-tray")
+  -- spawnOnce ("blueberry-tray")
+  spawnOnce ("conky -c ~/.config/xmonad/lib/scripts/conkyrc")
 
   spawnOnce "nitrogen --set-scaled --restore &"
 
@@ -196,6 +197,7 @@ myManageHook = composeAll
      , className =? "Vimb"               --> doShift ( myWorkspaces !! 1 )
      , className =? "Tor Browser"        --> doShift ( myWorkspaces !! 1 )
      , className =? "Chromium"           --> doShift ( myWorkspaces !! 1 )
+     , className =? "Google-chrome"      --> doShift ( myWorkspaces !! 1 )
      , className =? "jetbrains-idea-ce"  --> doShift ( myWorkspaces !! 2 )
      , className =? "jetbrains-studio"   --> doShift ( myWorkspaces !! 2 )
      , className =? "Subl"               --> doShift ( myWorkspaces !! 2 )
@@ -225,6 +227,7 @@ myKeys =
         , ("M-S-<Return>", spawn (myEmacs))
         , ("M-S-f", spawn (myFileManager))
         , ("C-<Return>", spawn (myScreenshot))
+        , ("M-S-c", spawn "killall conky")
 
     -- KB_GROUP Kill windows
         , ("M-q", kill1)       -- Kill the currently focused client

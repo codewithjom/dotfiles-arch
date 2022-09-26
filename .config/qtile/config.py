@@ -80,7 +80,7 @@ dgroups_key_binder = simple_key_binder("mod4")
 layout_theme = {
     "border_width": 2,
     "margin": 8,
-    "border_focus": "282828",
+    "border_focus": "90E1C6",
     "border_normal": "0A0E14",
 }
 
@@ -121,8 +121,8 @@ def init_widgets_list():
             padding_y=5,
             padding_x=3,
             borderwidth=2,
-            active=colors[2],
-            inactive=colors[7],
+            active=colors[7],
+            inactive=colors[2],
             rounded=False,
             highlight_color=colors[0],
             highlight_method="line",

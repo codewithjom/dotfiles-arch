@@ -15,8 +15,8 @@ env:
 window:
   decorations: full
   dimensions:
-    columns: 120
-    lines: 30
+    columns: 140
+    lines: 35
   padding:
     x: 0
     y: 0
@@ -383,7 +383,8 @@ font:
   ### Solarized Dark ###
   solarized-dark: &solarized-dark # Default colors
     primary:
-      background: "#001b21" # base03
+      background: "#0A0E14"
+        # background: "#001b21" # base03
       foreground: "#839496" # base0
 
     # Cursor colors
