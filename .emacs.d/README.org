@@ -279,19 +279,19 @@ Different platforms need different default font sizes, and =Cascadia Code= is cu
 
 #+begin_src emacs-lisp
 
-  (defvar jd/default-font-size 115)
-  (defvar jd/default-variable-font-size 115)
+  (defvar jd/default-font-size 110)
+  (defvar jd/default-variable-font-size 110)
 
   (defun jd/set-font-faces ()
     (message "Setting faces!")
     (set-face-attribute 'default nil
-                        :font "JetBrains Mono"
+                        :font "Source Code Pro"
                         :height jd/default-font-size
                         :weight 'light)
 
     ;; Set the fixed pitch face
     (set-face-attribute 'fixed-pitch nil
-                        :font "JetBrains Mono"
+                        :font "Source Code Pro"
                         :height jd/default-font-size
                         :weight 'light)
 

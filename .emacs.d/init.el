@@ -131,19 +131,19 @@
 (use-package doom-themes
   :init (load-theme 'doom-ayu-dark t))
 
-(defvar jd/default-font-size 115)
-(defvar jd/default-variable-font-size 115)
+(defvar jd/default-font-size 110)
+(defvar jd/default-variable-font-size 110)
 
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "JetBrains Mono"
+                      :font "Source Code Pro"
                       :height jd/default-font-size
                       :weight 'light)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "JetBrains Mono"
+                      :font "Source Code Pro"
                       :height jd/default-font-size
                       :weight 'light)
 
@@ -902,18 +902,3 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-	 '(sudo-edit daemons emms vterm-toggle vterm highlight-indent-guides rainbow-mode rainbow-delimiters smartparens yasnippet flycheck lsp-java prettier skewer-mode impatient-mode lorem-ipsum ac-html web-mode helpful ccls prettier-js apheleia js2-mode typescript-mode nvm cider lispyville lispy dap-mode lsp-ui lsp-mode magit org-appear ox-reveal org-present org-roam org-superstar simple-httpd bookmark-view openwith dired-collapse dired-ranger dired-single dired-rainbow all-the-icons-dired visual-fill-column company-box company marginalia consult orderless corfu vertico counsel ivy-rich ivy-hydra ivy hydra neotree ws-butler evil-nerd-commenter super-save doom-modeline minions all-the-icons diminish emojify doom-themes which-key command-log-mode evil-collection evil general no-littering use-package)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(mode-line ((t (:height 0.85))))
- '(mode-line-inactive ((t (:height 0.85))))
- '(vertico-current ((t (:background "#3a3f5a")))))
