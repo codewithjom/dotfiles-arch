@@ -269,7 +269,7 @@ These days I bounce around between themes included with =DOOM Themes= since they
 #+begin_src emacs-lisp
 
   (use-package doom-themes
-    :init (load-theme 'doom-ayu-dark t))
+    :init (load-theme 'doom-solarized-dark t))
 
 #+end_src
 
@@ -287,13 +287,13 @@ Different platforms need different default font sizes, and =Cascadia Code= is cu
     (set-face-attribute 'default nil
                         :font "Source Code Pro"
                         :height jd/default-font-size
-                        :weight 'light)
+                        :weight 'regular)
 
     ;; Set the fixed pitch face
     (set-face-attribute 'fixed-pitch nil
                         :font "Source Code Pro"
                         :height jd/default-font-size
-                        :weight 'light)
+                        :weight 'regular)
 
     ;; Set the variable pitch face
     (set-face-attribute 'variable-pitch nil

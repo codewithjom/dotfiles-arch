@@ -129,7 +129,7 @@
 (setq ad-redefinition-action 'accept)
 
 (use-package doom-themes
-  :init (load-theme 'doom-ayu-dark t))
+  :init (load-theme 'doom-solarized-dark t))
 
 (defvar jd/default-font-size 110)
 (defvar jd/default-variable-font-size 110)
@@ -139,13 +139,13 @@
   (set-face-attribute 'default nil
                       :font "Source Code Pro"
                       :height jd/default-font-size
-                      :weight 'light)
+                      :weight 'regular)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
                       :font "Source Code Pro"
                       :height jd/default-font-size
-                      :weight 'light)
+                      :weight 'regular)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
