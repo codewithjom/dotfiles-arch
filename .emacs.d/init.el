@@ -137,15 +137,15 @@
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "JetBrains Mono"
+                      :font "Source Code Pro"
                       :height jd/default-font-size
-                      :weight 'light)
+                      :weight 'regular)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "JetBrains Mono"
+                      :font "Source Code Pro"
                       :height jd/default-font-size
-                      :weight 'light)
+                      :weight 'regular)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
@@ -811,6 +811,10 @@ folder, otherwise delete a word"
     (jd/set-markdown-header-font-sizes))
 
   (add-hook 'markdown-mode-hook 'jd/markdown-mode-hook))
+
+;; Convert org file to markdown
+(eval-after-load "org"
+  '(require 'ox-md nil t))
 
 (use-package web-mode
   :mode "(\\.\\(html?\\|ejs\\|tsx\\|jsx\\)\\'"

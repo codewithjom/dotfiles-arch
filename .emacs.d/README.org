@@ -285,15 +285,15 @@ Different platforms need different default font sizes, and =Cascadia Code= is cu
   (defun jd/set-font-faces ()
     (message "Setting faces!")
     (set-face-attribute 'default nil
-                        :font "JetBrains Mono"
+                        :font "Source Code Pro"
                         :height jd/default-font-size
-                        :weight 'light)
+                        :weight 'regular)
 
     ;; Set the fixed pitch face
     (set-face-attribute 'fixed-pitch nil
-                        :font "JetBrains Mono"
+                        :font "Source Code Pro"
                         :height jd/default-font-size
-                        :weight 'light)
+                        :weight 'regular)
 
     ;; Set the variable pitch face
     (set-face-attribute 'variable-pitch nil
@@ -1286,6 +1286,10 @@ Just in case I want to learn this languages.
       (jd/set-markdown-header-font-sizes))
 
     (add-hook 'markdown-mode-hook 'jd/markdown-mode-hook))
+
+  ;; Convert org file to markdown
+  (eval-after-load "org"
+    '(require 'ox-md nil t))
 
 #+end_src
 

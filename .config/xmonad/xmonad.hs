@@ -192,6 +192,7 @@ myManageHook = composeAll
      , title =? "Oracle VM VirtualBox Manager"  --> doFloat
      , title =? "Mozilla Firefox"        --> doShift ( myWorkspaces !! 1 )
      , className =? "Brave-browser"      --> doShift ( myWorkspaces !! 1 )
+     , className =? "Brave-browser-dev"  --> doShift ( myWorkspaces !! 1 )
      , className =? "Min"                --> doShift ( myWorkspaces !! 1 )
      , className =? "qutebrowser"        --> doShift ( myWorkspaces !! 1 )
      , className =? "Vimb"               --> doShift ( myWorkspaces !! 1 )
