@@ -245,51 +245,6 @@ def init_widgets_list():
             fontsize=12,
         ),
         widget.TextBox(
-            text="",
-            font="VictorMono Nerd Font",
-            background=colors[0],
-            foreground=colors[7],
-            padding=3,
-            fontsize=12,
-        ),
-        widget.Memory(
-            foreground=colors[7],
-            background=colors[0],
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -e htop")},
-            fmt="Mem: {}",
-            padding=5,
-        ),
-        widget.TextBox(
-            text="|",
-            font="Ubuntu Mono",
-            background=colors[0],
-            foreground="474747",
-            padding=2,
-            fontsize=12,
-        ),
-        widget.TextBox(
-            text=" ",
-            font="VictorMono Nerd Font",
-            background=colors[0],
-            foreground=colors[5],
-            padding=2,
-            fontsize=12,
-        ),
-        widget.Backlight (
-            update_interval=0.2,
-            backlight_name="intel_backlight",
-            foreground=colors[5],
-            background=colors[0],
-        ),
-        widget.TextBox(
-            text="|",
-            font="Ubuntu Mono",
-            background=colors[0],
-            foreground="474747",
-            padding=2,
-            fontsize=12,
-        ),
-        widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
             background=colors[0],
@@ -326,28 +281,6 @@ def init_widgets_list():
             padding=5,
             foreground=colors[8],
             background=colors[0],
-        ),
-        widget.TextBox(
-            text = '|',
-            font = "Ubuntu Mono",
-            background = colors[0],
-            foreground = '474747',
-            padding = 2,
-            fontsize = 14
-        ),
-        widget.TextBox(
-            text = '蓼',
-            font = "VictorMono Nerd Font",
-            background = colors[0],
-            foreground = colors[4],
-            padding = 2,
-            fontsize = 14
-        ),
-        widget.Volume(
-            foreground = colors[4],
-            background = colors[0],
-            fmt = 'Vol: {}',
-            padding = 5
         ),
         widget.TextBox(
             text="|",
@@ -399,7 +332,7 @@ def init_widgets_screen2():
 def init_screens():
     return [
         # Screen(),
-        # Remove the comments below if you want to use the built-in status bar of qitle
+        # Remove the comments below if you want to use the built-in status bar of qtile
         Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=24)),
         Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=24)),
     ]
