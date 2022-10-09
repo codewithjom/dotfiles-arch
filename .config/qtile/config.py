@@ -408,7 +408,7 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),
         Match(title="pinentry"),
         Match(wm_class="pinentry-gtk-2"),
-    ]
+    ], fullscreen_border_width = 0, border_width = 0
 )
 
 auto_fullscreen = True
