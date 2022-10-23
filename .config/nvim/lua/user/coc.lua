@@ -13,10 +13,12 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-prettier',
   \ 'coc-python',
+  \ 'coc-react-refactor',
   \ 'coc-rome',
   \ 'coc-sh',
   \ 'coc-snippets',
   \ 'coc-sql',
+  \ 'coc-tailwindcss',
   \ 'coc-tsserver',
   \ 'coc-webview',
   \ ]
