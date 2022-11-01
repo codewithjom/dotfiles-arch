@@ -15,8 +15,8 @@ env:
 window:
   decorations: full
   dimensions:
-    columns: 140
-    lines: 35
+    columns: 160
+    lines: 40
   padding:
     x: 0
     y: 0
