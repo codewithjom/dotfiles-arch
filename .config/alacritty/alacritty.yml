@@ -15,8 +15,8 @@ env:
 window:
   decorations: full
   dimensions:
-    columns: 140
-    lines: 35
+    columns: 160
+    lines: 40
   padding:
     x: 0
     y: 0
@@ -49,7 +49,7 @@ font:
     family: Caskaydia Cove Nerd Font
     style: MediumItalic
 
-  size: 10 # Font Size
+  size: 9 # Font Size
 
   draw_bold_text_with_bright_colors: true
 

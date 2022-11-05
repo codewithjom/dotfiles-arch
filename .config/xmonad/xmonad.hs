@@ -118,7 +118,7 @@ myStartupHook = do
   spawnOnce ("xsetroot -cursor_name left_ptr")
   spawnOnce ("pamac-tray")
   -- spawnOnce ("blueberry-tray")
-  spawnOnce ("conky -c ~/.config/xmonad/lib/scripts/conkyrc")
+  -- spawnOnce ("conky -c ~/.config/xmonad/lib/scripts/conkyrc")
 
   spawnOnce "nitrogen --set-scaled --restore &"
 

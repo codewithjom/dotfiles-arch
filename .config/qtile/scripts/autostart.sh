@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # bash ~/.config/polybar/launch.sh --forest &
-conky -c ~/.config/qtile/scripts/conkyrc &
+# conky -c ~/.config/qtile/scripts/conkyrc &
 lxsession &
 picom --experimental-backends -b &
 nm-applet &
