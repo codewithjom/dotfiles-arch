@@ -227,7 +227,7 @@ myKeys =
         , ("M-n", spawn (myEditor))
         , ("M-S-<Return>", spawn (myEmacs))
         , ("M-S-f", spawn (myFileManager))
-        , ("C-<Return>", spawn (myScreenshot))
+        , ("C-S-<Return>", spawn (myScreenshot))
         , ("M-S-c", spawn "killall conky")
 
     -- KB_GROUP Kill windows

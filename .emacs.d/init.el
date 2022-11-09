@@ -137,19 +137,19 @@
 (defun jd/set-font-faces ()
   (message "Setting faces!")
   (set-face-attribute 'default nil
-                      :font "JetBrains Mono"
+                      :font "JetBrains Mono Nerd Font"
                       :height jd/default-font-size
                       :weight 'regular)
 
   ;; Set the fixed pitch face
   (set-face-attribute 'fixed-pitch nil
-                      :font "JetBrains Mono"
+                      :font "JetBrains Mono Nerd Font"
                       :height jd/default-font-size
                       :weight 'regular)
 
   ;; Set the variable pitch face
   (set-face-attribute 'variable-pitch nil
-                      :font "Cascadia Code"
+                      :font "JetBrains Mono Nerd Font"
                       :height jd/default-variable-font-size
                       :weight 'regular))
 
@@ -560,14 +560,14 @@ folder, otherwise delete a word"
     :after org
     :hook (org-mode . org-superstar-mode)
     :custom
-    (org-directory "~/Repo/notes")
+    (org-directory "~/Notes")
     (org-superstar-remove-leading-stars t)
     ;; (org-ellipsis "...")
     (org-superstar-item-bullet-alist '((?+ . ?✦) (?- . ?–)))
     (org-superstar-headline-bullets-list '("◉" "●" "○" "●" "○" "●" "○")))
 
   ;; Increase the size of various headings
-  (set-face-attribute 'org-document-title nil :font "Ubuntu" :weight 'bold :height 1.3)
+  (set-face-attribute 'org-document-title nil :font "JetBrains Mono Nerd Font" :weight 'bold :height 1.3)
   (dolist (face '((org-level-1 . 1.3)
                   (org-level-2 . 1.2)
                   (org-level-3 . 1.1)
@@ -576,7 +576,7 @@ folder, otherwise delete a word"
                   (org-level-6 . 1.05)
                   (org-level-7 . 1.05)
                   (org-level-8 . 1.05)))
-  (set-face-attribute (car face) nil :font "FantasqueSans Mono Nerd Font" :weight 'bold :height (cdr face)))
+  (set-face-attribute (car face) nil :font "JetBrains Mono Nerd Font" :weight 'bold :height (cdr face)))
 
   (require 'org-indent)
 
@@ -584,7 +584,7 @@ folder, otherwise delete a word"
   (set-face-attribute 'org-table nil  :inherit 'fixed-pitch)
   (set-face-attribute 'org-formula nil  :inherit 'fixed-pitch)
   (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-indent nil :inherit '(org-hide fixed-pitch))
+  ;; (set-face-attribute 'org-indent nil :inherit '(org-hide fixed-pitch))
   (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
   (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
   (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
