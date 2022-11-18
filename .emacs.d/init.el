@@ -103,8 +103,8 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq use-dialog-box nil) ;; Disable dialog boxes since they weren't working in Mac OSX
 
-;; (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
-;; (add-to-list 'default-frame-alist '(alpha . (95 . 90)))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 90))
+(add-to-list 'default-frame-alist '(alpha . (95 . 90)))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -902,3 +902,16 @@ folder, otherwise delete a word"
   :commands daemons)
 
 (use-package sudo-edit)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+	 '(exwm yasnippet xcscope ws-butler which-key web-mode vterm-toggle visual-fill-column vertico use-package typescript-mode super-save sudo-edit smartparens skewer-mode rainbow-mode rainbow-delimiters prettier-js prettier phps-mode ox-reveal org-superstar org-roam org-present org-appear orderless openwith no-littering neotree minions marginalia magit lsp-ui lsp-java lorem-ipsum lispyville ivy-rich ivy-hydra impatient-mode highlight-indent-guides helpful general flycheck evil-nerd-commenter evil-collection emojify emms doom-themes doom-modeline dired-single dired-ranger dired-rainbow dired-collapse diminish daemons counsel corfu consult company-phpactor company-box command-log-mode cider ccls bookmark-view apheleia all-the-icons-dired ac-html)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

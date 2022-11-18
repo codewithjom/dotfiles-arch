@@ -333,8 +333,8 @@ def init_screens():
     return [
         # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
-        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=24)),
-        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=24)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=26)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=26)),
     ]
 
 

@@ -16,12 +16,12 @@ super + Return
 	alacritty
 
 # program launcher
-super + shift + d
+super + d
 	rofi -show drun
 
 # dmenu
-super + d
-  dmenu_run -l 10 -i -p 'Run: '
+# super + d
+#   dmenu_run -l 10 -i -p 'Run: '
 
 # dmscript-edit (edit config file)
 super + s
