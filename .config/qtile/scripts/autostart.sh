@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bash ~/.config/polybar/launch.sh --forest &
+bash ~/.config/polybar/launch.sh &
 conky -c ~/.config/qtile/scripts/conkyrc &
 lxsession &
 picom --experimental-backends -b &

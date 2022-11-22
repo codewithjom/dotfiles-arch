@@ -80,8 +80,8 @@ dgroups_key_binder = simple_key_binder("mod4")
 layout_theme = {
     "border_width": 2,
     "margin": 8,
-    "border_focus": "90E1C6",
-    "border_normal": "0A0E14",
+    "border_focus": "0A0E14",
+    "border_normal": "",
 }
 
 layouts = [
@@ -331,10 +331,10 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        # Screen(),
+        Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
-        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=26)),
-        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=26)),
+        # Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=26)),
+        # Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=26)),
     ]
 
 

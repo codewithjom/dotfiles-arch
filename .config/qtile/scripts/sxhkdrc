@@ -45,7 +45,7 @@ super + Escape
 
 # show polybar
 alt + p
-	$HOME/.config/polybar/launch.sh --forest
+	$HOME/.config/polybar/launch.sh
 
 # kill polybar
 alt + shift + p
