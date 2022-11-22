@@ -96,10 +96,10 @@ myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
 
 myNormColor :: String       -- Border color of normal windows
-myNormColor   = "#01060E"   -- This variable is imported from Colors.THEME
+myNormColor   = "#29212C"   -- This variable is imported from Colors.THEME
 
 myFocusColor :: String      -- Border color of focused windows
-myFocusColor  = "#90E1C6"   -- This variable is imported from Colors.THEME
+myFocusColor  = "#16161e"   -- This variable is imported from Colors.THEME
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
@@ -107,7 +107,7 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 myStartupHook :: X ()
 myStartupHook = do
   spawn ("sxhkd -c $HOME/.config/xmonad/lib/scripts/sxhkdrc")
-  spawn ("bash ~/.config/polybar/launch.sh --forest")
+  spawn ("bash ~/.config/polybar/launch.sh")
   -- spawn ("killall trayer")
   -- spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
 
@@ -156,8 +156,8 @@ myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
     { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=50"
     , swn_fade              = 0.3
-    , swn_bgcolor           = "#001b21"
-    , swn_color             = "#839496"
+    , swn_bgcolor           = "#16161e"
+    , swn_color             = "#acb0d0"
     }
 
 -- The layout hook
