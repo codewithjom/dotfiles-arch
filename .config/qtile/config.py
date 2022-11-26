@@ -30,8 +30,7 @@ keys = [
     Key([mod], "n", lazy.spawn(editor)),
     Key([mod, s], ret, lazy.spawn(emacs)),
     Key([mod], ret, lazy.spawn(terminal)),
-    Key([mod, s], "f", lazy.spawn(file_manager)),
-    Key([ctrl, s], ret, lazy.spawn(screenshot)),
+    Key([mod, s], "f", lazy.spawn(file_manager)), Key([ctrl, s], ret, lazy.spawn(screenshot)),
 
     # ROFI
     Key([mod, s], "d", lazy.spawn("rofi -show drun")),
@@ -63,14 +62,14 @@ keys = [
 ]
 
 groups = [
-    Group("", layout="monadtall"),
-    Group("", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
-    Group("", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
-    Group("", layout="monadtall"),
-    Group("", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
-    Group("", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
-    Group("", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
-    Group("", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
+    Group("DEV", layout="monadtall"),
+    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
+    Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
+    Group("SYS", layout="monadtall"),
+    Group("VIR", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
+    Group("MSG", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
+    Group("MUS", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
+    Group("VID", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
 ]
 
 from libqtile.dgroups import simple_key_binder
@@ -195,35 +194,12 @@ def init_widgets_list():
             background=colors[0]
         ),
         widget.TextBox(
-            text="",
-            font="VictorMono Nerd Font",
-            background=colors[0],
-            foreground=colors[4],
-            padding=2,
-            fontsize=12,
-        ),
-        widget.ThermalSensor(
-            foreground=colors[4],
-            background=colors[0],
-            threshold=90,
-            fmt="{}",
-            padding=5,
-        ),
-        widget.TextBox(
-            text="|",
-            font="Ubuntu Mono",
-            background=colors[0],
-            foreground="474747",
-            padding=2,
-            fontsize=12,
-        ),
-        widget.TextBox(
             text="",
             font="VictorMono Nerd Font",
             background=colors[0],
             foreground=colors[6],
             padding=3,
-            fontsize=12,
+            fontsize=16,
         ),
         widget.CheckUpdates(
             update_interval=1800,
@@ -250,7 +226,7 @@ def init_widgets_list():
             background=colors[0],
             foreground=colors[2],
             padding=2,
-            fontsize=12,
+            fontsize=16,
         ),
         widget.DF(
             format="  {uf}{m}B",
@@ -267,12 +243,12 @@ def init_widgets_list():
             fontsize=12,
         ),
         widget.TextBox(
-            text="",
+            text="",
             font="VictorMono Nerd Font",
             background=colors[0],
             foreground=colors[8],
             padding=2,
-            fontsize=12,
+            fontsize=24,
         ),
         widget.Battery(
             format="batt: {percent:2.0%}",
@@ -296,7 +272,7 @@ def init_widgets_list():
             background=colors[0],
             foreground=colors[2],
             padding=5,
-            fontsize=12,
+            fontsize=16,
         ),
         widget.Clock(
             foreground=colors[2],
@@ -331,10 +307,10 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        Screen(),
+        # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
-        # Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=26)),
-        # Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=26)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=26)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=26)),
     ]
 
 
