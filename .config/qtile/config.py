@@ -169,7 +169,7 @@ def init_widgets_list():
             fontsize=12,
         ),
         widget.WindowName(
-            foreground=colors[6],
+            foreground=colors[2],
             background=colors[0],
             padding=0
         ),
@@ -309,8 +309,8 @@ def init_screens():
     return [
         # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
-        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=26)),
-        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=26)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=30)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=30)),
     ]
 
 
