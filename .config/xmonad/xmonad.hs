@@ -107,10 +107,10 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 myStartupHook :: X ()
 myStartupHook = do
   spawn ("sxhkd -c $HOME/.config/xmonad/lib/scripts/sxhkdrc")
-  spawn ("bash ~/.config/polybar/launch.sh")
   -- spawn ("killall trayer")
   -- spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
 
+  spawnOnce ("bash ~/.config/polybar/launch.sh")
   spawnOnce ("lxsession")
   spawnOnce ("picom --experimental-backends -b")
   spawnOnce ("nm-applet")
@@ -279,7 +279,7 @@ main = do
     -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc")
     -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc")
     -- $ ewmhFullscreen (add this below to apply fullscreen)
-    xmonad $ ewmh  $ docks $ def
+    xmonad $ ewmh $ ewmhFullscreen  $ docks $ def
         { manageHook         = placeHook simpleSmart <+> myManageHook <+> manageDocks
         , handleEventHook    = swallowEventHook (className =? "Alacritty" <||> className =? "XTerm") (return True)
         , modMask            = myModMask
