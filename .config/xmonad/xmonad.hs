@@ -170,7 +170,7 @@ myLayoutHook = avoidStruts
                    myDefaultLayout = withBorder myBorderWidth tall ||| noBorders monocle  ||| floats 
 
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
-myWorkspaces = ["DEV", "WEB", "SYS", "DOC", "VIR", "MSG", "MUS", "VID"]
+myWorkspaces = ["DEV", "WEB", "DOC", "SYS", "VIR", "MSG", "MUS", "VID"]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
@@ -199,15 +199,16 @@ myManageHook = composeAll
      , className =? "Tor Browser"        --> doShift ( myWorkspaces !! 1 )
      , className =? "Chromium"           --> doShift ( myWorkspaces !! 1 )
      , className =? "Google-chrome"      --> doShift ( myWorkspaces !! 1 )
-     , className =? "jetbrains-idea-ce"  --> doShift ( myWorkspaces !! 2 )
-     , className =? "jetbrains-studio"   --> doShift ( myWorkspaces !! 2 )
-     , className =? "Subl"               --> doShift ( myWorkspaces !! 2 )
-     , className =? "DesktopEditors"     --> doShift ( myWorkspaces !! 3 )
+     , className =? "DesktopEditors"     --> doShift ( myWorkspaces !! 2 )
+     , className =? "jetbrains-idea-ce"  --> doShift ( myWorkspaces !! 3 )
+     , className =? "jetbrains-studio"   --> doShift ( myWorkspaces !! 3 )
+     , className =? "Subl"               --> doShift ( myWorkspaces !! 3 )
      , className =? "VirtualBox Manager" --> doShift ( myWorkspaces !! 4 )
      , className =? "Virt-manager"       --> doShift ( myWorkspaces !! 4 )
      , className =? "discord"            --> doShift ( myWorkspaces !! 5 )
      , className =? "Thunderbird"        --> doShift ( myWorkspaces !! 5 )
      , className =? "Spotify"            --> doShift ( myWorkspaces !! 6 )
+     , className =? "mpv"                --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"               --> doShift ( myWorkspaces !! 8 )
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , isFullscreen -->  doFullFloat
