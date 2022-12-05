@@ -280,7 +280,7 @@ main = do
     -- xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmonad/lib/scripts/xmobarrc")
     -- xmproc1 <- spawnPipe ("xmobar -x 1 $HOME/.config/xmonad/lib/scripts/xmobarrc")
     -- $ ewmhFullscreen (add this below to apply fullscreen)
-    xmonad $ ewmh $ ewmhFullscreen  $ docks $ def
+    xmonad $ ewmh $ docks $ def
         { manageHook         = placeHook simpleSmart <+> myManageHook <+> manageDocks
         , handleEventHook    = swallowEventHook (className =? "Alacritty" <||> className =? "XTerm") (return True)
         , modMask            = myModMask
