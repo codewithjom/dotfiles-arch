@@ -110,6 +110,7 @@ myStartupHook = do
   -- spawn ("killall trayer")
   -- spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
 
+  spawnOnce ("xidlehook --not-when-audio --not-when-fullscreen --timer 180 'systemctl suspend' ''")
   spawnOnce ("bash ~/.config/polybar/launch.sh")
   spawnOnce ("lxsession")
   spawnOnce ("picom --experimental-backends -b")
