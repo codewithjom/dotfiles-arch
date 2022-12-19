@@ -3,7 +3,7 @@
 # bash ~/.config/polybar/launch.sh &
 # conky -c ~/.config/qtile/scripts/conkyrc &
 lxsession &
-picom --experimental-backends -b &
+picom -b &
 nm-applet &
 volumeicon &
 xsetroot -cursor_name left_ptr &

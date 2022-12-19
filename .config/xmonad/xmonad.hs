@@ -113,7 +113,7 @@ myStartupHook = do
   spawnOnce ("xidlehook --not-when-audio --not-when-fullscreen --timer 180 'systemctl suspend' ''")
   spawnOnce ("bash ~/.config/polybar/launch.sh")
   spawnOnce ("lxsession")
-  spawnOnce ("picom --experimental-backends -b")
+  spawnOnce ("picom -b")
   spawnOnce ("nm-applet")
   spawnOnce ("volumeicon")
   spawnOnce ("xsetroot -cursor_name left_ptr")
