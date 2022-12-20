@@ -11,3 +11,4 @@ pamac-tray &
 # blueberry-tray &
 sxhkd -c ~/.config/qtile/scripts/sxhkdrc &
 nitrogen --set-scaled --restore &
+xidlehook --not-when-audio --not-when-fullscreen --timer 180 'systemctl suspend' '' &
