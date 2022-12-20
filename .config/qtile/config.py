@@ -120,7 +120,7 @@ def init_widgets_list():
             padding_y=5,
             padding_x=3,
             borderwidth=2,
-            active=colors[2],
+            active='ffffff',
             inactive='85877C',
             rounded=False,
             highlight_color=colors[0],
