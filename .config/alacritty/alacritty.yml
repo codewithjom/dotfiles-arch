@@ -49,7 +49,7 @@ font:
     family: JetBrains Mono Nerd Font
     style: MediumItalic
 
-  size: 9.5 # Font Size
+  size: 10.5 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
@@ -383,7 +383,8 @@ font:
   ### Solarized Dark ###
   solarized-dark: &solarized-dark # Default colors
     primary:
-      background: "#0A0E14"
+      background:
+        "#0A0E14"
         # background: "#001b21" # base03
       foreground: "#839496" # base0
 
