@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bash ~/.config/polybar/launch.sh &
+bash ~/.config/polybar/launch.sh &
 # conky -c ~/.config/qtile/scripts/conkyrc &
 lxsession &
 picom -b &
@@ -11,4 +11,4 @@ pamac-tray &
 # blueberry-tray &
 sxhkd -c ~/.config/qtile/scripts/sxhkdrc &
 nitrogen --set-scaled --restore &
-xidlehook --not-when-audio --not-when-fullscreen --timer 180 'systemctl suspend' '' &
+xidlehook --not-when-audio --not-when-fullscreen --timer 600 'systemctl suspend' '' &
