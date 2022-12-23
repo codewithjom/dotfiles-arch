@@ -27,7 +27,7 @@ declare -a options=(
 "'archpkg' - https://archlinux.org/packages"
 "'archwiki' - https://wiki.archlinux.org/index.php?search="
 # Development
-"'github' - https://github.com/"
+"'github' - https://github.com/codewithjom"
 "'gitlab' - https://gitlab.com/"
 "'googleOpenSource' - https://opensource.google/projects/search?q="
 "'stackoverflow' - https://stackoverflow.com/search?q="
