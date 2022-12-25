@@ -49,7 +49,7 @@ font:
     family: JetBrains Mono Nerd Font
     style: MediumItalic
 
-  size: 10.5 # Font Size
+  size: 8.5 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
