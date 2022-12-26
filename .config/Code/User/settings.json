@@ -1,0 +1,16 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Andromeda",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "fluent-icons",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.tabSize": 2,
+    "editor.fontLigatures": true,
+    "window.menuBarVisibility": "toggle",
+    "explorer.confirmDelete": false,
+    "editor.linkedEditing": true,
+    "editor.fontSize": 13,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "terminal.integrated.defaultProfile.linux": "bash"
+}
