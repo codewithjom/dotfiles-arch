@@ -13,5 +13,8 @@
     "prettier.jsxSingleQuote": true,
     "prettier.singleQuote": true,
     "terminal.integrated.defaultProfile.linux": "bash",
-    "editor.cursorBlinking": "solid"
+    "editor.cursorBlinking": "solid",
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html"
+    }
 }
