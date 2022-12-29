@@ -1,9 +1,9 @@
 {
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Andromeda",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Ayu Dark",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.productIconTheme": "fluent-icons",
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "Cascadia Code",
     "editor.tabSize": 2,
     "editor.fontLigatures": true,
     "window.menuBarVisibility": "toggle",
@@ -12,5 +12,6 @@
     "editor.fontSize": 13,
     "prettier.jsxSingleQuote": true,
     "prettier.singleQuote": true,
-    "terminal.integrated.defaultProfile.linux": "bash"
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.cursorBlinking": "solid"
 }
