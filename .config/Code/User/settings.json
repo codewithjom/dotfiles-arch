@@ -16,5 +16,12 @@
     "editor.cursorBlinking": "solid",
     "tailwindCSS.includeLanguages": {
         "plaintext": "html"
-    }
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
 }
