@@ -38,18 +38,18 @@ scrolling:
 # you can add comment if you have your own font
 font:
   normal:
-    family: FantasqueSans Mono Nerd Font
-    style: Bold
+    family: Caskaydia Cove Nerd Font
+    style: Normal
 
   bold:
-    family: JetBrains Mono Nerd Font
+    family: Caskaydia Cove Nerd Font
     style: Bold
 
   italic:
-    family: JetBrains Mono Nerd Font
+    family: Caskaydia Cove Nerd Font
     style: MediumItalic
 
-  size: 10.5 # Font Size
+  size: 11 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
@@ -494,7 +494,7 @@ font:
 # *tokyo-night
 # *tomorrow-night
 
-colors: *solarized-dark
+colors: *tokyo-night
 
 #######################################
 ##       END OF COLOR SCHEMES        ##

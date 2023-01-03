@@ -16,16 +16,16 @@ super + Return
 	alacritty
 
 # program launcher
-super + d
-	rofi -show drun
+# super + d
+# 	rofi -show drun
 
 # kill conky
 super + shift + c
   killall conky
 
 # dmenu
-# super + d
-#   dmenu_run -l 10 -i -p 'Run: '
+super + d
+  dmenu_run -i -p 'Run: ' -nb '#0A0E14' -nf '#B3B1AD' -sb '#53BDFA' -sf '#0A0E14' -fn 'JetBrains Mono-10'
 
 # dmscript-edit (edit config file)
 super + s

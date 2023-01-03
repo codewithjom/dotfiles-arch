@@ -78,7 +78,7 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {
     "border_width": 2,
-    "margin": 8,
+    "margin": 12,
     "border_focus": "0A0E14",
     "border_normal": "",
 }
@@ -171,6 +171,7 @@ def init_widgets_list():
         widget.WindowName(
             foreground=colors[2],
             background=colors[0],
+            max_chars=40,
             padding=0
         ),
         widget.Sep(
@@ -204,7 +205,7 @@ def init_widgets_list():
         widget.CheckUpdates(
             update_interval=1800,
             distro="Arch_checkupdates",
-            display_format="Updates: {updates}",
+            display_format="{updates}",
             foreground=colors[0],
             colour_have_updates=colors[6],
             colour_no_updates=colors[6],
@@ -251,7 +252,7 @@ def init_widgets_list():
             fontsize=24,
         ),
         widget.Battery(
-            format="batt: {percent:2.0%}",
+            format="{percent:2.0%}",
             show_short_text=False,
             update_interval=50,
             padding=5,
@@ -307,10 +308,10 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        Screen(),
+        # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
-        # Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=30)),
-        # Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=30)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=30)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=30)),
     ]
 
 

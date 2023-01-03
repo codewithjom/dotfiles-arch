@@ -64,21 +64,21 @@ printf "\e[1;32m#########################################\e[0m\n"
 printf "\e[1;32m## Installing GTK, ICONS, CURSOR, ETC. ##\e[0m\n"
 printf "\e[1;32m#########################################\e[0m\n"
 
-paru -S python-iwlib skeuos-gtk sardi-icons sweet-cursor-theme-git pamac-aur pamac-tray-icon-plasma
-paru -S --aur betterlockscreen preload picom-git light-git devour chili-sddm-theme simple-mtpfs networkmanager-dmenu-git
+paru -S python-iwlib
+paru -S --aur betterlockscreen preload picom-git light-git devour simple-mtpfs networkmanager-dmenu-git
 
 printf "\e[1;32m######################\e[0m\n"
 printf "\e[1;32m## Installing FONTS ##\e[0m\n"
 printf "\e[1;32m######################\e[0m\n"
 
-paru -S ttc-iosevka-aile ttf-cascadia-code ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-inconsolata ttf-jetbrains-mono ttf-ubuntu-font-family ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway nerd-fonts-hack ttf-ms-fonts noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code nerd-fonts-roboto-mono nerd-fonts-fantasque-sans-mono adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts nerd-fonts-victor-mono ttf-icomoon-feather ttf-iosevka-nerd
+paru -S ttc-iosevka-aile ttf-cascadia-code ttf-fira-code ttf-fira-mono ttf-font-awesome ttf-inconsolata ttf-jetbrains-mono ttf-ubuntu-font-family ttf-mononoki nerd-fonts-mononoki nerd-fonts-jetbrains-mono otf-raleway ttf-ms-fonts noto-color-emoji-fontconfig nerd-fonts-inconsolata nerd-fonts-cascadia-code nerd-fonts-roboto-mono nerd-fonts-fantasque-sans-mono adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts ttf-icomoon-feather ttf-iosevka-nerd
 
 printf "\e[1;32m#############################\e[0m\n"
 printf "\e[1;32m## Installing DEVELOPMENTS ##\e[0m\n"
 printf "\e[1;32m#############################\e[0m\n"
 
-sudo pacman -S openjdk11-src python-pip cmake mariadb mysql-workbench python-jedi python-pylint clang
-paru -S android-studio google-java-format xampp
+sudo pacman -S openjdk11-src python-pip cmake python-jedi python-pylint clang
+paru -S google-java-format
 
 printf "\e[1;32m#############################\e[0m\n"
 printf "\e[1;32m## Installing DEPENDENCIES ##\e[0m\n"
@@ -96,21 +96,15 @@ fi
 
 pip3 install psutil
 
-paru -S qtile sxhkd pfetch xmonad xmonad-contrib
-git clone https://github.com/codewithjom/dotfiles.git ~/Downloads/dotfiles
-cd ~/Downloads/dotfiles
-cp -rf .* ~/
-rm -rf ~/.git ~/README.org ~/.install ~/.stow-local-ignore ~/LICENSE
-
 # Enable daemon
 sudo systemctl enable tlp.service
 sudo systemctl enable ufw.service
 sudo systemctl enable betterlockscreen@$USER
 sudo systemctl enable preload.service
-sudo systemctl enable nvidia-hibernate.service
-sudo systemctl enable nvidia-persistenced.service
-sudo systemctl enable nvidia-resume.service
-sudo systemctl enable nvidia-suspend.service
+# sudo systemctl enable nvidia-hibernate.service
+# sudo systemctl enable nvidia-persistenced.service
+# sudo systemctl enable nvidia-resume.service
+# sudo systemctl enable nvidia-suspend.service
 
 while true; do
     read -p "Do you want to reboot? (recommended) [Y/n] " yn

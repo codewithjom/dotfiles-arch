@@ -1,9 +1,9 @@
 #!/bin/bash
 
-bash ~/.config/polybar/launch.sh &
+# bash ~/.config/polybar/launch.sh &
 # conky -c ~/.config/qtile/scripts/conkyrc &
 lxsession &
-picom -b &
+# picom -b &
 nm-applet &
 volumeicon &
 xsetroot -cursor_name left_ptr &
