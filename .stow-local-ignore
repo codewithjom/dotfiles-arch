@@ -2,5 +2,6 @@
 .dotfiles.jpg
 .install
 .xinitrc
+.config/xmonad
 LICENSE
 README.org
