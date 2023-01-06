@@ -22,7 +22,7 @@ window:
     y: 0
   dynamic_padding: true
 
-  opacity: 0.98
+  # opacity: 0.98
 
   title: Alacritty
   dynamic_title: false
@@ -38,18 +38,18 @@ scrolling:
 # you can add comment if you have your own font
 font:
   normal:
-    family: Caskaydia Cove Nerd Font
+    family: Agave Nerd Font
     style: Normal
 
   bold:
-    family: Caskaydia Cove Nerd Font
+    family: Agave Nerd Font
     style: Bold
 
   italic:
-    family: Caskaydia Cove Nerd Font
+    family: Agave Nerd Font
     style: MediumItalic
 
-  size: 11 # Font Size
+  size: 11.5 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
@@ -227,6 +227,45 @@ font:
       magenta: "#AB9DF2"
       cyan: "#78DCE8"
       white: "#FCFCFA"
+
+  ### Nightfly ###
+  nightfly: &nightfly
+    primary:
+      background: "#011627"
+      foreground: "#acb4c2"
+      bright_foreground: "#eeeeee"
+
+    # Cursor colors
+    cursor:
+      text: "#080808"
+      cursor: "#9ca1aa"
+
+    # Selection colors
+    selection:
+      text: "#080808"
+      background: "#b2ceee"
+
+    # Normal colors
+    normal:
+      black: "#1d3b53"
+      red: "#fc514e"
+      green: "#a1cd5e"
+      yellow: "#e3d18a"
+      blue: "#82aaff"
+      magenta: "#c792ea"
+      cyan: "#7fdbca"
+      white: "#a1aab8"
+
+    # Bright colors
+    bright:
+      black: "#7c8f8f"
+      red: "#ff5874"
+      green: "#21c7a8"
+      yellow: "#ecc48d"
+      blue: "#82aaff"
+      magenta: "#ae81ff"
+      cyan: "#7fdbca"
+      white: "#d6deeb"
 
   ### Nord ###
   nord: &nord # Default colors
@@ -485,6 +524,7 @@ font:
 # *dracula
 # *gruvbox-dark
 # *monokai-pro
+# *nightfly
 # *nord
 # *oceanic-next
 # *one-dark
@@ -494,7 +534,7 @@ font:
 # *tokyo-night
 # *tomorrow-night
 
-colors: *tokyo-night
+colors: *solarized-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
