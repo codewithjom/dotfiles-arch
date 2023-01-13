@@ -1,7 +1,7 @@
 {
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Ayu Dark",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "ayu",
   "workbench.productIconTheme": "fluent-icons",
   "editor.fontFamily": "Agave Nerd Font",
   "editor.tabSize": 2,
