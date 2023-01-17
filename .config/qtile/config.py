@@ -31,7 +31,8 @@ keys = [
     Key([mod], "n", lazy.spawn(editor)),
     Key([mod, s], ret, lazy.spawn(emacs)),
     Key([mod], ret, lazy.spawn(terminal)),
-    Key([mod, s], "f", lazy.spawn(file_manager)), Key([ctrl, s], ret, lazy.spawn(screenshot)),
+    Key([mod, s], "f", lazy.spawn(file_manager)),
+    Key([ctrl, s], ret, lazy.spawn(screenshot)),
 
     # ROFI
     Key([mod, s], "d", lazy.spawn("rofi -show drun")),
