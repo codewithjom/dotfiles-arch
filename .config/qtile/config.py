@@ -390,7 +390,7 @@ floating_layout = layout.Floating(
     ], fullscreen_border_width = 0, border_width = 0
 )
 
-auto_fullscreen = True
+auto_fullscreen = False
 focus_on_window_activation = "focus"
 reconfigure_screens = True
 auto_minimize = True
