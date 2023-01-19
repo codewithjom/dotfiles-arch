@@ -534,7 +534,7 @@ font:
 # *tokyo-night
 # *tomorrow-night
 
-colors: *solarized-dark
+colors: *gruvbox-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
