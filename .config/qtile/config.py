@@ -81,10 +81,10 @@ from libqtile.dgroups import simple_key_binder
 dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {
-    "border_width": 2,
-    "margin": 12,
-    "border_focus": "282828",
-    "border_normal": "",
+    "border_width": 1,
+    "margin": 8,
+    "border_focus": "928374",
+    "border_normal": "282828",
 }
 
 layouts = [
