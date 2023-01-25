@@ -15,7 +15,7 @@ env:
 window:
   decorations: full
   dimensions:
-    columns: 115
+    columns: 85
     lines: 35
   padding:
     x: 0
@@ -49,7 +49,7 @@ font:
     family: Agave Nerd Font
     style: MediumItalic
 
-  size: 11.5 # Font Size
+  size: 11 # Font Size
 
   draw_bold_text_with_bright_colors: true
 
@@ -422,14 +422,13 @@ font:
   ### Solarized Dark ###
   solarized-dark: &solarized-dark # Default colors
     primary:
-      background:
-        "#0A0E14"
-        # background: "#001b21" # base03
+      # background: "#0A0E14"
+      background: "#001b26" # base03 (custom)
       foreground: "#839496" # base0
 
     # Cursor colors
     cursor:
-      text: "#001b21" # base03
+      text: "#002b36" # base03
       cursor: "#839496" # base0
 
     # Normal colors
@@ -534,7 +533,7 @@ font:
 # *tokyo-night
 # *tomorrow-night
 
-colors: *gruvbox-dark
+colors: *solarized-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
