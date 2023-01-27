@@ -25,7 +25,7 @@ super + shift + c
 
 # dmenu
 super + d
-  dmenu_run -i -nb '#282828' -nf '#ebdbb2' -sb '#458588' -sf '#282828' -fn 'Ubuntu Mono-14'
+  dmenu_run -i -nb '#0A0E14' -nf '#839496' -sb '#2aa198' -sf '#0A0E14' -fn 'Ubuntu Mono-14'
 
 # dmscript-edit (edit config file)
 super + s
