@@ -22,9 +22,9 @@ function fish_user_key_bindings
 end
 
 # aliases
-alias ls 'exa -l --color=always --group-directories-first'
-alias la 'exa -aG --color=always --group-directories-first'
-alias ll 'exa -alG --color=always --group-directories-first'
+alias ls 'exa -l --color=always --group-directories-first --icons'
+alias la 'exa -aG --color=always --group-directories-first --icons'
+alias ll 'exa -alG --color=always --group-directories-first --icons'
 alias vim 'nvim'
 alias em '/usr/bin/emacs -nw'
 alias emacs 'devour emacsclient -c -a "emacs"'
