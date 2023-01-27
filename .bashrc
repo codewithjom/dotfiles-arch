@@ -37,4 +37,4 @@ alias sxiv='devour sxiv'
 alias zathura='devour zathura'
 alias checkupdates='checkupdates | less'
 
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
