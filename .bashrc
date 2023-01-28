@@ -17,9 +17,9 @@ bind "set completion-ignore-case on"
 
 alias ..='cd ..'
 alias .='tmux new-session -s 1'
-alias ls='exa -l --color=always --group-directories-first'
-alias la='exa -aG --color=always --group-directories-first'
-alias ll='exa -alG --color=always --group-directories-first'
+alias ls='exa -l --color=always --group-directories-first --icons'
+alias la='exa -aG --color=always --group-directories-first --icons'
+alias ll='exa -alG --color=always --group-directories-first --icons'
 alias vim='nvim'
 alias em='/usr/bin/emacs -nw'
 alias rm='rm -rf'
