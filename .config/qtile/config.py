@@ -106,8 +106,8 @@ colors = [
 ]
 
 widget_defaults = dict(
-    font="Ubuntu Bold",
-    fontsize=10,
+    font="Agave Nerd Font",
+    fontsize=12,
     padding=2,
     background=colors[0])
 
@@ -117,9 +117,9 @@ extension_defaults = widget_defaults.copy()
 def init_widgets_list():
     widgets_list = [
         widget.GroupBox(
-            font="Ubuntu Bold",
-            fontsize=9,
-            margin_y=5,
+            # font="Agave Nerd Font",
+            fontsize=10,
+            margin_y=4,
             margin_x=0,
             padding_y=5,
             padding_x=3,
@@ -234,7 +234,7 @@ def init_widgets_list():
             fontsize=16,
         ),
         widget.DF(
-            format="  {uf}{m}B",
+            format="{uf}{m}B",
             visible_on_warn=False,
             foreground=colors[2],
             background=colors[0],
@@ -248,12 +248,12 @@ def init_widgets_list():
             fontsize=12,
         ),
         widget.TextBox(
-            text="",
+            text="",
             font="VictorMono Nerd Font",
             background=colors[0],
             foreground=colors[8],
             padding=2,
-            fontsize=24,
+            fontsize=26,
         ),
         widget.Battery(
             format="{percent:2.0%}",
@@ -292,8 +292,8 @@ def init_widgets_list():
         ),
         widget.Systray(
             background=colors[0],
-            icon_size=20,
-            padding=1
+            icon_size=14,
+            padding=4
         ),
     ]
     return widgets_list
@@ -312,10 +312,10 @@ def init_widgets_screen2():
 
 def init_screens():
     return [
-        Screen(),
+        # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
-        # Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=30)),
-        # Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=30)),
+        Screen(bottom=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=24)),
+        Screen(bottom=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=30)),
     ]
 
 
