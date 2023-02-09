@@ -91,6 +91,7 @@ layouts = [
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
     layout.Floating(**layout_theme),
+    layout.Tile(**layout_theme),
 ]
 
 colors = [
