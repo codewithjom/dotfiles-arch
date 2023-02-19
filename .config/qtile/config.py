@@ -3,12 +3,14 @@ import os
 import re
 import socket
 import subprocess
+from datetime import datetime, timedelta
+from time import time
 from libqtile import qtile
-from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
+from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+from libqtile.utils import guess_terminal, send_notification
 from typing import List
 
 mod = "mod4"  # Sets mod key to SUPER/WINDOWS
@@ -93,6 +95,15 @@ layouts = [
     layout.Floating(**layout_theme),
     layout.Tile(**layout_theme),
 ]
+
+groups.append(ScratchPad('scratchpad', [
+    DropDown('term', terminal, width=0.6, height=0.7, x=0.2, y=0.2, opacity=1),
+    DropDown('em', emacs, width=0.5, height=0.8, x=0.3, y=0.2, opacity=1),
+]))
+keys.extend([
+    Key([mod], "w", lazy.group['scratchpad'].dropdown_toggle('term')),
+    Key([mod], "e", lazy.group['scratchpad'].dropdown_toggle('em')),
+])
 
 colors = [
     ["#0A0E14", "#0A0E14"],  # 0 BG
@@ -217,6 +228,26 @@ def init_widgets_list():
             mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -e sudo pacman -Syu")},
             padding=5,
             background=colors[0],
+        ),
+        widget.TextBox(
+            text="|",
+            font="Ubuntu Mono",
+            background=colors[0],
+            foreground="474747",
+            padding=2,
+            fontsize=12,
+        ),
+        widget.Pomodoro(
+            color_active=colors[4],
+            color_break=colors[5],
+            color_inactive=colors[2],
+            length_long_break=10,
+            length_pomodori=50,
+            notification_on=True,
+            num_pomodori=1,
+            prefix_active='stadi ',
+            prefix_long_break='BREAK ',
+            update_interval=1
         ),
         widget.TextBox(
             text="|",
