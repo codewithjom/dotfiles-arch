@@ -1,7 +1,7 @@
 #!/usr/bin/fish
 
-set work_time 50 # Set work minutes for timer-bin
-set break_time 10 # Set break minutes for timer-bin
+set work_time 50m # Set work minutes for timer-bin
+set break_time 10m # Set break minutes for timer-bin
 
 function pomodoro
   while true
