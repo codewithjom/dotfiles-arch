@@ -1,26 +1,20 @@
 #!/usr/bin/fish
 
-set work_time 50 # Set work time to 50 minutes
-set break_time 10 # Set break time to 10 minutes
-set pomodoro_count 0 # Set initial Pomodoro count to 0
+set work_time 50 # Set work minutes for timer-bin
+set break_time 10 # Set break minutes for timer-bin
 
 function pomodoro
   while true
     # Start work timer
-    notify-send "Pomodoro Timer" "Start working for $work_time minutes"
-    set work_time_seconds (echo "$work_time * 60" | bc)
-    sleep $work_time_seconds
+    notify-send -t 0 "Pomodoro Timer" "Start working for $work_time minutes"
+    timer $work_time
 
     # Start break timer
-    notify-send "Pomodoro Timer" "Take a break for $break_time minutes"
-    set break_time_seconds (echo "$break_time * 60" | bc)
-    sleep $break_time_seconds
-
-    # Increment Pomodoro count
-    set pomodoro_count $pomodoro_count + 1
+    notify-send -t 0 "Pomodoro Timer" "Take a break for $break_time minutes"
+    timer $break_time
 
     # Notify user of Pomodoro completion and current count
-    notify-send "Pomodoro Timer" "Pomodoro $pomodoro_count completed"
+    notify-send -t 0 "Pomodoro Timer" "Session completed!"
 
     # Ask user if they want to continue or stop
     set -q continue_pomodoro
