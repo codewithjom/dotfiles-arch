@@ -16,7 +16,7 @@ window:
   decorations: full
   dimensions:
     columns: 120
-    lines: 40
+    lines: 30
   padding:
     x: 5
     y: 5
