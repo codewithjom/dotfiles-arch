@@ -64,7 +64,7 @@ alt + shift + l
 	betterlockscreen -l
 
 ctrl + alt + l
-  i3lock -c 000000
+  systemctl suspend;i3lock -c 000000
 
 # display conky
 alt + c 
