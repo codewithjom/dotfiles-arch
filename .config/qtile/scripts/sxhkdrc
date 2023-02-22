@@ -63,6 +63,9 @@ alt + b
 alt + shift + l
 	betterlockscreen -l
 
+ctrl + alt + l
+  i3lock -c 000000
+
 # display conky
 alt + c 
 	conky -c ~/.config/qtile/scripts/conkyrc
