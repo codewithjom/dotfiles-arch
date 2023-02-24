@@ -147,6 +147,7 @@ def init_widgets_list():
             other_screen_border=colors[4],
             foreground=colors[2],
             background=colors[0],
+            hide_unused=True
         ),
         widget.TextBox(
             text="|",
