@@ -12,4 +12,4 @@ pamac-tray &
 sxhkd -c ~/.config/qtile/scripts/sxhkdrc &
 nitrogen --set-scaled --restore &
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend;i3lock -c 000000' '' &
-/usr/bin/emacs --daemon &
+# /usr/bin/emacs --daemon &

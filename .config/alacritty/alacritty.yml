@@ -22,7 +22,7 @@ window:
     y: 5
   dynamic_padding: true
 
-  # opacity: 0.90
+  opacity: 0.90
 
   title: Alacritty
   dynamic_title: false

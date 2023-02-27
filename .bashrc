@@ -2,7 +2,7 @@ export TERM="xterm-256color"
 export HISTCONTROL=ignoredups:erasedups
 export EDITOR="nvim"
 export VISUAL="nvim"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/.local/bin"
 
 unset HISTFILE
 
@@ -17,12 +17,13 @@ bind "set completion-ignore-case on"
 
 alias ..='cd ..'
 alias .='tmux new-session -s 1'
-alias ls='exa -l --color=always --group-directories-first --icons'
+alias ls='exa --color=always --group-directories-first --icons'
 alias la='exa -aG --color=always --group-directories-first --icons'
 alias ll='exa -alG --color=always --group-directories-first --icons'
 alias vim='nvim'
 alias em='/usr/bin/emacs -nw'
-alias rm='rm -rf'
+# alias rm='rm -rf'
+alias rm='trash'
 alias mv='mv -i'
 alias cp='cp -rf'
 alias gs='git status -s'
