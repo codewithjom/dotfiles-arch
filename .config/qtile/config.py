@@ -83,9 +83,9 @@ from libqtile.dgroups import simple_key_binder
 dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {
-    "border_width": 1,
+    "border_width": 2,
     "margin": 4,
-    "border_focus": "839496",
+    "border_focus": "53BDFA",
     "border_normal": "0A0E14",
 }
 
