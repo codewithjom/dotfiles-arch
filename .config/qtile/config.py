@@ -99,7 +99,7 @@ layouts = [
 groups.append(ScratchPad('scratchpad', [
     DropDown('term', terminal, width=0.8, height=0.7, x=0.1, y=0.2),
     DropDown('em', emacs, width=0.8, height=0.7, x=0.1, y=0.2),
-    DropDown('file', file_manager, width=0.8, height=0.7, x=0.1, y=0.2),
+    DropDown('file', file_manager, width=0.7, height=0.8, x=0.1, y=0.1),
 ]))
 keys.extend([
     Key([mod], "w", lazy.group['scratchpad'].dropdown_toggle('term')),
