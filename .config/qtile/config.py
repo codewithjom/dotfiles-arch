@@ -68,7 +68,7 @@ keys = [
 ]
 
 groups = [
-    Group("1", layout="monadtall"),
+    Group("1", layout="monadwide"),
     Group("2", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
     Group("3", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
     Group("4", layout="monadtall"),
@@ -94,6 +94,7 @@ layouts = [
     layout.Max(**layout_theme),
     layout.Floating(**layout_theme),
     layout.Tile(**layout_theme),
+    layout.MonadWide(**layout_theme),
 ]
 
 groups.append(ScratchPad('scratchpad', [
@@ -350,7 +351,7 @@ def init_screens():
         # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
         Screen(bottom=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=24)),
-        Screen(bottom=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=30)),
+        Screen(bottom=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=24)),
     ]
 
 
