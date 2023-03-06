@@ -68,14 +68,14 @@ keys = [
 ]
 
 groups = [
-    Group("DEV", layout="monadtall"),
-    Group("WEB", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
-    Group("DOC", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
-    Group("SYS", layout="monadtall"),
-    Group("VIR", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
-    Group("MSG", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
-    Group("MUS", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
-    Group("VID", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
+    Group("1", layout="monadtall"),
+    Group("2", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
+    Group("3", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
+    Group("4", layout="monadtall"),
+    Group("5", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
+    Group("6", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
+    Group("7", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
+    Group("8", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
 ]
 
 from libqtile.dgroups import simple_key_binder
