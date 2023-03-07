@@ -1,0 +1,28 @@
+{
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "fluent-icons",
+
+  "editor.fontFamily": "Agave Nerd Font",
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "solid",
+  "editor.linkedEditing": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "window.menuBarVisibility": "toggle",
+
+  "explorer.confirmDelete": false,
+  "explorer.excludeGitIgnore": true,
+
+  "prettier.arrowParens": "avoid",
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": true,
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "none",
+  "prettier.printWidth": 110
+}
