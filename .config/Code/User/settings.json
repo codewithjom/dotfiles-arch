@@ -20,9 +20,10 @@
 
   "prettier.arrowParens": "avoid",
   "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
   "prettier.bracketSpacing": true,
   "prettier.semi": false,
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "none",
-  "prettier.printWidth": 110
+  "prettier.printWidth": 120
 }
