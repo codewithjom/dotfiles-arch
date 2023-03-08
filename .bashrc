@@ -2,7 +2,7 @@ export TERM="xterm-256color"
 export HISTCONTROL=ignoredups:erasedups
 export EDITOR="nvim"
 export VISUAL="nvim"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/.local/bin"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin"
 
 unset HISTFILE
 

@@ -68,7 +68,7 @@ keys = [
 ]
 
 groups = [
-    Group("1", layout="monadwide"),
+    Group("1", layout="monadwide", matches=[Match(wm_class=['Code'])]),
     Group("2", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
     Group("3", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
     Group("4", layout="monadtall"),
@@ -350,8 +350,8 @@ def init_screens():
     return [
         # Screen(),
         # Remove the comments below if you want to use the built-in status bar of qtile
-        Screen(bottom=bar.Bar(widgets=init_widgets_screen1(), opacity=0.8, size=24)),
-        Screen(bottom=bar.Bar(widgets=init_widgets_screen2(), opacity=0.8, size=24)),
+        Screen(bottom=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=24)),
+        Screen(bottom=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=24)),
     ]
 
 
