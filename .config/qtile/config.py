@@ -70,7 +70,7 @@ keys = [
 groups = [
     Group("1", layout="monadwide", matches=[Match(wm_class=['Code'])]),
     Group("2", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
-    Group("3", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
+    Group("3", layout="monadtall", matches=[Match(wm_class=["DesktopEditors", "emacs"])]),
     Group("4", layout="monadtall"),
     Group("5", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
     Group("6", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
@@ -98,9 +98,9 @@ layouts = [
 ]
 
 groups.append(ScratchPad('scratchpad', [
-    DropDown('term', terminal, width=0.8, height=0.7, x=0.1, y=0.2),
-    DropDown('em', emacs, width=0.8, height=0.7, x=0.1, y=0.2),
-    DropDown('file', file_manager, width=0.7, height=0.8, x=0.1, y=0.1),
+    DropDown('term', terminal, width=0.8, height=0.7, x=0.1, y=0.2, opacity=1),
+    DropDown('em', emacs, width=0.8, height=0.7, x=0.1, y=0.2, opacity=1),
+    DropDown('file', file_manager, width=0.7, height=0.8, x=0.1, y=0.1, opacity=1),
 ]))
 keys.extend([
     Key([mod], "w", lazy.group['scratchpad'].dropdown_toggle('term')),
