@@ -25,7 +25,7 @@ super + shift + c
 
 # dmenu
 super + d
-  dmenu_run -i -nb '#1a1b26' -nf '#32344a' -sb '#449dab' -sf '#1a1b26' -fn 'Agave Nerd Font-12'
+  dmenu_run -i -nb '#1a1b26' -nf '#787c99' -sb '#449dab' -sf '#1a1b26' -fn 'Agave Nerd Font-12'
 
 # dmscript-edit (edit config file)
 super + s
