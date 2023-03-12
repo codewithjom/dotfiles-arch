@@ -109,15 +109,15 @@ keys.extend([
 ])
 
 colors = [
-    ["#282828", "#282828"],  # 0 BG
-    ["#282828", "#928374"],  # 1 BLACK
-    ["#ebdbb2", "#ebdbb2"],  # 2 FG
-    ["#cc241d", "#fb4934"],  # 3 RED
-    ["#98971a", "#b8bb26"],  # 4 GREEN
-    ["#d79921", "#fabd2f"],  # 5 YELLOW
-    ["#458588", "#83a598"],  # 6 BLUE
-    ["#b16286", "#d3869b"],  # 7 MAGENTA
-    ["#689d6a", "#8ec07c"],  # 8 CYAN
+    ["#1a1b26", "#1a1b26"],  # 0 BG
+    ["#32344a", "#444b6a"],  # 1 BLACK
+    ["#a9b1d6", "#a9b1d6"],  # 2 FG
+    ["#f7768e", "#ff7a93"],  # 3 RED
+    ["#9ece6a", "#b9f27c"],  # 4 GREEN
+    ["#e0af68", "#ff9e64"],  # 5 YELLOW
+    ["#7aa2f7", "#7da6ff"],  # 6 BLUE
+    ["#ad8ee6", "#bb9af7"],  # 7 MAGENTA
+    ["#449dab", "#0db9d7"],  # 8 CYAN
 ]
 
 widget_defaults = dict(
