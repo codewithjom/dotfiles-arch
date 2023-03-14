@@ -12,11 +12,15 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
 
   "window.menuBarVisibility": "toggle",
 
   "explorer.confirmDelete": false,
   "explorer.excludeGitIgnore": true,
+  "explorer.confirmDragAndDrop": false,
 
   "prettier.arrowParens": "avoid",
   "prettier.singleQuote": true,
@@ -29,5 +33,9 @@
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
-  "explorer.confirmDragAndDrop": false
+
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "tailwindCSS.emmetCompletions": true
 }
