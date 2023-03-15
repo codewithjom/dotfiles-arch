@@ -68,11 +68,11 @@ keys = [
 ]
 
 groups = [
-    Group("1", layout="monadwide", matches=[Match(wm_class=['Code'])]),
-    Group("2", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox","Brave-browser-dev", "Google-chrome"])]),
-    Group("3", layout="monadtall", matches=[Match(wm_class=["DesktopEditors", "emacs"])]),
+    Group("1", layout="monadtall", matches=[Match(wm_class=['Code'])]),
+    Group("2", layout="monadtall", matches=[Match(wm_class=["Brave-browser","qutebrowser","Vimb","firefox"])]),
+    Group("3", layout="monadtall", matches=[Match(wm_class=["DesktopEditors"])]),
     Group("4", layout="monadtall"),
-    Group("5", layout="monadtall", matches=[Match(wm_class=["VirtualBox Manager", "Virt-manager"])]),
+    Group("5", layout="monadtall", matches=[Match(wm_class=["Virt-manager"])]),
     Group("6", layout="monadtall", matches=[Match(wm_class=["discord", "Thunderbird"])]),
     Group("7", layout="monadtall", matches=[Match(wm_class=["Spotify"])]),
     Group("8", layout="monadtall", matches=[Match(wm_class=["mpv"])]),
