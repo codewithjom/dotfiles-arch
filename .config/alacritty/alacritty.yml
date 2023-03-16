@@ -15,14 +15,14 @@ env:
 window:
   decorations: full
   dimensions:
-    columns: 170
-    lines: 40
+    columns: 110
+    lines: 45
   padding:
     x: 5
     y: 5
   dynamic_padding: true
 
-  opacity: 0.90
+  opacity: 0.95
 
   title: Alacritty
   dynamic_title: false
