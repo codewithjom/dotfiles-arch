@@ -30,9 +30,6 @@
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "none",
   "prettier.printWidth": 120,
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
 
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
