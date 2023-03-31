@@ -7,11 +7,11 @@ function pomodoro
   while true
     # Start work timer
     notify-send -t 0 "Pomodoro Timer" "Start working for $work_time minutes"
-    timer $work_time; paplay ~/Music/alarm/alarm-sound-effect-02.mp3
+    timer $work_time
 
     # Start break timer
     notify-send -t 0 "Pomodoro Timer" "Take a break for $break_time minutes"
-    timer $break_time; paplay ~/Music/alarm/alarm-sound-effect-02.mp3
+    timer $break_time
 
     # Notify user of Pomodoro completion and current count
     notify-send -t 0 "Pomodoro Timer" "Session completed!"
