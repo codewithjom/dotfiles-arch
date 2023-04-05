@@ -28,16 +28,16 @@ super + d
   dmenu_run -i -nb '#1a1b26' -nf '#787c99' -sb '#449dab' -sf '#1a1b26' -fn 'Agave Nerd Font-12'
 
 # dmscript-edit (edit config file)
-super + s
-	$HOME/.local/bin/dmscript-edit
+# super + s
+# 	$HOME/.local/bin/dmscript-edit
 
 # dmscript-browse (quick browse)
-super + shift + b 
-	$HOME/.local/bin/dmscript-browse
+# super + shift + b 
+# 	$HOME/.local/bin/dmscript-browse
 
 # dmscript-colorscheme (choose colorscheme)
-super + c 
-	$HOME/.local/bin/dmscript-colorscheme
+# super + c 
+# 	$HOME/.local/bin/dmscript-colorscheme
 
 # make sxhkd reload its configuration files:
 super + Escape
