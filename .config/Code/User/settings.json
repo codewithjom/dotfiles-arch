@@ -1,7 +1,7 @@
 {
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Ayu Dark Bordered",
-  "workbench.iconTheme": "ayu",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
 
   "editor.fontFamily": "Agave Nerd Font",
@@ -21,6 +21,7 @@
   "explorer.confirmDelete": false,
   "explorer.excludeGitIgnore": true,
   "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
 
   "prettier.arrowParens": "avoid",
   "prettier.singleQuote": true,
