@@ -254,7 +254,8 @@ exec --no-startup-id picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xsetroot -cursor_name left_ptr
 exec --no-startup-id sxhkd -c $HOME/.config/i3/sxhkdrc
-exec --no-startup-id nitrogen --set-zoom-fill $HOME/Downloads/wallpapers/0383.png
+# exec --no-startup-id nitrogen --set-zoom-fill $HOME/Downloads/wallpapers/0383.png
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 900 'systemctl suspend;i3lock -c 000000' ''
 
 # Sreen brightness controls
