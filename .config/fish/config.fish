@@ -22,7 +22,7 @@ function fish_user_key_bindings
 end
 
 # aliases
-alias ls 'exa -l --color=always --group-directories-first --icons'
+alias ls 'exa --color=always --group-directories-first --icons'
 alias la 'exa -aG --color=always --group-directories-first --icons'
 alias ll 'exa -alG --color=always --group-directories-first --icons'
 alias vim 'nvim'
@@ -39,14 +39,14 @@ alias gl 'git log --oneline'
 alias gp 'git push'
 alias gd 'git diff'
 alias youtube-dl-music 'youtube-dl --extract-audio --audio-format mp3'
-alias mpvid 'devour mpv'
-alias sxiv 'devour sxiv'
-alias zathura 'devour zathura'
+# alias mpvid 'devour mpv'
+# alias sxiv 'devour sxiv'
+# alias zathura 'devour zathura'
 # alias clear 'clear && colorscript -e 35'
 alias checkupdates 'checkupdates | less'
 alias . 'tmux new-session -s 1'
 # alias how-old-am-i "sudo dumpe2fs $(mount | grep 'on \/ ' | awk '{print $1}') | grep 'Filesystem created:'"
-alias xampp-start 'sudo xampp startapache; sudo xampp startmysql'
+# alias xampp-start 'sudo xampp startapache; sudo xampp startmysql'
 
 # if status --is-login
 #   if test -z "$DISPLAY" -a $XDG_VTNR = 1
@@ -59,4 +59,4 @@ alias xampp-start 'sudo xampp startapache; sudo xampp startmysql'
 
 # fisher install IlanCosman/tide@v5 (Fish prompt)
 # Remove comment below if not using custom prompt (fisher/tide)
-# starship init fish | source
+starship init fish | source

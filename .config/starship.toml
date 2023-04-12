@@ -38,7 +38,7 @@ error_symbol = "[✗](bold red)"
 # configure directory
 [directory]
 read_only = " "
-truncation_length = 10
+truncation_length = 1
 truncate_to_repo = true # truncates directory to root folder if in github repo
 style = "bold italic blue"
 
