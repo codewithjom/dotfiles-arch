@@ -17,6 +17,9 @@
 
 add_newline = false
 
+[line_break]
+disabled = true
+
 [username]
 style_user = "green bold"
 style_root = "red bold"
@@ -28,7 +31,7 @@ show_always = true
 ssh_only = false
 format = 'on [$hostname](bold purple) '
 trim_at = "."
-disabled = false
+disabled = true
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
