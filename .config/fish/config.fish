@@ -7,8 +7,8 @@ set -gx TERM xterm-256color
 # Set EDITOR/VISUAL as emacs
 # set EDITOR emacsclient -c -a emacs
 # set VISUAL emacsclient -c -a emacs
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+set -gx EDITOR lvim
+set -gx VISUAL lvim
 
 # theme
 set -g theme_color_scheme terminal-dark
@@ -25,7 +25,8 @@ end
 alias ls 'exa --color=always --group-directories-first --icons'
 alias la 'exa -aG --color=always --group-directories-first --icons'
 alias ll 'exa -lG --color=always --group-directories-first --icons'
-alias vim 'nvim'
+# alias vim 'nvim'
+alias vim 'lvim'
 alias em '/usr/bin/emacs -nw'
 alias emacs 'devour emacs'
 # alias rm 'rm -rf'
