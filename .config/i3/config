@@ -273,8 +273,10 @@ bindsym XF86MonBrightnessDown exec light -U 10
 
 # application rules
         # firefox
-                assign [class="Firefox"] → 1
-
+assign [class="Brave"] → 2
+assign [class="DesktopEditors"] → 4
+assign [class="discord"] → 6
+for_window [class="Spotify"] move to workspace 7
 
 # autolock
 exec --no-startup-id xautolock -corners -000 -time 10 -locker 'i3lock -c 000000' &
