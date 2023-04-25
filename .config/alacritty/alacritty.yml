@@ -422,7 +422,7 @@ font:
   ### Solarized Dark ###
   solarized-dark: &solarized-dark # Default colors
     primary:
-      background: "#282c34"
+      background: "#0A0E14"
       # background: "#001b26" # base03 (custom)
       foreground: "#839496" # base0
 
