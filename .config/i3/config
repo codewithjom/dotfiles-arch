@@ -274,6 +274,7 @@ bindsym XF86MonBrightnessDown exec light -U 10
 # application rules
         # firefox
 assign [class="Brave"] → 2
+for_window [class="Min"] move to workspace 2
 assign [class="DesktopEditors"] → 4
 for_window [class="libreoffice"] move to workspace 4
 assign [class="discord"] → 6
